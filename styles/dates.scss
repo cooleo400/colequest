@@ -1,0 +1,52 @@
+@import './colors';
+@import './fonts';
+
+.dates {
+  display: table;
+  width: 100%;
+  margin-bottom: 25px;
+  font-family: $secondary-font-family;
+
+  .dates-row {
+    display: table-row;
+
+    &.strike, &.strike a {
+      color: $primary-font-color-disabled;
+      text-decoration: line-through;
+    }
+    &.today, &.today a {
+      color: $primary-font-color-alt;
+    }
+  }
+
+  .dates-col {
+    display: table-cell;
+    padding: 10px;
+
+    &.name {
+      padding-left: 0;
+    }
+    &.date {
+      padding-right: 0;
+    }
+  }
+
+  .dates-row.header .dates-col {
+    border-bottom: 1px solid #ccc;
+    border-collapse: collapse;
+  }
+
+  .dates-col .time {
+    display: block;
+    font-size: $primary-font-xs;
+    @include breakpoint('mobileonly') {
+      font-size: $primary-font-mobile-xs;
+    }
+  }
+
+  // .dates-col .note-container {
+  //   top: -20px;
+  //   left: -27px
+  // }
+
+}

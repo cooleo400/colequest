@@ -1,0 +1,63 @@
+@import './colors';
+@import './mixins';
+
+body {
+  background-color: $bg1;
+  font-family: $primary-font-family;
+  color: $primary-font-color;
+  font-size: $primary-font-sm;
+  @include breakpoint('mobileonly') {
+    font-size: $primary-font-mobile-xs;
+  }
+}
+
+a {
+  color: $primary-font-color;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+::selection {
+  background: $bg1;
+}
+
+h1 {
+  // font-size: $primary-font-lg;
+}
+
+h2 {
+  font-size: $primary-font-lg;
+  @include breakpoint('mobileonly') {
+    font-size: $primary-font-md;
+  }
+}
+
+h3 {
+  font-size: $primary-font-md;
+  @include breakpoint('mobileonly') {
+    font-size: $primary-font-sm;
+  }
+}
+
+h4 {
+  font-family: $secondary-font-family;
+  font-size: $secondary-font-md;
+  @include breakpoint('mobileonly') {
+    font-size: $secondary-font-sm;
+  }
+}
+
+p {
+  font-family: $secondary-font-family;
+  font-size: $secondary-font-xs;
+  @include breakpoint('mobileonly') {
+    font-size: $secondary-font-mobile-xs;
+  }
+}
+
+img {
+  width: 100%;
+}

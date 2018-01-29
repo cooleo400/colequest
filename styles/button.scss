@@ -1,0 +1,20 @@
+@import './colors';
+@import './mixins';
+
+.button {
+  border: 3px solid $bg1;
+  @include border-radius(10px);
+	padding: 15px;
+	background-color: $bg2;
+	text-decoration: none;
+  @include transition(all .5s ease-in-out);
+  color: $white;
+  font-family: $primary-font-family;
+
+  &:hover {
+    background-color: $black;
+    border-color: $white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

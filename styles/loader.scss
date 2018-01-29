@@ -1,0 +1,122 @@
+@import './fonts';
+@import './colors';
+@import './mixins';
+
+.loader {
+  position: relative;
+  width: 50%;
+  height:36px;
+  margin: 0 auto;
+  overflow:visible;
+  @include user-select(none);
+  cursor: default;
+  font-family: $secondary-font-family;
+
+  div {
+    position: absolute;
+    opacity:0;
+    @include animation(move 2s linear infinite);
+    @include transform(rotate(180deg));
+
+    &:nth-child(2){
+      @include animation-delay(0.2s);
+    }
+    &:nth-child(3){
+      @include animation-delay(0.4s);
+    }
+    &:nth-child(4){
+      @include animation-delay(0.6s);
+    }
+    &:nth-child(5){
+      @include animation-delay(0.8s);
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0;
+  }
+	35% {
+		left: 41%;
+    @include transform(rotate(0deg));
+		opacity:1;
+	}
+	65% {
+		left:59%;
+    @include transform(rotate(0deg));
+		opacity:1;
+	}
+	100% {
+		left:100%;
+    @include transform(rotate(-180deg));
+		opacity:0;
+	}
+}
+
+@-moz-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	100% {
+		left:100%;
+    @include transform(rotate(-180deg));
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	100% {
+		left:100%;
+    @include transform(rotate(-180deg));
+		opacity:0;
+	}
+}
+
+@-o-keyframes move {
+	0% {
+		left:0;
+		opacity:0;
+	}
+	35% {
+		left:41%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		@include transform(rotate(0deg));
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		@include transform(rotate(-180deg));
+		opacity:0;
+	}
+}

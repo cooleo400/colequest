@@ -1,0 +1,52 @@
+@import './colors';
+@import './fonts';
+@import './mixins';
+
+.bg-1 {
+  background-color: $bg1;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  background-color: $red-transparent;
+}
+
+.success {
+  background-color: $green-transparent;
+}
+
+.color-bg-1 {
+  color: $bg1;
+}
+
+.color-bg-2 {
+  color: $bg2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-top-none {
+  margin-top: 0;
+}
+.margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 15px;
+}
+
+.status-message {
+  @include border-radius(5px);
+  padding: 15px;
+  @include transition(max-height .5s ease-in-out);
+  font-family: $primary-font-family;
+  padding: 15px 2%;
+  width: 100%;
+  @include border-radius(5px);
+}

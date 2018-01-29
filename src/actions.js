@@ -1,0 +1,53 @@
+import { createClient } from 'contentful';
+
+const SPACE_ID = 'iwbucf7d4iqh'
+const ACCESS_TOKEN = 'da27f9a70950e8e6924ac270dbcf328e31bc4d150062c05be49e549528e4d696'
+
+const client = createClient({
+  space: SPACE_ID,
+  accessToken: ACCESS_TOKEN
+});
+
+export function fetchShows() {
+  return fetchEntriesForContentType('gig');
+}
+
+// Load all entries for a given Content Type from Contentful
+export function fetchEntriesForContentType (contentType) {
+  return client.getEntries({
+      content_type: contentType,
+      'fields.active' : 'true',
+      order: 'fields.date'
+    })
+  .then((response) => response.items)
+  .catch((error) => {
+    console.log(`Error occurred while fetching Entries for ${contentType.name}:`);
+    console.error(error);
+  })
+}
+
+function fetchContentTypes () {
+  return client.getContentTypes()
+  .then((response) => response.items)
+  .catch((error) => {
+    console.log('Error occurred while fetching Content Types:');
+    console.error(error);
+  })
+}
+
+export function submitEmail(email) {
+  const emailUrl = 'http://colequest.com/subscribe.php';
+
+  return fetch(emailUrl, {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+    mode: 'no-cors',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+  .then(response => response.json)
+  .catch((error) => {
+    console.log(error);
+  });
+};
