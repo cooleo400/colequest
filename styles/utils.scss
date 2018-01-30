@@ -43,10 +43,16 @@
 
 .status-message {
   @include border-radius(5px);
-  padding: 15px;
-  @include transition(max-height .5s ease-in-out);
+  @include transition(all .5s ease-in-out);
   font-family: $primary-font-family;
-  padding: 15px 2%;
-  width: 100%;
+  width: 96%;
   @include border-radius(5px);
+  max-height: 0;
+  overflow: hidden;
+
+  &.success,
+  &.error {
+    padding: 15px 2%;
+    max-height: 100px;
+  }
 }

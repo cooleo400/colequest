@@ -19,9 +19,10 @@ const Merchandise = () => {
       <div>
         <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank" className="button order-link">Order</a>
       </div>
-      <div className="social-container-sm">
-        <SocialIcon type="bandcamp" />
+      <div className="social-container-md">
         <SocialIcon type="apple" />
+        <SocialIcon type="spotify" />
+        <SocialIcon type="bandcamp" />
         <SocialIcon type="googlePlay" />
       </div>
     </div>

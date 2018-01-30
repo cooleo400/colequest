@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import scrollToComponent from 'react-scroll-to-component';
-import Navigation from './components/Navigation';
 import Section from './components/Section';
 import About from './components/About';
 import Media from './components/Media';

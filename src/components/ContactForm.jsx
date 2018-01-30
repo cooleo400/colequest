@@ -17,14 +17,16 @@ class ContactForm extends PureComponent {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  renderStatusMessage() {
+  renderStatusMessage(msg) {
     if(this.state.status === statusMap.success) {
       return (
         <div>Got it, you've been added to our email list! <span className="emoji white-smiling-face"></span></div>
       );
-    } else {
+    } else if(msg) {
+      return (msg);
+    } {
       return (
-        <div>Something didnt work <span className="emoji broken-heart"></span></div>
+        <div>Something did nawt work, maybe you typed your email wrong? <span className="emoji broken-heart"></span></div>
       );
     }
 
@@ -32,9 +34,9 @@ class ContactForm extends PureComponent {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.submitEmail()
+    this.props.submitEmail(this.ref.value)
       .then((response) => {
-        const newState = (response.success) ? { status : statusMap.success } : { status: statusMap.failure } ;
+        const newState = (response && response.success) ? { status : statusMap.success } : { status: statusMap.failure } ;
         this.setState(newState);
       });
   }
@@ -46,7 +48,7 @@ class ContactForm extends PureComponent {
       <form action="subscribe.php" id="invite" method="POST" className="clearfix">
         <p className="text-center">Sign up for our mailing list here:</p>
         <div className={statusMessageClasses}>{this.renderStatusMessage()}</div>
-        <input type="email" className="email text-center" placeholder="Enter your email for updates!" />
+        <input type="email" className="email text-center" placeholder="Enter your email for updates!" ref={(ref) => (this.ref = ref)}/>
         <button id="submit" type="submit" className="button submit-email" onClick={this.handleClick} >Sign Up</button>
       </form>
     );

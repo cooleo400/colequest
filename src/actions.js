@@ -43,10 +43,10 @@ export function submitEmail(email) {
     body: JSON.stringify({ email }),
     mode: 'no-cors',
     headers: new Headers({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     })
   })
-  .then(response => response.json)
+  .then(response => response.json())
   .catch((error) => {
     console.log(error);
   });

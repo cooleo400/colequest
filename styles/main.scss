@@ -4,6 +4,7 @@
 @import './base';
 @import './icons';
 @import './columns';
+@import './emoji';
 
 .content {
   background-color: $bg3;
@@ -38,9 +39,9 @@ input {
 
 .section {
   &.contact {
-    .status-message {
-      padding: 15px 2%;
-    }
+    // .status-message {
+    //   padding: 15px 2%;
+    // }
     input.email {
       display: block;
     }
@@ -58,7 +59,7 @@ $margin: 25px;
 .social-container-md {
   width: 330px;
   @include breakpoint('mobileonly') {
-    width: 270px;
+    width: 255px;
   }
 }
 .social-container-lg {
@@ -75,6 +76,10 @@ $margin: 25px;
   .icon {
     display: inline-block;
     margin: 0 8px;
+
+    @include breakpoint('mobileonly') {
+      margin: 0 6px;
+    }
   }
 }
 
