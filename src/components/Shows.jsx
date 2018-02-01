@@ -8,22 +8,10 @@ import Loader from './Loader';
 class Shows extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      shows : null
-    };
   }
 
-  componentDidMount() {
-    const { fetchShows } = this.props;
-    fetchShows()
-      .then(shows =>{
-        this.setState({ shows });
-      })
-      .catch();
-  }
-
-  renderShowRows(shows) {
-    return this.state.shows.map((show, index) => {
+  renderShowRows() {
+    return this.props.shows.map((show, index) => {
       const {
         eventTitle,
         eventLink,
@@ -50,7 +38,7 @@ class Shows extends PureComponent {
   }
 
   render() {
-    const { shows } = this.state;
+    const { shows } = this.props;
     if(shows) {
       if(shows.length > 0){
         {this.renderShowsTable()}
@@ -68,11 +56,12 @@ class Shows extends PureComponent {
 
 Shows.propTypes = {
   className : PropTypes.string,
-  fetchShows : PropTypes.func.isRequired
+  shows : PropTypes.array
 };
 
 Shows.defaultProps = {
-  className : ''
+  className : '',
+  shows : []
 };
 
 export default Shows;

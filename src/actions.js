@@ -1,7 +1,11 @@
 import { createClient } from 'contentful';
 
+//Production Keys
 const SPACE_ID = 'iwbucf7d4iqh'
 const ACCESS_TOKEN = 'da27f9a70950e8e6924ac270dbcf328e31bc4d150062c05be49e549528e4d696'
+//Local Keys
+// const SPACE_ID = 'iwbucf7d4iqh'
+// const ACCESS_TOKEN = '7a2767b4044daaf5e9999d41873060d2e98947dc15802f58c65a9a139634eab5'
 
 const client = createClient({
   space: SPACE_ID,
@@ -21,7 +25,7 @@ export function fetchEntriesForContentType (contentType) {
     })
   .then((response) => response.items)
   .catch((error) => {
-    console.log(`Error occurred while fetching Entries for ${contentType.name}:`);
+    console.log('Error occurred while fetching Entries:', contentType);
     console.error(error);
   })
 }

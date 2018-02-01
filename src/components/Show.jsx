@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { isShowToday, isShowPast } from '../util';
 import Moment from 'react-moment';
 
 function renderLink(title, url) {
@@ -17,15 +18,9 @@ const Show = (props) => {
     time
   } = props;
 
-  const currentTime = new Date().getTime();
-  const currentDate = new Date().toDateString();
-  const showTime = new Date(date).getTime();
-  const showDate = new Date(date).toDateString();
+  const todayShow = isShowToday(date)
+  const pastShow = isShowPast(date);
 
-  const notFutureShow = showTime < currentTime;
-  const todayShow = notFutureShow && (currentDate === showDate);
-  const pastShow = notFutureShow && !todayShow;
-  
   const rowClasses = classNames('dates-row', {
     'strike' : pastShow,
     'today' : todayShow

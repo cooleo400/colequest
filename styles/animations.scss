@@ -1,0 +1,37 @@
+@import './colors';
+
+@keyframes animateAltColor {
+  0% {
+    color: inherit;
+  }
+  // 25% {
+  //   color: inherit;
+  // }
+  50% {
+    color: $primary-font-color-alt;
+  }
+  // 75% {
+  //   color: inherit;
+  // }
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes animateAltBg {
+  0% {
+    background-color: $bg1;
+  }
+  // 25% {
+  //   background-color: inherit;
+  // }
+  50% {
+    background-color: $primary-font-color-alt;
+  }
+  // 75% {
+  //   background-color: inherit;
+  // }
+  100% {
+    background-color: $bg1;
+  }
+}

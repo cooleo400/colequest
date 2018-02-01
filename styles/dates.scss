@@ -15,7 +15,8 @@
       text-decoration: line-through;
     }
     &.today, &.today a {
-      color: $primary-font-color-alt;
+      animation: animateAltColor 1.5s linear;
+      animation-iteration-count: infinite;
     }
   }
 

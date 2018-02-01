@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Shows from './components/Shows';
 import Footer from './components/Footer';
 import { submitEmail, fetchShows } from './actions';
+import { isShowToday } from './util';
 import logoImage from './images/logo.png';
 import 'normalize.css';
 import 'styles/index.scss';
@@ -28,7 +29,9 @@ class App extends PureComponent {
       shows : false,
       media : false,
       merchandise : false,
-      conctact : false
+      conctact : false,
+      showData : [],
+      showHappeningToday : false
     };
 
     this.setSectionRef = this.setSectionRef.bind(this);
@@ -36,6 +39,19 @@ class App extends PureComponent {
 
   componentDidMount() {
     const { route } = this.props;
+    fetchShows()
+      .then(shows => {
+        // shows[0].fields.date = '2018-01-31'; //KEEP FOR DEBUGGING
+        this.setState({ showData : shows });
+        const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
+        if(showHappeningToday) {
+          document.body.classList.add('show-happening-today');
+        }
+      })
+      .catch((e) => {
+        throw Error(e);
+      });
+
     if(route) {
       const newState = Object.assign({}, this.state);
       newState[route] = true;
@@ -55,11 +71,11 @@ class App extends PureComponent {
       <div>
         <img className="logo" src={logoImage} />
         <div className="content">
-          <Section title="About" className="about" isOpen={this.state.about} ref={ref => this.setSectionRef('about', ref)} >
+          <Section title="About" className="about" isOpen={this.state.about} ref={ref => this.setSectionRef('about', ref)}>
             <About />
           </Section>
           <Section title="Shows" className="shows" isOpen={this.state.shows} ref={ref => this.setSectionRef('shows', ref)}>
-            <Shows fetchShows={fetchShows} />
+            <Shows shows={this.state.showData} />
           </Section>
           <Section title="Media" className="media" isOpen={this.state.media} ref={ref => this.setSectionRef('media', ref)}>
             <Media />

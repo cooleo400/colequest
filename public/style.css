@@ -43,18 +43,23 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  padding: 15px;
-  -webkit-transition: max-height 0.5s ease-in-out;
-  -moz-transition: max-height 0.5s ease-in-out;
-  -ms-transition: max-height 0.5s ease-in-out;
-  transition: max-height 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-family: "Playball", cursive;
-  padding: 15px 2%;
   width: 96%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.status-message.success, .status-message.error {
+  padding: 15px 2%;
+  max-height: 100px;
 }
 
 body {
@@ -612,10 +617,6 @@ input {
 
 .footer {
   padding-bottom: 25px;
-}
-
-.section.contact .status-message {
-  padding: 15px 2%;
 }
 
 .section.contact input.email {
