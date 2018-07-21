@@ -40,6 +40,11 @@
          user-select: $value;
 }
 
+@mixin animateAltBgOnText() {
+  animation: animateAltColor 1.5s linear !important;
+  animation-iteration-count: infinite !important;
+}
+
 @mixin breakpoint($point) {
   @if $point == desktop {
      @media (min-width: 70em) { @content ; }

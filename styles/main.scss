@@ -111,7 +111,12 @@ body.show-happening-today {
 
   .section.shows .section-link,
   .section.shows .section-link h2 {
-    animation: animateAltColor 1.5s linear;
+    @include animateAltBgOnText();
     animation-iteration-count: infinite;
   }
+}
+
+.highlight,
+.highlight:hover {
+  @include animateAltBgOnText();
 }

@@ -42,8 +42,8 @@ class App extends PureComponent {
     fetchShows()
       .then(shows => {
         // shows[0].fields.date = '2018-01-31'; //KEEP FOR DEBUGGING
-        this.setState({ showData : shows });
         const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
+        this.setState({ showData : shows, showHappeningToday });
         if(showHappeningToday) {
           document.body.classList.add('show-happening-today');
         }
@@ -67,23 +67,34 @@ class App extends PureComponent {
   }
 
   render() {
+    const {
+      about,
+      shows,
+      showData,
+      media,
+      merchandise,
+      contact,
+      highlight
+    } = this.state;
+
+
     return (
       <div>
         <img className="logo" src={logoImage} />
         <div className="content">
-          <Section title="About" className="about" isOpen={this.state.about} ref={ref => this.setSectionRef('about', ref)}>
+        <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)}>
             <About />
           </Section>
-          <Section title="Shows" className="shows" isOpen={this.state.shows} ref={ref => this.setSectionRef('shows', ref)}>
-            <Shows shows={this.state.showData} />
+          <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
+            <Shows shows={showData} />
           </Section>
-          <Section title="Media" className="media" isOpen={this.state.media} ref={ref => this.setSectionRef('media', ref)}>
+          <Section title="Media" className="media" isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
             <Media />
           </Section>
-          <Section title="Merchandise" className="merchandise" isOpen={this.state.merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
+          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
             <Merchandise />
           </Section>
-          <Section title="Contact" className="contact" isOpen={this.state.contact} ref={ref => this.setSectionRef('contact', ref)}>
+          <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)}>
             <Contact submitEmail={submitEmail} />
           </Section>
         </div>

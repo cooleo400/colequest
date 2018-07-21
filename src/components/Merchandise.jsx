@@ -2,14 +2,15 @@ import React from 'react';
 import Columns from './Columns';
 import SocialIcon from './SocialIcon';
 import coverImage from '../images/cover.jpg';
+import wearableCoverImage from '../images/merch.jpg';
 
 const Merchandise = () => {
-  const leftColumnChildren = (
+  const cdLeftCol = (
     <div>
-      <img src={coverImage} alt="Cole Quest and The City Pickers" />
+      <img src={coverImage} alt="Cole Quest and The City Pickers CD" />
     </div>
   );
-  const rightColumnChildren = (
+  const cdRightCol = (
     <div>
       <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank">
         <h4 className="margin-top-none">Cole Quest and The City Pickers CD</h4>
@@ -27,8 +28,34 @@ const Merchandise = () => {
       </div>
     </div>
   );
+
+  const wearableLeftCol = (
+    <div>
+      <img src={wearableCoverImage} alt="Pocket Tee's, Hats and Koozies!" />
+    </div>
+  );
+  const wearableRightCol = (
+    <div>
+      <a href="mailto:info@colequest.com" className="highlight" >
+        <h4 className="margin-top-none">Pocket tee's, trucker hats and koozies!</h4>
+      </a>
+      <p>Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we'll do our best to ship it when we can.</p>
+      <p>$15 Shirts<br/>$10 Hats<br/>$3 Koozies</p>
+      <div>
+        <a href="mailto:info@colequest.com" className="order-link">Email us</a>
+      </div>
+    </div>
+  );
+
   return (
-    <Columns leftColumnChildren={leftColumnChildren} rightColumnChildren={rightColumnChildren} />
+    <div>
+      <div className="margin-bottom-md">
+        <Columns leftColumnChildren={cdLeftCol} rightColumnChildren={cdRightCol} />
+      </div>
+      <div>
+        <Columns leftColumnChildren={wearableLeftCol} rightColumnChildren={wearableRightCol} />
+      </div>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const statusMap = {
-  unsubmitted : 'hide',
+  unsubmitted : 'unsubmitted',
   success : 'success',
   failure : 'error',
 }
@@ -38,6 +38,9 @@ class ContactForm extends PureComponent {
       .then((response) => {
         const newState = (response && response.success) ? { status : statusMap.success } : { status: statusMap.failure } ;
         this.setState(newState);
+        setTimeout(() => {
+          this.setState({ status: statusMap.unsubmitted });
+        },5000);
       });
   }
 

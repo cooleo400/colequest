@@ -13,4 +13,13 @@
       display: block;
     }
   }
+
+  &.three-up .col {
+    width: 31%;
+
+    @include breakpoint(mobileonly) {
+      width: 80%;
+      margin: 0 auto 15px;
+    }
+  }
 }

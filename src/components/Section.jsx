@@ -33,15 +33,21 @@ class Section extends PureComponent {
   }
 
   render() {
-    const { children, className, title } = this.props;
+    const { children, className, highlight, title } = this.props;
     const contentClasses = classNames('section-content', {
       'open' : this.state.open
     });
+    const titleClasses = classNames('section-link', {
+      highlight : highlight
+    });
+
 
     return (
       <div className={`section ${className}`} >
         <div className="background-image" />
-        <a className="section-link" onClick={this.handleClick} ><h2>{title}</h2></a>
+        <a className={titleClasses} onClick={this.handleClick} >
+          <h2 className={(highlight) ? 'highlight' : ''}>{title}</h2>
+        </a>
         <div className={contentClasses} >
           <div className="section-content-inner">
             { this.renderChildren() }
@@ -55,12 +61,14 @@ class Section extends PureComponent {
 Section.propTypes = {
   children : PropTypes.element.isRequired,
   className : PropTypes.string,
+  highlight : PropTypes.bool,
   isOpen : PropTypes.bool,
   title : PropTypes.string.isRequired
 };
 
 Section.defaultProps = {
   className : '',
+  highlight : false,
   isOpen : false
 };
 

@@ -33,7 +33,7 @@ class About extends PureComponent {
 
     const leftQuotes = (
       <div>
-        <p>"What a crack team of pickers and voices you have put together. Great dobro playing, world class harmonica...skies the limit when you get a band as good as this." <br/> Ketch Secor / <i>Old Crow Medicine Show</i></p>
+        <p>"What a crack team of pickers and voices you have put together. Great dobro playing, world class harmonica. Damn it sure sounds fun with your city pickers at the microphone." <br/> Ketch Secor / <i>Old Crow Medicine Show</i></p>
         <p>"It's clear that while he embraces much of Woody's legacy, Cole is very successfully forging his own path&nbsp;in&nbsp;music." <br/> John&nbsp;Platt / <a href="http://www.wfuv.org/content/cole-quest-and-city-pickers-0" target="_blank"><i>WFUV</i></a></p>
         <p>"Cole Quest and the City Pickers spread the good word of Bluegrass through clever original songs and a vast library of classics.  Their unbridled energy, tight harmonies and instrumental virtuosity will turn you into a believer in the good book of acoustic roots&nbsp;music." <br/> Steve Danielsson / <a href="http://www.feastofmusic.com/feast_of_music/2015/03/cole-quest-and-the-city-pickers-at-the-living-room.html" target="_blank"><i>Feast&nbsp;Of&nbsp;Music</i></a></p>
         <p>"This year I made sure to catch a showcase of theirs and was not disappointed. I had high expectations and they exceeded&nbsp;them...These guys can energize a crowd on a visceral level while displaying remarkable musicianship and songwriting." <br/> Gordon Nash / <a href="http://horvendile.diaryland.com/oyr217.html#.WK-nihIrLXR" target="_blank"><i>Wise&nbsp;Madness</i></a></p>

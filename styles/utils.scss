@@ -41,14 +41,22 @@
   margin-bottom: 15px;
 }
 
+.margin-bottom-md {
+  margin-bottom: 25px;
+}
+
 .status-message {
   @include border-radius(5px);
   @include transition(all .5s ease-in-out);
   font-family: $primary-font-family;
   width: 96%;
-  @include border-radius(5px);
   max-height: 0;
   overflow: hidden;
+
+  &.unsubmitted {
+    max-height: 0;
+    padding: 0;
+  }
 
   &.success,
   &.error {
