@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Columns = (props) => {
-  const { leftColumnChildren, centerColumnChildren, rightColumnChildren } = props;
+const Columns = ({ leftColumnChildren, centerColumnChildren, rightColumnChildren, marginBottom }) => {
 
   const containerClasses = classNames('cols-container', {
-    'three-up' : centerColumnChildren !== null
+    'three-up' : centerColumnChildren !== null,
+    [`margin-bottom-${marginBottom}`] : marginBottom
   });
 
   return (
@@ -27,13 +27,15 @@ const Columns = (props) => {
 }
 
 Columns.propTypes = {
-  leftColumnChildren : PropTypes.element.isRequired,
   centerColumnChildren : PropTypes.element,
-  rightColumnChildren : PropTypes.element.isRequired,
+  leftColumnChildren : PropTypes.element.isRequired,
+  marginBottom : PropTypes.oneOf(['small', 'medium', 'large']),
+  rightColumnChildren : PropTypes.element.isRequired
 }
 
 Columns.defaultProps = {
   centerColumnChildren : null,
+  marginBottom : null
 }
 
 export default Columns;

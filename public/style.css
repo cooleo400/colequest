@@ -1,3 +1,27 @@
+@keyframes animateAltColor {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: #e4981e;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes animateAltBg {
+  0% {
+    background-color: #c82c2f;
+  }
+  50% {
+    background-color: #e4981e;
+  }
+  100% {
+    background-color: #c82c2f;
+  }
+}
+
 .bg-1 {
   background-color: #c82c2f;
 }
@@ -22,6 +46,10 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
+.display-block {
+  display: block;
+}
+
 .text-center {
   text-align: center;
 }
@@ -38,6 +66,10 @@
   margin-bottom: 15px;
 }
 
+.margin-bottom-md {
+  margin-bottom: 25px;
+}
+
 .status-message {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -49,12 +81,13 @@
   transition: all 0.5s ease-in-out;
   font-family: "Playball", cursive;
   width: 96%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
   max-height: 0;
   overflow: hidden;
+}
+
+.status-message.unsubmitted {
+  max-height: 0;
+  padding: 0;
 }
 
 .status-message.success, .status-message.error {
@@ -223,6 +256,21 @@ img {
   }
 }
 
+.cols-container.three-up .col {
+  width: 31%;
+}
+
+@media (max-width: 37.5em) {
+  .cols-container.three-up .col {
+    width: 80%;
+    margin: 0 auto 15px;
+  }
+}
+
+.cols-container.margin-bottom-small .col {
+  margin-bottom: 15px;
+}
+
 /** more emjoi's at: http://www.emojitracker.com/ **/
 span.emoji {
   display: -moz-inline-box;
@@ -258,6 +306,25 @@ span.emoji {
 
 .rainbow {
   background-image: url(data:image/png;base64,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);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1800px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
 }
 
 .content {
@@ -510,7 +577,7 @@ input {
 }
 
 .section .section-link h2 {
-  transition: all .2s ease-in-out;
+  transition: font-size .2s ease-in-out, color .2s ease-in-out;
   margin: 0;
 }
 
@@ -531,7 +598,10 @@ input {
 }
 
 .section .section-content .section-content-inner {
-  padding: 0 10% 45px;
+  padding-bottom: 45px;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1800px;
 }
 
 .section.about .background-image {
@@ -555,7 +625,7 @@ input {
 }
 
 .section.media .section-content.open {
-  max-height: 3000px;
+  max-height: 3500px;
 }
 
 .section.merchandise .background-image {
@@ -583,7 +653,8 @@ input {
 }
 
 .dates .dates-row.today, .dates .dates-row.today a {
-  color: #e4981e;
+  animation: animateAltColor 1.5s linear;
+  animation-iteration-count: infinite;
 }
 
 .dates .dates-col {
@@ -678,7 +749,6 @@ input {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
-  margin-bottom: 25px;
 }
 
 .video-wrapper .video {
@@ -693,6 +763,24 @@ input {
   display: block;
   text-align: center;
   margin-bottom: 25px;
+}
+
+body.show-happening-today {
+  animation: animateAltBg 3s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+body.show-happening-today .section.shows .section-link,
+body.show-happening-today .section.shows .section-link h2 {
+  animation: animateAltColor 1.5s linear !important;
+  animation-iteration-count: infinite !important;
+  animation-iteration-count: infinite;
+}
+
+.highlight,
+.highlight:hover {
+  animation: animateAltColor 1.5s linear !important;
+  animation-iteration-count: infinite !important;
 }
 
 .button {

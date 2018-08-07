@@ -1,3 +1,4 @@
+@import './variables';
 @import './mixins';
 
 .cols-container {
@@ -21,5 +22,9 @@
       width: 80%;
       margin: 0 auto 15px;
     }
+  }
+
+  &.margin-bottom-small .col {
+    margin-bottom: $small;
   }
 }
