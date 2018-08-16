@@ -1,6 +1,6 @@
 <?php
 
-include('./apikey.php');
+include('./apiKey.php');
 include('./MailChimp.php');
 
 use \DrewM\MailChimp\MailChimp;
