@@ -11,7 +11,7 @@ $send_welcome=false;
 $status = "subscribed";
 $email_type = 'html';
 
-$MailChimp = new MailChimp('cde4aaa9e1e77e37dcddebc47c7e8511-us10');
+$MailChimp = new MailChimp($apiKey);
 
 // # Get JSON as a string
 $json_str = file_get_contents('php://input');
