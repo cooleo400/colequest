@@ -52,9 +52,9 @@ class Media extends PureComponent {
 
     return (
       <div>
-        <Columns leftColumnChildren={leftImage} rightColumnChildren={rightImage} marginBottom="small" />
         <Columns leftColumnChildren={leftVideoOne} rightColumnChildren={rightVideoOne} marginBottom="small" />
         <Columns leftColumnChildren={leftVideoTwo} rightColumnChildren={rightVideoTwo} marginBottom="small" />
+        <Columns leftColumnChildren={leftImage} rightColumnChildren={rightImage} marginBottom="small" />
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.handleCloseModal}
