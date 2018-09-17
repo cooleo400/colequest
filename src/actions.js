@@ -13,6 +13,7 @@ const client = createClient({
 });
 
 export function fetchShows() {
+  // return Promise.resolve();
   return fetchEntriesForContentType('gig');
 }
 

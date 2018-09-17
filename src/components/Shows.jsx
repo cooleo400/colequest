@@ -20,7 +20,16 @@ class Shows extends PureComponent {
         date,
         time
       } = show.fields;
-      return <Show eventTitle={eventTitle} eventLink={eventLink} locationTitle={locationTitle} locationLink={locationLink} date={date} time={time} key={`show-${index}`}/>
+      return (
+        <Show
+          eventTitle={eventTitle}
+          eventLink={eventLink}
+          locationTitle={locationTitle}
+          locationLink={locationLink}
+          date={date}
+          time={time}
+          key={`show-${index}`}
+      />);
     });
   }
 
@@ -37,20 +46,32 @@ class Shows extends PureComponent {
     );
   }
 
-  render() {
+  renderFetchedShows() {
     const { shows } = this.props;
+
     if(shows) {
       if(shows.length > 0){
-        {this.renderShowsTable()}
+        return this.renderShowsTable();
       } else {
-        return (<p className="text-center">Unfortunately there are no upcoming shows. :-/</p>);
+        return (<p className="text-center">More shows coming soon...</p>);
       }
     } else {
       return (
         <Loader />
       );
     }
-    return this.renderShowsTable();
+  }
+
+  render() {
+      return (
+        <div>
+          <div className="text-center">
+            <a href="https://leestavall.com/collections/preorders/products/colequest" target="_blank" className="highlight"><h4 className="margin-top-none margin-bottom-none">Upcoming Leesta Vall Recording session!</h4></a>
+            <p><span className="highlight">--------</span><br/>We're doing a special vinyl recording session coming up on <b>Oct&nbsp;17th</b>, visit our <a href="https://leestavall.com/collections/preorders/products/colequest" target="_blank">session page</a> to get your own personalized song!<br/><span className="highlight">___________</span></p>
+          </div>
+          {this.renderFetchedShows()}
+        </div>
+      );
   };
 };
 

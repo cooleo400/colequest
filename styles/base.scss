@@ -46,7 +46,7 @@ h4 {
   font-family: $secondary-font-family;
   font-size: $secondary-font-md;
   @include breakpoint('mobileonly') {
-    font-size: $secondary-font-sm;
+    font-size: $secondary-font-xs;
   }
 }
 

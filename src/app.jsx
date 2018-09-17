@@ -41,7 +41,7 @@ class App extends PureComponent {
     const { route } = this.props;
     fetchShows()
       .then(shows => {
-        // shows[0].fields.date = '2018-01-31'; //KEEP FOR DEBUGGING
+        // shows[0].fields.date = '2018-09-16'; //KEEP FOR DEBUGGING
         const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
         this.setState({ showData : shows, showHappeningToday });
         if(showHappeningToday) {
@@ -73,8 +73,7 @@ class App extends PureComponent {
       showData,
       media,
       merchandise,
-      contact,
-      highlight
+      contact
     } = this.state;
 
 
@@ -85,7 +84,7 @@ class App extends PureComponent {
         <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)}>
             <About />
           </Section>
-          <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
+          <Section title="Shows" className="shows" highlight isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
             <Shows shows={showData} />
           </Section>
           <Section title="Media" className="media" isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
