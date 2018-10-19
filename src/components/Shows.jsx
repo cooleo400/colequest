@@ -65,10 +65,6 @@ class Shows extends PureComponent {
   render() {
       return (
         <div>
-          <div className="text-center">
-            <a href="https://leestavall.com/collections/preorders/products/colequest" target="_blank" className="highlight"><h4 className="margin-top-none margin-bottom-none">Upcoming Leesta Vall Recording session!</h4></a>
-            <p><span className="highlight">--------</span><br/>We're doing a special vinyl recording session coming up on <b>Oct&nbsp;17th</b>, visit our <a href="https://leestavall.com/collections/preorders/products/colequest" target="_blank">session page</a> to get your own personalized song!<br/><span className="highlight">___________</span></p>
-          </div>
           {this.renderFetchedShows()}
         </div>
       );
