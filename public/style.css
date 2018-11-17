@@ -632,6 +632,10 @@ input {
   background-image: url(./50dbc441875e2d6bc21f331aa6056356.jpg);
 }
 
+.section.merchandise .section-content.open {
+  max-height: 2500px;
+}
+
 .section.contact .background-image {
   background-image: url(./60045edf1f61b5eee47a306e84fce59d.jpg);
 }

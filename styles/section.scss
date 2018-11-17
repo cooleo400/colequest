@@ -87,8 +87,16 @@
       }
     }
   }
-  &.merchandise .background-image {
-    background-image: url('../src/images/fire_picking.jpg');
+  &.merchandise {
+    .background-image {
+      background-image: url('../src/images/fire_picking.jpg');
+    }
+
+    .section-content {
+      &.open {
+        max-height: 2500px;
+      }
+    }
   }
   &.contact .background-image {
     background-image: url('../src/images/cole_christian_thought.jpg');
