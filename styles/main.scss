@@ -121,3 +121,5 @@ body.show-happening-today {
 .highlight:hover {
   @include animateAltBgOnText();
 }
+
+@import './header';

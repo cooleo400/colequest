@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import scrollToComponent from 'react-scroll-to-component';
+import Header from './components/Header';
 import Section from './components/Section';
 import About from './components/About';
 import Media from './components/Media';
@@ -10,7 +11,6 @@ import Shows from './components/Shows';
 import Footer from './components/Footer';
 import { submitEmail, fetchShows } from './actions';
 import { isShowToday } from './util';
-import logoImage from './images/logo.png';
 import 'normalize.css';
 import 'styles/index.scss';
 
@@ -18,21 +18,23 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
     this.sectionRefs = {
-      about : null,
-      shows : null,
-      media : null,
-      merchandise : null,
-      conctact : null
+      about: null,
+      shows: null,
+      media: null,
+      merchandise: null,
+      contact: null
     };
     this.state = {
-      about : false,
-      shows : false,
-      media : false,
-      merchandise : false,
-      conctact : false,
-      showData : [],
-      showHappeningToday : false
+      about: false,
+      contact: false,
+      media: false,
+      merchandise: false,
+      shows: false,
+      showData: [],
+      showHappeningToday: false
     };
+
+    this.showVideo =  !/iPad|iPhone|iPod|Android/.test(navigator.userAgent);
 
     this.setSectionRef = this.setSectionRef.bind(this);
   }
@@ -43,7 +45,7 @@ class App extends PureComponent {
       .then(shows => {
         // shows[0].fields.date = '2018-09-16'; //KEEP FOR DEBUGGING
         const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
-        this.setState({ showData : shows, showHappeningToday });
+        this.setState({ showData: shows, showHappeningToday });
         if(showHappeningToday) {
           document.body.classList.add('show-happening-today');
         }
@@ -58,11 +60,11 @@ class App extends PureComponent {
       this.setState(newState);
       setTimeout(() => {
         scrollToComponent(this.sectionRefs[route], { offset: 0, align: 'top', duration: 500, ease: 'inCirc' });
-      },500);
+      }, 500);
     }
   }
 
-  setSectionRef(section,ref) {
+  setSectionRef(section, ref) {
     this.sectionRefs[section] = ref;
   }
 
@@ -77,12 +79,11 @@ class App extends PureComponent {
       highlight
     } = this.state;
 
-
     return (
       <div>
-        <img className="logo" src={logoImage} />
+        <Header showVideo={this.showVideo} />
         <div className="content">
-        <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)}>
+          <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)}>
             <About />
           </Section>
           <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
@@ -102,14 +103,14 @@ class App extends PureComponent {
       </div>
     );
   }
-};
+}
 
 App.propTypes = {
-  route : PropTypes.string
+  route: PropTypes.string
 }
 
 App.defaultProps = {
-  route : null
+  route: null
 }
 
 export default App;
