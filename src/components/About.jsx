@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import Columns from './Columns';
 import Loader from './Loader';
 
+const epkLink = 'https://drive.google.com/open?id=1Af2V_dZbPYB8LN78R_gUQdoXeZ0Ihn0-';
+
 class About extends PureComponent {
   constructor(props) {
     super(props);
@@ -50,6 +52,7 @@ class About extends PureComponent {
     );
     return (
       <div>
+        <a href={epkLink} target="_blank" className="order-link">Press Kit</a>
         <Columns leftColumnChildren={bio} rightColumnChildren={twitter} />
         <br />
         <Columns leftColumnChildren={leftQuotes} rightColumnChildren={rightQuotes} />

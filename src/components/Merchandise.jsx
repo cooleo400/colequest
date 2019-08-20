@@ -4,6 +4,7 @@ import SocialIcon from './SocialIcon';
 import coverImage from '../images/cover.jpg';
 import wearableCoverImage from '../images/merch.jpg';
 import vinylCoverImage from '../images/vinyl.jpg';
+import bandanaCoverImage from '../images/bandana.jpg';
 
 const Merchandise = () => {
   const cdImage = (
@@ -55,11 +56,29 @@ const Merchandise = () => {
   );
   const vinylDescription = (
     <div>
-      <a href="mailto:info@colequest.com" className="highlight" >
+      <a href="mailto:info@colequest.com">
         <h4 className="margin-top-none">Limited Edition Lathe Cut Records</h4>
       </a>
       <p>Recorded live at <a href="https://leestavall.com/collections/livesessions/products/lvls524?variant=12441059360812" target="_blank">LeestaVall Record Studios</a>, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950's. Each record is handmade, one at a time, in real time, by a real person.</p>
-      <p>$20</p>
+      <p>$20 <span className="highlight">*Only 2 left!*</span></p>
+      <div>
+        <a href="mailto:info@colequest.com" className="order-link">Email us</a>
+      </div>
+    </div>
+  );
+
+  const bandanaImage = (
+    <div>
+      <img src={bandanaCoverImage} alt="Brooklyn Bandanas" />
+    </div>
+  );
+  const bandanaDescription = (
+    <div>
+      <a href="mailto:info@colequest.com" className="highlight" >
+        <h4 className="margin-top-none">Bandanas</h4>
+      </a>
+      <p>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank">Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</p>
+      <p>$15</p>
       <div>
         <a href="mailto:info@colequest.com" className="order-link">Email us</a>
       </div>
@@ -69,12 +88,15 @@ const Merchandise = () => {
   return (
     <div>
       <div className="margin-bottom-md">
+        <Columns leftColumnChildren={bandanaImage} rightColumnChildren={bandanaDescription} />
+      </div>
+      <div className="margin-bottom-md">
         <Columns leftColumnChildren={vinylImage} rightColumnChildren={vinylDescription} />
       </div>
-      <div>
+      <div className="margin-bottom-md">
         <Columns leftColumnChildren={wearableImage} rightColumnChildren={wearableDescription} />
       </div>
-      <div>
+      <div className="margin-bottom-md">
         <Columns leftColumnChildren={cdImage} rightColumnChildren={cdDescription} />
       </div>
     </div>

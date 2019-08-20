@@ -56,7 +56,10 @@ input {
 
 $margin: 25px;
 .social-container-sm {
-  width: 250px;
+  width: 246px;
+  @include breakpoint('mobileonly') {
+    width: 190px;
+  }
 }
 .social-container-md {
   width: 330px;

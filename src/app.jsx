@@ -89,7 +89,7 @@ class App extends PureComponent {
           <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
             <Shows shows={showData} />
           </Section>
-          <Section title="Media" className="media" isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
+          <Section title="Media" className="media" highlight isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
             <Media />
           </Section>
           <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>

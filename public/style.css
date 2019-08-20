@@ -704,7 +704,13 @@ input {
 }
 
 .social-container-sm {
-  width: 250px;
+  width: 246px;
+}
+
+@media (max-width: 37.5em) {
+  .social-container-sm {
+    width: 190px;
+  }
 }
 
 .social-container-md {
