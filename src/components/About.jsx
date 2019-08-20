@@ -22,7 +22,8 @@ class About extends PureComponent {
     const bio = (
       <div>
         <p>Cole Quest and The City Pickers are a group of New York City musicians connected by friendship and a love of bluegrass. Cole Quest, grandson of the folk icon Woody Guthrie, has brought together a collection of eclectic pickers who have gained recognition on the local scene. Performing both Quest's original tunes as well as traditional favorites, The City Pickers bring their special brand of high-spirited talent to the stage, with up-beat, knee slapping energy and a high lonesome sound that'll leave you wanting more.</p>
-        <p>After recording at NYC's renowned Magic Shop studio, by Grammy award winning producer Steve Rosenthal, they released their debut album in 2017. They've shared bills with acts such as Sierra Hull, Sarah Jaroz, Billy Strings & Don Julin, Della Mae, The Brothers Comatose, The Lil Smokies, Whiskey Shivers, Old Salt Union, The Lonely Heartstring Band, Willie Watson, Blind Boy Paxton and Michael Daves during their tenure as group and continue to perform for live audiances throughout the US. Sign up for the mailing list to catch the next show!</p>
+        <p>After recording at NYC's renowned Magic Shop studio, by Grammy award winning producer Steve Rosenthal, they released their debut album in 2017. They've shared bills with acts such as Sierra Hull, Sarah Jaroz, Billy Strings & Don Julin, Della Mae, The Brothers Comatose, The Lil Smokies, Whiskey Shivers, Old Salt Union, The Lonely Heartstring Band, Willie Watson, Blind Boy Paxton and Michael Daves during their tenure as group and continue to perform for live audiences throughout the US. Sign up for the mailing list to catch the next show!</p>
+        <a href={epkLink} target="_blank" className="order-link">Press Kit</a>
       </div>
     );
     const twitter = (
@@ -52,7 +53,6 @@ class About extends PureComponent {
     );
     return (
       <div>
-        <a href={epkLink} target="_blank" className="order-link">Press Kit</a>
         <Columns leftColumnChildren={bio} rightColumnChildren={twitter} />
         <br />
         <Columns leftColumnChildren={leftQuotes} rightColumnChildren={rightQuotes} />

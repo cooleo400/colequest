@@ -17,7 +17,7 @@ const Merchandise = () => {
       <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank">
         <h4 className="margin-top-none">Cole Quest and The City Pickers CD</h4>
       </a>
-      <p>A handful of original tunes as well as a few of our favorite traditional tunes, recorded live at The Magic Shop studio. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.</p>
+      <p>Released in 2016, our debut CD contains a handful of originals as well as a few of our favorite traditional tunes, recorded live at The Magic Shop studio. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.</p>
       <p>$10.00</p>
       <div>
         <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank" className="button order-link">Order</a>
@@ -42,7 +42,7 @@ const Merchandise = () => {
         <h4 className="margin-top-none">Pocket tee's, trucker hats and koozies!</h4>
       </a>
       <p>Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we'll do our best to ship it when we can.</p>
-      <p>$15 Shirts<br/>$10 Hats<br/>$3 Koozies</p>
+      <p>$15 Shirts <span className="highlight">*Only 3 left!*</span><br/>$10 Hats<br/>$3 Koozies</p>
       <div>
         <a href="mailto:info@colequest.com" className="order-link">Email us</a>
       </div>
