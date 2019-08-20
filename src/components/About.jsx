@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import Columns from './Columns';
 import Loader from './Loader';
+import Quote from './Quote';
 
 const epkLink = 'https://drive.google.com/open?id=1Af2V_dZbPYB8LN78R_gUQdoXeZ0Ihn0-';
 
@@ -36,11 +37,21 @@ class About extends PureComponent {
 
     const leftQuotes = (
       <div>
-        <p>"What a crack team of pickers and voices you have put together. Great dobro playing, world class harmonica. Damn it sure sounds fun with your city pickers at the microphone."</p><p><span className="color-bg-1">Ketch Secor</span> / <i>Old Crow Medicine Show</i></p>
-        <p>"It's clear that while he embraces much of Woody's legacy, Cole is very successfully forging his own path&nbsp;in&nbsp;music."</p><p><span className="color-bg-1">John&nbsp;Platt</span> / <a href="http://www.wfuv.org/content/cole-quest-and-city-pickers-0" target="_blank"><i>WFUV</i></a></p>
-        <p>"Cole Quest and the City Pickers spread the good word of Bluegrass through clever original songs and a vast library of classics.  Their unbridled energy, tight harmonies and instrumental virtuosity will turn you into a believer in the good book of acoustic roots&nbsp;music." </p><p><span className="color-bg-1">Steve Danielsson</span> / <a href="http://www.feastofmusic.com/feast_of_music/2015/03/cole-quest-and-the-city-pickers-at-the-living-room.html" target="_blank"><i>Feast&nbsp;Of&nbsp;Music</i></a></p>
-        <p>"This year I made sure to catch a showcase of theirs and was not disappointed. I had high expectations and they exceeded&nbsp;them...These guys can energize a crowd on a visceral level while displaying remarkable musicianship and songwriting."</p><p><span className="color-bg-1">Gordon Nash</span> / <a href="http://horvendile.diaryland.com/oyr217.html#.WK-nihIrLXR" target="_blank"><i>Wise&nbsp;Madness</i></a></p>
-        <p>"Like a young romantic interlude, it's hot, it's tight, it's exciting and it leaves the crowd wanting more! They're like your very first dalliance in the musical arena of love! They'll leave you breathless and confused but satiated and&nbsp;spent!"</p><p><span className="color-bg-1">Michael&nbsp;Weinstein</span></p>
+        <Quote author="Ketch Secor" attribution="Old Crow Medicine Show">
+          "What a crack team of pickers and voices you have put together. Great dobro playing, world class harmonica. Damn it sure sounds fun with your city pickers at the microphone."
+        </Quote>
+        <Quote author="John&nbsp;Platt" attribution="WFUV" attributionLink="http://www.wfuv.org/content/cole-quest-and-city-pickers-0">
+          "It's clear that while he embraces much of Woody's legacy, Cole is very successfully forging his own path&nbsp;in&nbsp;music."
+        </Quote>
+        <Quote author="Steve Danielsson" attribution="Feast&nbsp;Of&nbsp;Music" attributionLink="http://www.feastofmusic.com/feast_of_music/2015/03/cole-quest-and-the-city-pickers-at-the-living-room.html">
+          "Cole Quest and the City Pickers spread the good word of Bluegrass through clever original songs and a vast library of classics.  Their unbridled energy, tight harmonies and instrumental virtuosity will turn you into a believer in the good book of acoustic roots&nbsp;music."
+        </Quote>
+        <Quote author="Gordon Nash" attribution="Wise&nbsp;Madness" attributionLink="http://horvendile.diaryland.com/oyr217.html#.WK-nihIrLXR">
+          "This year I made sure to catch a showcase of theirs and was not disappointed. I had high expectations and they exceeded&nbsp;them...These guys can energize a crowd on a visceral level while displaying remarkable musicianship and songwriting."
+        </Quote>
+        <Quote author="Michael&nbsp;Weinstein">
+          "Like a young romantic interlude, it's hot, it's tight, it's exciting and it leaves the crowd wanting more! They're like your very first dalliance in the musical arena of love! They'll leave you breathless and confused but satiated and&nbsp;spent!"
+        </Quote>
       </div>
     );
     const rightQuotes = (
