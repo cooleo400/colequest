@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Video = ({ youtubeId, autoPlay }) => {
+const Video = ({ youtubeId, autoPlay, isNew }) => {
   let url = `https://www.youtube.com/embed/${youtubeId}`;
   if(autoPlay) {
     url += `?autoplay=1&mute=1&rel=0&loop=1&playlist=${youtubeId}`;
@@ -9,18 +9,23 @@ const Video = ({ youtubeId, autoPlay }) => {
 
   return (
     <div className="video-wrapper">
+      { isNew && (
+          <p className="is-new highlight">NEW</p>
+      )}
       <iframe className="video" width="560" height="315" src={url} frameBorder="0" allowFullScreen></iframe>
     </div>
   );
 }
 
 Video.propsTypes = {
+  autoPlay: PropTypes.bool,
+  isNew: PropTypes.bool,
   youtubeId: PropTypes.string.isRequired,
-  autoPlay: PropTypes.bool
 }
 
 Video.defaultProps = {
-  autoPlay: false
+  autoPlay: false,
+  isNew: false
 }
 
 export default Video;

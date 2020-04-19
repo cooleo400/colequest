@@ -42,7 +42,13 @@ const Merchandise = () => {
         <h4 className="margin-top-none">Pocket tee's, trucker hats and koozies!</h4>
       </a>
       <p>Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we'll do our best to ship it when we can.</p>
-      <p>$15 Shirts <span className="highlight">*Only 3 left!*</span><br/>$10 Hats<br/>$3 Koozies</p>
+      <p>
+        <span className="strike">$15 Shirts</span>
+        <br/>
+        $10 Hats
+        <br/>
+        $3 Koozies
+      </p>
       <div>
         <a href="mailto:info@colequest.com" className="order-link">Email us</a>
       </div>
@@ -60,7 +66,7 @@ const Merchandise = () => {
         <h4 className="margin-top-none">Limited Edition Lathe Cut Records</h4>
       </a>
       <p>Recorded live at <a href="https://leestavall.com/collections/livesessions/products/lvls524?variant=12441059360812" target="_blank">LeestaVall Record Studios</a>, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950's. Each record is handmade, one at a time, in real time, by a real person.</p>
-      <p>$20 <span className="highlight">*Only 2 left!*</span></p>
+      <p className="strike">$20</p>
       <div>
         <a href="mailto:info@colequest.com" className="order-link">Email us</a>
       </div>
@@ -74,7 +80,7 @@ const Merchandise = () => {
   );
   const bandanaDescription = (
     <div>
-      <a href="mailto:info@colequest.com" className="highlight" >
+      <a href="mailto:info@colequest.com" >
         <h4 className="margin-top-none">Bandanas</h4>
       </a>
       <p>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank">Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</p>

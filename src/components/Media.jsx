@@ -13,7 +13,7 @@ class Media extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen : false
+      modalIsOpen: false
     };
 
     this.openModalImageOne = this.openModal.bind(this, pressPhotoOne);
@@ -24,22 +24,22 @@ class Media extends PureComponent {
   openModal(image, event) {
     event.preventDefault();
     this.setState({
-      modalIsOpen : true,
+      modalIsOpen: true,
       image
     });
   }
 
   handleCloseModal() {
     this.setState({
-      modalIsOpen : false
+      modalIsOpen: false
     });
   }
 
   render() {
-    const leftVideoOne = (<Video youtubeId="WjJSC8v5bAg" />);
-    const rightVideoOne = (<Video youtubeId="OCCV3hsgSyM" />);
-    const leftVideoTwo = (<Video youtubeId="B6bVcKoctL4" />);
-    const rightVideoTwo = (<Video youtubeId="a-2fJTCJ41Y" />);
+    const ostrichTherapyVideo = (<Video youtubeId="WjJSC8v5bAg" />);
+    const waxCyclinderVideo = (<Video youtubeId="OCCV3hsgSyM" />);
+    const themeTimeVideo = (<Video youtubeId="B6bVcKoctL4" />);
+    const doReMiVideo = (<Video youtubeId="SPPbG1u4lvU" isNew />);
     const leftImage = (
       <a href="#" onClick={this.openModalImageOne} >
         <img src={pressPhotoOne} alt="Press Photo 1" className="display-block" />
@@ -50,19 +50,19 @@ class Media extends PureComponent {
         <img src={pressPhotoTwo} alt="Press Photo 2" className="display-block" />
       </a>
     );
-    const trackOne = (
+    const bitcoinGamblerSoundCloud = (
       <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/667625246&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
     );
-    const trackTwo = (
+    const standingMountainSoundCloud = (
       <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/617323221&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
     );
 
     return (
       <div>
-        <Columns leftColumnChildren={leftVideoOne} rightColumnChildren={rightVideoOne} marginBottom="small" />
-        <Columns leftColumnChildren={leftVideoTwo} rightColumnChildren={rightVideoTwo} marginBottom="small" />
+        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={ostrichTherapyVideo} marginBottom="small" />
+        <Columns leftColumnChildren={themeTimeVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
         <Columns leftColumnChildren={leftImage} rightColumnChildren={rightImage} marginBottom="small" />
-        <Columns leftColumnChildren={trackOne} rightColumnChildren={trackTwo} marginBottom="small" />
+        <Columns leftColumnChildren={bitcoinGamblerSoundCloud} rightColumnChildren={standingMountainSoundCloud} marginBottom="small" />
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="youtube" />

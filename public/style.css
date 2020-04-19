@@ -769,6 +769,33 @@ input {
   height: 100%;
 }
 
+.video-wrapper .is-new {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg) translate(0px, -20px);
+  -moz-transform: rotate(-45deg) translate(0px, -20px);
+  -ms-transform: rotate(-45deg) translate(0px, -20px);
+  transform: rotate(-45deg) translate(0px, -20px);
+  font-size: 30px;
+}
+
+@media (max-width: 37.5em) {
+  .video-wrapper .is-new {
+    -webkit-transform: rotate(-45deg) translate(30px, -5px);
+    -moz-transform: rotate(-45deg) translate(30px, -5px);
+    -ms-transform: rotate(-45deg) translate(30px, -5px);
+    transform: rotate(-45deg) translate(30px, -5px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(1, 1, 1, 0.7);
+    padding: 10px;
+  }
+}
+
 .order-link {
   display: block;
   text-align: center;
@@ -791,6 +818,11 @@ body.show-happening-today .section.shows .section-link h2 {
 .highlight:hover {
   animation: animateAltColor 1.5s linear !important;
   animation-iteration-count: infinite !important;
+}
+
+.strike {
+  color: #666666;
+  text-decoration: line-through;
 }
 
 .header {
