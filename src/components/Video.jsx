@@ -8,7 +8,7 @@ const Video = ({ youtubeId, autoPlay, isNew }) => {
   }
 
   return (
-    <div className="video-wrapper">
+    <div className="video-wrapper is-new-wrapper">
       { isNew && (
           <p className="is-new highlight">NEW</p>
       )}

@@ -769,6 +769,7 @@ input {
   height: 100%;
 }
 
+.is-new,
 .video-wrapper .is-new {
   position: absolute;
   top: 0;

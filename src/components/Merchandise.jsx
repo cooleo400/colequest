@@ -2,11 +2,37 @@ import React from 'react';
 import Columns from './Columns';
 import SocialIcon from './SocialIcon';
 import coverImage from '../images/cover.jpg';
+import cover2Image from '../images/front-cover.jpg';
 import wearableCoverImage from '../images/merch.jpg';
 import vinylCoverImage from '../images/vinyl.jpg';
 import bandanaCoverImage from '../images/bandana.jpg';
 
 const Merchandise = () => {
+  const cd2Image = (
+    <div className="is-new-wrapper">
+      <p className="is-new highlight">NEW</p>
+      <img src={cover2Image} alt="Self [En]Titled" />
+    </div>
+  );
+  const cd2Description = (
+    <div>
+      <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank">
+        <h4 className="margin-top-none highlight">Cole Quest and The City Pickers: Self [En]Titled</h4>
+      </a>
+      <p>Released in 2020, this 6 track EP contains a few of our more self absorbed songs, including a cover of Woody Guthrie\'s lyric, Way Over Yonder in the Minor key. This was recorded at Conveyor Studios and produced by Steve Rosenthal. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.</p>
+      <p>$7.00</p>
+      <div>
+        <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank" className="button order-link">Order</a>
+      </div>
+      <div className="social-container-md">
+        <SocialIcon type="apple-se" />
+        <SocialIcon type="spotify-se" />
+        <SocialIcon type="bandcamp" />
+        <SocialIcon type="googlePlay-se" />
+      </div>
+    </div>
+  );
+
   const cdImage = (
     <div>
       <img src={coverImage} alt="Cole Quest and The City Pickers CD" />
@@ -94,10 +120,10 @@ const Merchandise = () => {
   return (
     <div>
       <div className="margin-bottom-md">
-        <Columns leftColumnChildren={bandanaImage} rightColumnChildren={bandanaDescription} />
+        <Columns leftColumnChildren={cd2Image} rightColumnChildren={cd2Description} />
       </div>
       <div className="margin-bottom-md">
-        <Columns leftColumnChildren={vinylImage} rightColumnChildren={vinylDescription} />
+        <Columns leftColumnChildren={bandanaImage} rightColumnChildren={bandanaDescription} />
       </div>
       <div className="margin-bottom-md">
         <Columns leftColumnChildren={wearableImage} rightColumnChildren={wearableDescription} />
