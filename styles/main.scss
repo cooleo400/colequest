@@ -14,15 +14,8 @@
 
 .logo {
   display: block;
-  width: 40%;
+  width: 100%;
   margin: 0 auto;
-  padding: 45px 0;
-  max-width: 800px;
-
-  @include breakpoint('mobileonly') {
-    width: 60%;
-    padding: 20px 0;
-  }
 }
 
 input {

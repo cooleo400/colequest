@@ -62,7 +62,7 @@
 
   &.about {
     .background-image {
-      background-image: url('../src/images/rockland_dobro.jpg');
+      background-image: url('../src/images/rockland-sing.jpg');
     }
     p:first-child {
       margin-top: 0;
@@ -89,7 +89,8 @@
   }
   &.merchandise {
     .background-image {
-      background-image: url('../src/images/front-cover.jpg');
+      background-image: url('../src/images/rockland_dobro.jpg');
+      // background-image: url('../src/images/front-cover.jpg');
     }
 
     .section-content {

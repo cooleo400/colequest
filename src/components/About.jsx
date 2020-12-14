@@ -23,8 +23,7 @@ class About extends PureComponent {
     const bio = (
       <div>
         <p>Cole Quest and The City Pickers are a group of New York City musicians connected by friendship and a love of bluegrass. Cole Quest, grandson of the folk icon Woody Guthrie, has brought together a collection of eclectic pickers who have gained recognition on the local scene. Performing both Quest's original tunes as well as traditional favorites, The City Pickers bring their special brand of high-spirited talent to the stage, with up-beat, knee slapping energy and a high lonesome sound that'll leave you wanting more.</p>
-        <p>After recording at NYC's renowned Magic Shop studio, by Grammy award winning producer Steve Rosenthal, they released their debut album in 2017. They've shared bills with acts such as Sierra Hull, Sarah Jaroz, Billy Strings & Don Julin, Della Mae, The Brothers Comatose, The Lil Smokies, Whiskey Shivers, Old Salt Union, The Lonely Heartstring Band, Willie Watson, Blind Boy Paxton and Michael Daves during their tenure as group and continue to perform for live audiences throughout the US. Sign up for the mailing list to catch the next show!</p>
-        <a href={epkLink} target="_blank" className="order-link">Press Kit</a>
+        <p>After recording at NYC's renowned Magic Shop studio and releasing their debut album in 2017, they are now planning to release their first EP, Self [En]Titled, in January of 2020 with the help of Grammy award winning producer Steve Rosenthal and Grammy nominated mastering engineer, Michael Graves. They've shared bills with acts such as Sierra Hull, Sarah Jaroz, Billy Strings & Don Julin, Della Mae, The Brothers Comatose, The Lil Smokies, Whiskey Shivers, Old Salt Union, The Lonely Heartstring Band, Willie Watson, Blind Boy Paxton, Mike + Ruthy (of The Mammals), Tony Trischka, and Michael Daves during their tenure as group and continue to perform for live audiences throughout the US. Sign up for the mailing list to catch the next show!</p>
       </div>
     );
     const twitter = (
@@ -48,9 +47,6 @@ class About extends PureComponent {
         </Quote>
         <Quote author="Gordon Nash" attribution="Wise&nbsp;Madness" attributionLink="http://horvendile.diaryland.com/oyr217.html#.WK-nihIrLXR">
           "This year I made sure to catch a showcase of theirs and was not disappointed. I had high expectations and they exceeded&nbsp;them...These guys can energize a crowd on a visceral level while displaying remarkable musicianship and songwriting."
-        </Quote>
-        <Quote author="Michael&nbsp;Weinstein">
-          "Like a young romantic interlude, it's hot, it's tight, it's exciting and it leaves the crowd wanting more! They're like your very first dalliance in the musical arena of love! They'll leave you breathless and confused but satiated and&nbsp;spent!"
         </Quote>
       </div>
     );

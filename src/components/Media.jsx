@@ -36,7 +36,7 @@ class Media extends PureComponent {
   }
 
   render() {
-    const wayOverYonderVideo = (<Video youtubeId="zOBQg-OvpBU" isNew />);
+    const ostrichTherapyVideo = (<Video youtubeId="WjJSC8v5bAg" />);
     const waxCyclinderVideo = (<Video youtubeId="OCCV3hsgSyM" />);
     const themeTimeVideo = (<Video youtubeId="B6bVcKoctL4" />);
     const doReMiVideo = (<Video youtubeId="SPPbG1u4lvU" isNew />);
@@ -59,10 +59,10 @@ class Media extends PureComponent {
 
     return (
       <div>
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={doReMiVideo} marginBottom="small" />
+        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={ostrichTherapyVideo} marginBottom="small" />
         <Columns leftColumnChildren={themeTimeVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
         <Columns leftColumnChildren={leftImage} rightColumnChildren={rightImage} marginBottom="small" />
-        {standingMountainSoundCloud}
+        <Columns leftColumnChildren={bitcoinGamblerSoundCloud} rightColumnChildren={standingMountainSoundCloud} marginBottom="small" />
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="youtube" />

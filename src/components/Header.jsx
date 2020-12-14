@@ -1,8 +1,8 @@
 import React from 'react';
 import Video from './Video';
-import logoImage from '../images/logo.png';
+import logoImage from '../images/front-cover.jpg';
 
-const youtubeId = "qSdHVLTb2RA";
+const youtubeId = "moSbBL3G1ao";
 
 const Header = ({ showVideo }) => {
   if(showVideo) {
@@ -14,8 +14,11 @@ const Header = ({ showVideo }) => {
       </div>
     );
   } else {
+    const youtubeLink = `https://youtu.be/${youtubeId}`
     return (
-      <img className="logo" src={logoImage} />
+      <a href={youtubeLink} target="_blank">
+        <img className="logo" src={logoImage} />
+      </a>
     );
   }
 };
