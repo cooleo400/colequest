@@ -2,7 +2,7 @@ import React from 'react';
 import Video from './Video';
 import logoImage from '../images/front-cover.jpg';
 
-const youtubeId = "moSbBL3G1ao";
+const youtubeId = "IlhjwJAh1BU";
 
 const Header = ({ showVideo }) => {
   if(showVideo) {
@@ -18,6 +18,7 @@ const Header = ({ showVideo }) => {
     return (
       <a href={youtubeLink} target="_blank">
         <img className="logo" src={logoImage} />
+        <div className="logo-link" />
       </a>
     );
   }

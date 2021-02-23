@@ -35,3 +35,21 @@
     background-color: $bg1;
   }
 }
+
+@keyframes animateAltBorder {
+  0% {
+    border-color: inherit;
+  }
+  // 25% {
+  //   border-color: inherit;
+  // }
+  50% {
+    border-color: $primary-font-color-alt;
+  }
+  // 75% {
+  //   border-color: inherit;
+  // }
+  100% {
+    border-color: inherit;
+  }
+}

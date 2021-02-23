@@ -22,6 +22,18 @@
   }
 }
 
+@keyframes animateAltBorder {
+  0% {
+    border-color: inherit;
+  }
+  50% {
+    border-color: #e4981e;
+  }
+  100% {
+    border-color: inherit;
+  }
+}
+
 .bg-1 {
   background-color: #c82c2f;
 }
@@ -335,6 +347,18 @@ span.emoji {
   display: block;
   width: 100%;
   margin: 0 auto;
+}
+
+.logo-link {
+  border-width: 1px;
+  animation: animateAltBorder 1.5s linear;
+  animation-iteration-count: infinite;
+  width: 79%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-style: dashed;
 }
 
 input {
