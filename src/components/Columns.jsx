@@ -5,8 +5,8 @@ import classNames from 'classnames';
 const Columns = ({ leftColumnChildren, centerColumnChildren, rightColumnChildren, marginBottom }) => {
 
   const containerClasses = classNames('cols-container', {
-    'three-up' : centerColumnChildren !== null,
-    [`margin-bottom-${marginBottom}`] : marginBottom
+    'three-up': centerColumnChildren !== null,
+    [`margin-bottom-${marginBottom}`]: marginBottom
   });
 
   return (
@@ -27,15 +27,15 @@ const Columns = ({ leftColumnChildren, centerColumnChildren, rightColumnChildren
 }
 
 Columns.propTypes = {
-  centerColumnChildren : PropTypes.element,
-  leftColumnChildren : PropTypes.element.isRequired,
-  marginBottom : PropTypes.oneOf(['small', 'medium', 'large']),
-  rightColumnChildren : PropTypes.element.isRequired
+  centerColumnChildren: PropTypes.element,
+  leftColumnChildren: PropTypes.element.isRequired,
+  marginBottom: PropTypes.oneOf(['small', 'medium', 'large']),
+  rightColumnChildren: PropTypes.element.isRequired
 }
 
 Columns.defaultProps = {
-  centerColumnChildren : null,
-  marginBottom : null
+  centerColumnChildren: null,
+  marginBottom: null
 }
 
 export default Columns;

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import scrollToComponent from 'react-scroll-to-component';
+import Modal from 'react-modal';
 import Header from './components/Header';
 import Section from './components/Section';
 import About from './components/About';
@@ -9,10 +10,13 @@ import Merchandise from './components/Merchandise';
 import Contact from './components/Contact';
 import Shows from './components/Shows';
 import Footer from './components/Footer';
+import Video from './components/Video';
 import { submitEmail, fetchShows } from './actions';
 import { isShowToday } from './util';
 import 'normalize.css';
 import 'styles/index.scss';
+
+Modal.setAppElement('#app');
 
 class App extends PureComponent {
   constructor(props) {
@@ -31,12 +35,14 @@ class App extends PureComponent {
       merchandise: false,
       shows: false,
       showData: [],
-      showHappeningToday: false
+      showHappeningToday: false,
+      isModalOpen: false
     };
 
     this.showVideo =  !/iPad|iPhone|iPod|Android/.test(navigator.userAgent);
 
     this.setSectionRef = this.setSectionRef.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   componentDidMount() {
@@ -62,10 +68,18 @@ class App extends PureComponent {
         scrollToComponent(this.sectionRefs[route], { offset: 0, align: 'top', duration: 500, ease: 'inCirc' });
       }, 500);
     }
+
+    setTimeout(() => {
+      this.setState({ isModalOpen: true });
+    }, 3000);
   }
 
   setSectionRef(section, ref) {
     this.sectionRefs[section] = ref;
+  }
+
+  handleCloseModal() {
+    this.setState({ isModalOpen: false });
   }
 
   render() {
@@ -100,6 +114,15 @@ class App extends PureComponent {
           </Section>
         </div>
         <Footer />
+        <Modal
+          isOpen={this.state.isModalOpen}
+          onRequestClose={this.handleCloseModal}
+          className="modal"
+          overlayClassName="overlay fade-in">
+            <h4 className="highlight text-center">CHECKOUT OUR NEW SINGLE</h4>
+            <iframe src="https://open.spotify.com/embed/track/204YPUvcaxgAmDPivXib3y" width="100%" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <Video youtubeId="Yw5tZtpiYlI" />
+        </Modal>
       </div>
     );
   }
