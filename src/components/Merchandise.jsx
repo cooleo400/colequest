@@ -2,11 +2,30 @@ import React from 'react';
 import Columns from './Columns';
 import SocialIcon from './SocialIcon';
 import coverImage from '../images/cover.jpg';
+import selfEntitledCover from '../images/front-cover.jpg';
 import wearableCoverImage from '../images/merch.jpg';
 import vinylCoverImage from '../images/vinyl.jpg';
 import bandanaCoverImage from '../images/bandana.jpg';
 
 const Merchandise = () => {
+  const selfEntitledImage = (
+    <div>
+      <img src={selfEntitledCover} alt="Self [En]Titled EP" />
+    </div>
+  );
+  const selfEntitledDescription = (
+    <div>
+      <a href="http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/" target="_blank">
+        <h4 className="margin-top-none">Self [En]Titled EP</h4>
+      </a>
+      <p>Set for release April 16, 2020, this debut EP contains witty originals and crucial covers for the modern listener, including a cover of Woody Guthrie's Way Over Yonder in the Minor Key. As Tony Trischka says, "Cole and his cohorts have put together a savory, poignant, hard-driving album with a rainbow of warm musical colors." Click the Pre-order button below to purchase a CD or to digitally download.</p>
+      <p>$11.98 CD / $7.99 MP3</p>
+      <div>
+        <a href="http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/" target="_blank" className="button order-link">Pre-Order</a>
+      </div>
+    </div>
+  );
+
   const cdImage = (
     <div>
       <img src={coverImage} alt="Cole Quest and The City Pickers CD" />
@@ -23,10 +42,10 @@ const Merchandise = () => {
         <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank" className="button order-link">Order</a>
       </div>
       <div className="social-container-md">
-        <SocialIcon type="apple" />
-        <SocialIcon type="spotify" />
-        <SocialIcon type="bandcamp" />
-        <SocialIcon type="googlePlay" />
+      <SocialIcon type="apple" />
+      <SocialIcon type="spotify" />
+      <SocialIcon type="bandcamp" />
+      <SocialIcon type="googlePlay" />
       </div>
     </div>
   );
@@ -93,6 +112,9 @@ const Merchandise = () => {
 
   return (
     <div>
+      <div className="margin-bottom-md">
+        <Columns leftColumnChildren={selfEntitledImage} rightColumnChildren={selfEntitledDescription} />
+      </div>
       <div className="margin-bottom-md">
         <Columns leftColumnChildren={bandanaImage} rightColumnChildren={bandanaDescription} />
       </div>

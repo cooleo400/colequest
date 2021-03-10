@@ -49,12 +49,12 @@ class Media extends PureComponent {
     //     <img src={pressPhotoTwo} alt="Press Photo 2" className="display-block" />
     //   </a>
     // );
-    const bitcoinGamblerSoundCloud = (
-      <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/667625246&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-    );
-    const standingMountainSoundCloud = (
-      <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/617323221&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-    );
+    // const bitcoinGamblerSoundCloud = (
+    //   <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/667625246&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+    // );
+    // const standingMountainSoundCloud = (
+    //   <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/617323221&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+    // );
     const wayOverYonderSpotifySingle = (
       <iframe src="https://open.spotify.com/embed/track/204YPUvcaxgAmDPivXib3y" width="100%" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     );
@@ -71,7 +71,6 @@ class Media extends PureComponent {
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={doReMiVideo} marginBottom="small" />
         <Columns leftColumnChildren={ostrichTherapyVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
         <Columns leftColumnChildren={waxCyclinderVideo} rightColumnChildren={bandAtConveyorPhoto} marginBottom="small" />
-        <Columns leftColumnChildren={bitcoinGamblerSoundCloud} rightColumnChildren={standingMountainSoundCloud} marginBottom="small" />
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="youtube" />
