@@ -352,6 +352,38 @@ span.emoji {
   animation: fadeIn 1s linear;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 37.5em) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid-column {
+  display: grid;
+}
+
+.grid-item {
+  margin: 0 5%;
+  display: grid;
+}
+
+.grid-item-image {
+  align-self: center;
+}
+
+.grid-item-description {
+  display: grid;
+}
+
+.grid-item-link {
+  align-self: end;
+}
+
 .content {
   background-color: rgba(0, 0, 0, 0.3);
 }
