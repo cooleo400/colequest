@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include breakpoint('mobileonly') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid-column {
+  display: grid;
+}
+
+.grid-item {
+  margin: 0 5%;
+  display: grid;
+}
+
+.grid-item-image {
+  align-self: center;
+}
+
+.grid-item-description {
+  display: grid;
+}
+
+.grid-item-link {
+  align-self: end;
+}

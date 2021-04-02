@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WithNew from './WithNew';
 
 const Video = ({ youtubeId, autoPlay, isNew }) => {
   let url = `https://www.youtube.com/embed/${youtubeId}`;
@@ -8,12 +9,9 @@ const Video = ({ youtubeId, autoPlay, isNew }) => {
   }
 
   return (
-    <div className="video-wrapper is-new-wrapper">
-      { isNew && (
-          <p className="is-new highlight">NEW</p>
-      )}
+    <WithNew className="video-wrapper" isNew={isNew} >
       <iframe className="video" width="560" height="315" src={url} frameBorder="0" allowFullScreen></iframe>
-    </div>
+    </WithNew>
   );
 }
 

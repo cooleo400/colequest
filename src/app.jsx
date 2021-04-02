@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import scrollToComponent from 'react-scroll-to-component';
 import Modal from 'react-modal';
+import Columns from './components/Columns';
 import Header from './components/Header';
 import Section from './components/Section';
 import About from './components/About';
@@ -11,6 +12,7 @@ import Contact from './components/Contact';
 import Shows from './components/Shows';
 import Footer from './components/Footer';
 import Video from './components/Video';
+import SpotifyEmbed from './components/SpotifyEmbed';
 import { submitEmail, fetchShows } from './actions';
 import { isShowToday } from './util';
 import 'normalize.css';
@@ -71,7 +73,7 @@ class App extends PureComponent {
 
     setTimeout(() => {
       this.setState({ isModalOpen: true });
-    }, 3000);
+    }, 5000);
   }
 
   setSectionRef(section, ref) {
@@ -92,6 +94,10 @@ class App extends PureComponent {
       contact,
       highlight
     } = this.state;
+    const woySpotifyLink = <SpotifyEmbed spotifyId="204YPUvcaxgAmDPivXib3y" />;
+    const woyVideo = <Video youtubeId="Yw5tZtpiYlI" />;
+    const tbgSpotifyLink = <SpotifyEmbed spotifyId="61GJR66qBsGKt1Ra2ba6Q7" />;
+    const tbgVideo = <Video youtubeId="k8BI1KWwiTc" />;
 
     return (
       <div>
@@ -106,7 +112,7 @@ class App extends PureComponent {
           <Section title="Media" className="media" highlight isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
             <Media />
           </Section>
-          <Section title="Merchandise" className="merchandise" isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
+          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
             <Merchandise />
           </Section>
           <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)}>
@@ -119,9 +125,9 @@ class App extends PureComponent {
           onRequestClose={this.handleCloseModal}
           className="modal"
           overlayClassName="overlay fade-in">
-            <h4 className="highlight text-center">CHECKOUT OUR NEW SINGLE</h4>
-            <iframe src="https://open.spotify.com/embed/track/204YPUvcaxgAmDPivXib3y" width="100%" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            <Video youtubeId="Yw5tZtpiYlI" />
+            <h4 className="highlight text-center">CHECKOUT OUR NEW SINGLES</h4>
+            <Columns leftColumnChildren={woySpotifyLink} rightColumnChildren={tbgSpotifyLink} />
+            <Columns leftColumnChildren={woyVideo} rightColumnChildren={tbgVideo} />
         </Modal>
       </div>
     );

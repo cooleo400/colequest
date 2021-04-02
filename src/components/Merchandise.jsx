@@ -1,133 +1,133 @@
 import React from 'react';
-import Columns from './Columns';
-import SocialIcon from './SocialIcon';
+import WithNew from './WithNew';
 import coverImage from '../images/cover.jpg';
 import selfEntitledCover from '../images/front-cover.jpg';
+import patchesImage from '../images/patches.jpg';
 import wearableCoverImage from '../images/merch.jpg';
 import vinylCoverImage from '../images/vinyl.jpg';
 import bandanaCoverImage from '../images/bandana.jpg';
 
-const Merchandise = () => {
-  const selfEntitledImage = (
-    <div>
-      <img src={selfEntitledCover} alt="Self [En]Titled EP" />
-    </div>
-  );
-  const selfEntitledDescription = (
-    <div>
-      <a href="http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/" target="_blank">
-        <h4 className="margin-top-none">Self [En]Titled EP</h4>
-      </a>
-      <p>Set for release April 16, 2020, this debut EP contains witty originals and crucial covers for the modern listener, including a cover of Woody Guthrie's Way Over Yonder in the Minor Key. As Tony Trischka says, "Cole and his cohorts have put together a savory, poignant, hard-driving album with a rainbow of warm musical colors." Click the Pre-order button below to purchase a CD or to digitally download.</p>
-      <p>$11.98 CD / $7.99 MP3</p>
-      <div>
-        <a href="http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/" target="_blank" className="button order-link">Pre-Order</a>
-      </div>
-    </div>
-  );
+const merchData = [
+  {
+    image: selfEntitledCover,
+    title: 'Self [En]Titled EP',
+    description: 'Set for release April 16, 2021 on Omnivore Records, this debut EP contains witty originals and crucial covers for the modern listener, including a cover of Woody Guthrie\'s Way Over Yonder in the Minor Key. As Tony Trischka says, "Cole and his cohorts have put together a savory, poignant, hard-driving album with a rainbow of warm musical colors." Click the Pre-order button below to purchase a CD or to digitally download.',
+    link: 'http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/',
+    price: '$11.98 CD / $7.99 MP3',
+    ctaLabel: 'Pre-Order',
+    isNew: true,
+  },
+  {
+    image: patchesImage,
+    title: 'Patches',
+    description: 'Designed and made specifically for the release of our EP Self [En]Titled, these patches are the front and back covers of the album art and made from a wonderfully reflective thread to add a little extra glimer to your clothes! The patches are iron on patches, no sewing required!',
+    link: 'mailto:info@colequest.com',
+    price: '$3 Per Patch / $5 for 1 of each',
+    ctaLabel: 'Email us',
+    isNew: true,
+  },
+  {
+    image: bandanaCoverImage,
+    title: 'Brooklyn Bandanas',
+    description: (<span>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank">Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</span>),
+    link: 'mailto:info@colequest.com',
+    price: '$15',
+    ctaLabel: 'Email us',
+    isNew: false,
+  },
+  {
+    image: wearableCoverImage,
+    title: 'Pocket tee\'s, trucker hats and koozies!',
+    description: 'Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we\'ll do our best to ship it when we can.',
+    link: 'mailto:info@colequest.com',
+    price: (<span><span className="strike">$15 Shirts</span> / $10 Hats / $3 Koozies</span>),
+    ctaLabel: 'Email us',
+    isNew: false,
+  },
+  {
+    image: vinylCoverImage,
+    title: 'Limited Edition Lath Cut Records',
+    description: 'Recorded live at LeestaVall Record Studios, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950\'s. Each record is handmade, one at a time, in real time, by a real person.',
+    link: 'mailto:info@colequest.com',
+    price: (<span className="strike">$20</span>),
+    ctaLabel: 'Email us',
+    isNew: false,
+  },
+  {
+    image: coverImage,
+    title: 'Cole Quest and The City Pickers CD',
+    description: 'Released in 2016, our debut CD contains a handful of originals as well as a few of our favorite traditional tunes, recorded live at The Magic Shop studio. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.',
+    link: 'https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers',
+    price: '$10',
+    ctaLabel: 'Buy Now',
+    isNew: false,
+  },
+];
 
-  const cdImage = (
-    <div>
-      <img src={coverImage} alt="Cole Quest and The City Pickers CD" />
-    </div>
-  );
-  const cdDescription = (
-    <div>
-      <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank">
-        <h4 className="margin-top-none">Cole Quest and The City Pickers CD</h4>
-      </a>
-      <p>Released in 2016, our debut CD contains a handful of originals as well as a few of our favorite traditional tunes, recorded live at The Magic Shop studio. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.</p>
-      <p>$10.00</p>
-      <div>
-        <a href="https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers" target="_blank" className="button order-link">Order</a>
-      </div>
-      <div className="social-container-md">
-      <SocialIcon type="apple" />
-      <SocialIcon type="spotify" />
-      <SocialIcon type="bandcamp" />
-      <SocialIcon type="googlePlay" />
-      </div>
-    </div>
-  );
+// <SocialIcon type="apple" />
+// <SocialIcon type="spotify" />
+// <SocialIcon type="bandcamp" />
+// <SocialIcon type="googlePlay" />
 
-  const wearableImage = (
-    <div>
-      <img src={wearableCoverImage} alt="Pocket Tees, Hats and Koozies!" />
-    </div>
-  );
-  const wearableDescription = (
-    <div>
-      <a href="mailto:info@colequest.com">
-        <h4 className="margin-top-none">Pocket tee's, trucker hats and koozies!</h4>
-      </a>
-      <p>Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we'll do our best to ship it when we can.</p>
-      <p>
-        <span className="strike">$15 Shirts</span>
-        <br/>
-        $10 Hats
-        <br/>
-        $3 Koozies
-      </p>
+const MerchItem = ({
+  image,
+  title,
+  description,
+  link,
+  price,
+  ctaLabel,
+  isNew
+ }) => {
+  const gridDescription = (
+    <div className="grid-item-description">
       <div>
-        <a href="mailto:info@colequest.com" className="order-link">Email us</a>
+        <a href={link} target="_blank">
+          <h4 className="margin-top-none">{title}</h4>
+        </a>
+        <p>{description}</p>
+        <p>{price}</p>
+      </div>
+      <div className="grid-item-link">
+        <a href={link} target="_blank" className="button order-link">{ctaLabel}</a>
       </div>
     </div>
   );
-
-  const vinylImage = (
+  const gridImage = (
     <div>
-      <img src={vinylCoverImage} alt="Limited Edition Lath Cut Records" />
-    </div>
-  );
-  const vinylDescription = (
-    <div>
-      <a href="mailto:info@colequest.com">
-        <h4 className="margin-top-none">Limited Edition Lathe Cut Records</h4>
-      </a>
-      <p>Recorded live at <a href="https://leestavall.com/collections/livesessions/products/lvls524?variant=12441059360812" target="_blank">LeestaVall Record Studios</a>, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950's. Each record is handmade, one at a time, in real time, by a real person.</p>
-      <p className="strike">$20</p>
-      <div>
-        <a href="mailto:info@colequest.com" className="order-link">Email us</a>
-      </div>
-    </div>
-  );
-
-  const bandanaImage = (
-    <div>
-      <img src={bandanaCoverImage} alt="Brooklyn Bandanas" />
-    </div>
-  );
-  const bandanaDescription = (
-    <div>
-      <a href="mailto:info@colequest.com" >
-        <h4 className="margin-top-none">Bandanas</h4>
-      </a>
-      <p>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank">Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</p>
-      <p>$15</p>
-      <div>
-        <a href="mailto:info@colequest.com" className="order-link">Email us</a>
-      </div>
+      <img src={image} alt={title} />
     </div>
   );
 
   return (
-    <div>
-      <div className="margin-bottom-md">
-        <Columns leftColumnChildren={selfEntitledImage} rightColumnChildren={selfEntitledDescription} />
-      </div>
-      <div className="margin-bottom-md">
-        <Columns leftColumnChildren={bandanaImage} rightColumnChildren={bandanaDescription} />
-      </div>
-      <div className="margin-bottom-md">
-        <Columns leftColumnChildren={vinylImage} rightColumnChildren={vinylDescription} />
-      </div>
-      <div className="margin-bottom-md">
-        <Columns leftColumnChildren={wearableImage} rightColumnChildren={wearableDescription} />
-      </div>
-      <div className="margin-bottom-md">
-        <Columns leftColumnChildren={cdImage} rightColumnChildren={cdDescription} />
-      </div>
+    <WithNew isNew={isNew} className="grid-column">
+      <GridCard image={gridImage} description={gridDescription} />
+    </WithNew>
+  );
+};
+
+const GridCard = ({ image, description }) => (
+  <div className="grid-item margin-bottom-md">
+    <div className="grid-item-image">
+      {image}
     </div>
+    {description}
+  </div>
+);
+
+const Grid = ({ children }) => (
+  <div className="grid-container">
+    {children}
+  </div>
+);
+
+const Merchandise = () => {
+
+  const gridItems = merchData.map((props) => <MerchItem key={props.title} {...props} />);
+
+  return (
+    <Grid>
+      {gridItems}
+    </Grid>
   );
 };
 

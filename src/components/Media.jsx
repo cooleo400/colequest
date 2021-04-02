@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Modal from 'react-modal';
 import Columns from './Columns';
 import Video from './Video';
+import SpotifyEmbed from './SpotifyEmbed';
 import SocialIcon from './SocialIcon';
 
 import pressPhotoOne from '../images/conveyor-shirts.jpg';
@@ -34,11 +35,14 @@ class Media extends PureComponent {
   }
 
   render() {
-    const ostrichTherapyVideo = (<Video youtubeId="WjJSC8v5bAg" />);
-    const waxCyclinderVideo = (<Video youtubeId="OCCV3hsgSyM" />);
-    const themeTimeVideo = (<Video youtubeId="B6bVcKoctL4" />);
-    const doReMiVideo = (<Video youtubeId="SPPbG1u4lvU" isNew />);
-    const wayOverYonderVideo = (<Video youtubeId="Yw5tZtpiYlI" isNew />);
+    const ostrichTherapyVideo = <Video youtubeId="WjJSC8v5bAg" />;
+    const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
+    const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
+    const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
+    const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" isNew />;
+    const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" isNew />;
+    const wayOverYonderSpotify = <SpotifyEmbed spotifyId="204YPUvcaxgAmDPivXib3y" />;
+    const bitcoinSpotify = <SpotifyEmbed spotifyId="61GJR66qBsGKt1Ra2ba6Q7" />;
     const bandAtConveyorPhoto = (
       <a href="#" onClick={this.openModalImageOne} >
         <img src={pressPhotoOne} alt="Press Photo 1" className="display-block" />
@@ -55,22 +59,16 @@ class Media extends PureComponent {
     // const standingMountainSoundCloud = (
     //   <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/617323221&color=%23c82c2f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
     // );
-    const wayOverYonderSpotifySingle = (
-      <iframe src="https://open.spotify.com/embed/track/204YPUvcaxgAmDPivXib3y" width="100%" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-    );
-    const newSingleHeader = (
-      <div>
-        <h4 className="highlight text-center">CHECKOUT OUR NEW SINGLE</h4>
-        {wayOverYonderSpotifySingle}
-      </div>
-    );
 
     return (
       <div>
-        <Columns centerColumnChildren={newSingleHeader} marginBottom="small"/>
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={doReMiVideo} marginBottom="small" />
-        <Columns leftColumnChildren={ostrichTherapyVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
-        <Columns leftColumnChildren={waxCyclinderVideo} rightColumnChildren={bandAtConveyorPhoto} marginBottom="small" />
+        <h4 className="highlight text-center">NEW SINGLES!</h4>
+        <Columns leftColumnChildren={wayOverYonderSpotify} rightColumnChildren={bitcoinSpotify} marginBottom="small" />
+        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="medium" />
+        <h4 className="text-center">GREAT OLDIES</h4>
+        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
+        <Columns leftColumnChildren={ostrichTherapyVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
+        <Columns centerColumnChildren={bandAtConveyorPhoto} marginBottom="small"/>
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="youtube" />
