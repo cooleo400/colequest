@@ -938,6 +938,15 @@ body.show-happening-today .section.shows .section-link h2 {
   }
 }
 
+.secondary-headline {
+  font-family: "Playball", cursive;
+}
+
+.full-width-button {
+  display: block;
+  margin: 0 15px;
+}
+
 .button {
   border: 3px solid #c82c2f;
   -webkit-border-radius: 10px;
@@ -952,12 +961,27 @@ body.show-happening-today .section.shows .section-link h2 {
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   color: #ffffff;
-  font-family: "Playball", cursive;
 }
 
 .button:hover {
   background-color: #000000;
   border-color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary-button {
+  font-family: "Playball", cursive;
+}
+
+.button.secondary-button {
+  font-family: "Oswald", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button.secondary-button:hover {
+  border-color: #000000;
   text-decoration: none;
   cursor: pointer;
 }

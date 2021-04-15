@@ -14,12 +14,8 @@ const Header = ({ showVideo }) => {
       </div>
     );
   } else {
-    const youtubeLink = `https://youtu.be/${youtubeId}`
     return (
-      <a href={youtubeLink} target="_blank">
-        <img className="logo" src={logoImage} />
-        <div className="logo-link" />
-      </a>
+      <img className="logo" src={logoImage} />
     );
   }
 };

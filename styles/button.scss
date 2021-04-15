@@ -9,12 +9,26 @@
 	text-decoration: none;
   @include transition(all .5s ease-in-out);
   color: $white;
-  font-family: $primary-font-family;
 
   &:hover {
     background-color: $black;
     border-color: $white;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  &.primary-button {
+    font-family: $primary-font-family;
+  }
+  &.secondary-button {
+    font-family: $secondary-font-family;
+    background-color: $bg4;
+    color: $black;
+
+    &:hover {
+      border-color: $black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }

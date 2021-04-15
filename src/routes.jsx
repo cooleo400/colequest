@@ -4,17 +4,18 @@ import {
   Route
 } from 'react-router-dom';
 import App from './app';
-import About from './components/About';
+import Links from './components/Links';
 import 'styles/index.scss';
+
+// <Route path="/:route" render={(route) => {
+//   return (<App route={route.match.params.route} />);
+// }} />
 
 const Routes = () => (
   <Router>
     <div>
       <Route exact path="/" component={App} />
-      <Route path="/:route" render={(route) => {
-        return (<App route={route.match.params.route} />);
-      }} />
-
+      <Route exact path="/linkinbio" component={Links} />
     </div>
   </Router>
 );

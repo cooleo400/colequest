@@ -41,6 +41,7 @@ class Media extends PureComponent {
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
     const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" isNew />;
     const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" isNew />;
+    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" isNew />;
     const wayOverYonderSpotify = <SpotifyEmbed spotifyId="204YPUvcaxgAmDPivXib3y" />;
     const bitcoinSpotify = <SpotifyEmbed spotifyId="61GJR66qBsGKt1Ra2ba6Q7" />;
     const bandAtConveyorPhoto = (
@@ -63,6 +64,9 @@ class Media extends PureComponent {
     return (
       <div>
         <h4 className="highlight text-center">NEW SINGLES!</h4>
+        <div className="margin-bottom-sm">
+          {ostrichVideo}
+        </div>
         <Columns leftColumnChildren={wayOverYonderSpotify} rightColumnChildren={bitcoinSpotify} marginBottom="small" />
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="medium" />
         <h4 className="text-center">GREAT OLDIES</h4>

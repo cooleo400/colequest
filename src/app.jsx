@@ -94,10 +94,7 @@ class App extends PureComponent {
       contact,
       highlight
     } = this.state;
-    const woySpotifyLink = <SpotifyEmbed spotifyId="204YPUvcaxgAmDPivXib3y" />;
-    const woyVideo = <Video youtubeId="Yw5tZtpiYlI" />;
-    const tbgSpotifyLink = <SpotifyEmbed spotifyId="61GJR66qBsGKt1Ra2ba6Q7" />;
-    const tbgVideo = <Video youtubeId="k8BI1KWwiTc" />;
+    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" />;
 
     return (
       <div>
@@ -125,9 +122,8 @@ class App extends PureComponent {
           onRequestClose={this.handleCloseModal}
           className="modal"
           overlayClassName="overlay fade-in">
-            <h4 className="highlight text-center">CHECKOUT OUR NEW SINGLES</h4>
-            <Columns leftColumnChildren={woySpotifyLink} rightColumnChildren={tbgSpotifyLink} />
-            <Columns leftColumnChildren={woyVideo} rightColumnChildren={tbgVideo} />
+            <h4 className="highlight text-center">CHECKOUT OUR NEW VIDEO!</h4>
+            {ostrichVideo}
         </Modal>
       </div>
     );
