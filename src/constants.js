@@ -4,3 +4,7 @@ export const bitcoinGamblerSpotifyLink = 'https://open.spotify.com/album/6h4kGj2
 export const wayOverYonderYouTubeLink = 'https://youtu.be/Yw5tZtpiYlI';
 export const bitcoinGamblerYoutTubeLink = 'https://youtu.be/k8BI1KWwiTc';
 export const ostrichYouTubeLink = 'https://youtu.be/WZ_macH8E1w';
+export const selfEntitledAppleLink = 'https://music.apple.com/us/album/self-en-titled-ep/1553168380';
+export const selfEntitledSpotifyLink = 'https://open.spotify.com/album/722LxydFuKWU2SyAGrmtXB?si=DmmJcCmyThWpT-67wVbHzg';
+export const selfEntitledTidalLink = '';
+export const selfEntitledAmazonLink = '';

@@ -4,12 +4,23 @@ import Columns from './Columns';
 import Button, { buttonTypes } from './Button';
 import Headline, { headlineTypes } from './Headline';
 import {
-  wayOverYonderSpotifyLink,
   wayOverYonderYouTubeLink,
-  bitcoinGamblerSpotifyLink,
   bitcoinGamblerYoutTubeLink,
-  ostrichYouTubeLink
+  ostrichYouTubeLink,
+  selfEntitledAppleLink,
+  selfEntitledSpotifyLink,
+  // selfEntitledTidalLink,
+  // selfEntitledAmazonLink,
 } from '../constants';
+
+// <Columns
+//   leftColumnChildren={(
+//     <Button link={selfEntitledTidalLink} ctaLabel="Listen on Tidal" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+//   )}
+//   rightColumnChildren={(
+//     <Button link={selfEntitledAmazonLink} ctaLabel="Listen on Amazon" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+//   )}
+// />
 
 export default class Links extends PureComponent {
   constructor(props){
@@ -19,27 +30,40 @@ export default class Links extends PureComponent {
     return (
       <div>
         <Header showVideo={false} />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">Ostrich Therapy</Headline>
-        <Button link={ostrichYouTubeLink} ctaLabel="Watch on YouTube" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
-        <Headline type={headlineTypes.SECONDARY} className="highlight">Way Over Yonder in the Minor Key</Headline>
+        <Headline type={headlineTypes.SECONDARY} className="highlight">Self [En]Titled EP</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={wayOverYonderYouTubeLink} ctaLabel="Watch on YouTube" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+            <Button link={selfEntitledSpotifyLink} ctaLabel="Listen on Spotify" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
           )}
           rightColumnChildren={(
-            <Button link={wayOverYonderSpotifyLink} ctaLabel="Listen on Spotify" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+            <Button link={selfEntitledAppleLink} ctaLabel="Listen on Apple Music" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
           )}
         />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">The Bitcoin Gambler</Headline>
+        <Headline type={headlineTypes.SECONDARY} className="highlight">Watch New Videos</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={bitcoinGamblerYoutTubeLink} ctaLabel="Watch on YouTube" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+            <Button link={ostrichYouTubeLink} ctaLabel="Ostrich Therapy" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
           )}
           rightColumnChildren={(
-            <Button link={bitcoinGamblerSpotifyLink} ctaLabel="Listen on Spotify" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+            <Button link={bitcoinGamblerYoutTubeLink} ctaLabel="The Bitcoin Gambler" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
           )}
         />
+        <Columns
+          leftColumnChildren={(
+            <Button link={wayOverYonderYouTubeLink} ctaLabel="Way Over Yonder in the Minor Key" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+          )}
+          rightColumnChildren={null}
+        />
+
         <Headline type={headlineTypes.SECONDARY} >Reviews</Headline>
+        <Columns
+          leftColumnChildren={(
+            <Button link="https://americansongwriter.com/review-cole-quest-makes-granddad-proud/" ctaLabel="American Songwriter" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+          )}
+          rightColumnChildren={(
+            <Button link="https://americanahighways.org/2021/04/16/review-cole-quest-and-the-city-pickers-self-entitled-is-bright-stellar-performance/" ctaLabel="Americana Highways" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
+          )}
+        />
         <Columns
           leftColumnChildren={(
             <Button link="https://thebluegrasssituation.com/read/watch-cole-quest-and-the-city-pickers-the-bitcoin-gambler/" ctaLabel="The Bluegrass Situation" className="text-center full-width-button" type={buttonTypes.SECONDARY}/>
