@@ -72,7 +72,7 @@ class App extends PureComponent {
     }
 
     setTimeout(() => {
-      // this.setState({ isModalOpen: true });
+      this.setState({ isModalOpen: true });
     }, 5000);
   }
 
