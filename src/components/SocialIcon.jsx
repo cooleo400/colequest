@@ -1,11 +1,14 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {
+  selfEntitledAppleLink,
+  selfEntitledSpotifyLink
+} from '../constants';
 
 const socialTypes = {
   // amazon : '',
   apple: 'https://geo.itunes.apple.com/us/album/cole-quest-city-pickers/id1126888774?mt=1&app=music',
-  'apple-se': 'https://geo.itunes.apple.com/us/album/cole-quest-city-pickers/id1126888774?mt=1&app=music',
+  'apple-se': selfEntitledAppleLink,
   bandcamp: 'https://colequest.bandcamp.com/releases',
   email: 'mailto:info@colequest.com',
   facebook: 'https://www.facebook.com/citypickers',
@@ -14,9 +17,8 @@ const socialTypes = {
   instagram: 'https://www.instagram.com/citypickers/',
   soundcloud: 'https://soundcloud.com/citypickers',
   spotify: 'https://open.spotify.com/album/518LdQOgCX5YuAGyXFL3bN',
-  'spotify-se': 'https://open.spotify.com/album/518LdQOgCX5YuAGyXFL3bN',
+  'spotify-se': selfEntitledSpotifyLink,
   twitter: 'https://twitter.com/colequestcp',
-  // wgp : '',
   youtube: 'https://www.youtube.com/channel/UCRvFa90dbwytdK75cpxbfmg',
 }
 

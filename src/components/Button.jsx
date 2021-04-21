@@ -14,7 +14,7 @@ class Button extends PureComponent {
   render() {
     const {
       className,
-      ctaLabel,
+      children,
       external,
       type,
       link,
@@ -31,14 +31,14 @@ class Button extends PureComponent {
     }
 
     return (
-      <a {...attributes}>{ctaLabel}</a>
+      <a {...attributes}>{children}</a>
     );
   }
 }
 
 Button.propTypes = {
   className: PropTypes.string,
-  ctaLabel: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   external: PropTypes.bool,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(buttonTypes))

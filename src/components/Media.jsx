@@ -42,8 +42,6 @@ class Media extends PureComponent {
     const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" isNew />;
     const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" isNew />;
     const ostrichVideo = <Video youtubeId="WZ_macH8E1w" isNew />;
-    const wayOverYonderSpotify = <SpotifyEmbed spotifyId="204YPUvcaxgAmDPivXib3y" />;
-    const bitcoinSpotify = <SpotifyEmbed spotifyId="61GJR66qBsGKt1Ra2ba6Q7" />;
     const bandAtConveyorPhoto = (
       <a href="#" onClick={this.openModalImageOne} >
         <img src={pressPhotoOne} alt="Press Photo 1" className="display-block" />
@@ -67,7 +65,6 @@ class Media extends PureComponent {
         <div className="margin-bottom-sm">
           {ostrichVideo}
         </div>
-        <Columns leftColumnChildren={wayOverYonderSpotify} rightColumnChildren={bitcoinSpotify} marginBottom="small" />
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="medium" />
         <h4 className="text-center">GREAT OLDIES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
@@ -75,9 +72,9 @@ class Media extends PureComponent {
         <Columns centerColumnChildren={bandAtConveyorPhoto} marginBottom="small"/>
         <div className="social-container">
           <div className="social-container-sm">
+            <SocialIcon type="spotify-se" />
+            <SocialIcon type="apple-se" />
             <SocialIcon type="youtube" />
-            <SocialIcon type="soundcloud" />
-            <SocialIcon type="apple" />
           </div>
         </div>
         <Modal
