@@ -11,7 +11,7 @@ const merchData = [
   {
     image: selfEntitledCover,
     title: 'Self [En]Titled EP',
-    description: 'Set for release April 16, 2021 on Omnivore Records, this debut EP contains witty originals and crucial covers for the modern listener, including a cover of Woody Guthrie\'s Way Over Yonder in the Minor Key. As Tony Trischka says, "Cole and his cohorts have put together a savory, poignant, hard-driving album with a rainbow of warm musical colors." Click the Pre-order button below to purchase a CD or to digitally download.',
+    description: 'Released April 16, 2021 on Omnivore Records, this debut EP contains witty originals and crucial covers for the modern listener, including a cover of Woody Guthrie\'s Way Over Yonder in the Minor Key. As Tony Trischka says, "Cole and his cohorts have put together a savory, poignant, hard-driving album with a rainbow of warm musical colors." Click the button below to purchase a CD or to digitally download.',
     link: 'http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/',
     price: '$11.98 CD / $7.99 MP3',
     ctaLabel: 'Order',
@@ -59,7 +59,7 @@ const merchData = [
     description: 'Released in 2016, our debut CD contains a handful of originals as well as a few of our favorite traditional tunes, recorded live at The Magic Shop studio. Click the Order button below to purchase a CD, or your other favorite vendor for digital downloads.',
     link: 'https://store.woodyguthrie.org/products/cole-quest-and-the-city-pickers',
     price: '$10',
-    ctaLabel: 'Buy Now',
+    ctaLabel: 'Order',
     isNew: false,
   },
 ];

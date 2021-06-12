@@ -2,7 +2,7 @@ import React from 'react';
 import Video from './Video';
 import logoImage from '../images/front-cover.jpg';
 
-const youtubeId = "moSbBL3G1ao";
+const youtubeId = "3-gEYvrN4F8";
 
 const Header = ({ showVideo }) => {
   if(showVideo) {
