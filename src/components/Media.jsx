@@ -35,13 +35,14 @@ class Media extends PureComponent {
   }
 
   render() {
+    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" isNew />;
     const ostrichTherapyVideo = <Video youtubeId="WjJSC8v5bAg" />;
     const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
-    const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" isNew />;
-    const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" isNew />;
-    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" isNew />;
+    const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" />;
+    const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" />;
+    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" />;
     const bandAtConveyorPhoto = (
       <a href="#" onClick={this.openModalImageOne} >
         <img src={pressPhotoOne} alt="Press Photo 1" className="display-block" />
@@ -62,9 +63,7 @@ class Media extends PureComponent {
     return (
       <div>
         <h4 className="highlight text-center">NEW SINGLES!</h4>
-        <div className="margin-bottom-sm">
-          {ostrichVideo}
-        </div>
+        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="medium" />
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="medium" />
         <h4 className="text-center">GREAT OLDIES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />

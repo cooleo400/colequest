@@ -1,4 +1,5 @@
 export const selfEntitledPurchaseLink = 'http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/';
+export const sevenElevenGlideLink = 'https://glidemagazine.com/275743/video-premiere-cole-quest-and-the-city-pickers-lay-down-funky-bluegrass-jams-on-instrumental-tune-7-11-foggy-mountain-rock/';
 export const wayOverYonderSpotifyLink = 'https://open.spotify.com/album/0jVYh64Pq4Pb8KQrdubb2x?si=CRQEkEBxRd27hFMOJFLq_Q';
 export const bitcoinGamblerSpotifyLink = 'https://open.spotify.com/album/6h4kGj2kgLEv3JH6VfbUOv?si=s49EfsELS7S8zqJyWNnJLw';
 export const wayOverYonderYouTubeLink = 'https://youtu.be/Yw5tZtpiYlI';

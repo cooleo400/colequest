@@ -4,6 +4,7 @@ import Columns from './Columns';
 import Button, { buttonTypes } from './Button';
 import Headline, { headlineTypes } from './Headline';
 import {
+  sevenElevenGlideLink,
   wayOverYonderYouTubeLink,
   bitcoinGamblerYoutTubeLink,
   ostrichYouTubeLink,
@@ -31,6 +32,12 @@ export default class Links extends PureComponent {
     return (
       <div>
         <Header showVideo={false} />
+        <Headline type={headlineTypes.SECONDARY} className="highlight">7-11 / Foggy Mountain Rock Video Premier</Headline>
+        <Columns
+          centerColumnChildren={(
+            <Button link={sevenElevenGlideLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
+          )}
+        />
         <Headline type={headlineTypes.SECONDARY} className="highlight">Self [En]Titled EP</Headline>
         <Columns
           leftColumnChildren={(

@@ -72,9 +72,9 @@ class App extends PureComponent {
     }
 
     // Keep around to display modal
-    // setTimeout(() => {
-    //   this.setState({ isModalOpen: true });
-    // }, 5000);
+    setTimeout(() => {
+      this.setState({ isModalOpen: true });
+    }, 5000);
   }
 
   setSectionRef(section, ref) {
@@ -95,7 +95,7 @@ class App extends PureComponent {
       contact,
       highlight
     } = this.state;
-    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" />;
+    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" />;
 
     return (
       <div>
@@ -124,7 +124,7 @@ class App extends PureComponent {
           className="modal"
           overlayClassName="overlay fade-in">
             <h4 className="highlight text-center">CHECKOUT OUR NEW VIDEO!</h4>
-            {ostrichVideo}
+            {sevenElevenVideo}
         </Modal>
       </div>
     );
