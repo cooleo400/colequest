@@ -1,9 +1,20 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import SocialIcon from './SocialIcon';
+import Button, {buttonTypes} from './Button';
 
 const Contact = (props) => (
   <div>
+    <div className="text-center margin-bottom-md">
+      <Button
+        type={buttonTypes.PRIMARY}
+        link="http://colequest.com/booking"
+        external
+        className="inline-block"
+      >
+        Book the band!
+      </Button>
+    </div>
     <p className="text-center">Email:<br/> <a href="mailto:info@colequest.com">info@colequest.com</a></p>
     <ContactForm submitEmail={props.submitEmail} />
     <div className="social-container">

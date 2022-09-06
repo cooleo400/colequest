@@ -71,6 +71,10 @@
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .text-center {
   text-align: center;
 }
@@ -665,7 +669,7 @@ input {
 }
 
 .section.about .background-image {
-  background-image: url(./cfa6af63ea9e131a44adb7e9f4353297.jpg);
+  background-image: url(./900a3a4b31394dd6a8a70f34b36d20cb.jpg);
 }
 
 .section.about p:first-child {
@@ -677,7 +681,7 @@ input {
 }
 
 .section.shows .background-image {
-  background-image: url(./df4cd3451c4726661c694956178b7894.jpg);
+  background-image: url(./c29a4b944a0eb53e688506ab34f10bdb.jpg);
 }
 
 .section.media .background-image {
@@ -697,7 +701,7 @@ input {
 }
 
 .section.contact .background-image {
-  background-image: url(./60045edf1f61b5eee47a306e84fce59d.jpg);
+  background-image: url(./f18c809e44aca8fc45b71830c3250c3c.jpg);
 }
 
 .dates {

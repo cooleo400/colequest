@@ -72,9 +72,9 @@ class App extends PureComponent {
     }
 
     // Keep around to display modal
-    setTimeout(() => {
-      this.setState({ isModalOpen: true });
-    }, 5000);
+    // setTimeout(() => {
+    //   this.setState({ isModalOpen: true });
+    // }, 5000);
   }
 
   setSectionRef(section, ref) {

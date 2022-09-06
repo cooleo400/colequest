@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import Modal from 'react-modal';
 import Columns from './Columns';
 import Video from './Video';
-import SpotifyEmbed from './SpotifyEmbed';
 import SocialIcon from './SocialIcon';
 
 import pressPhotoOne from '../images/conveyor-shirts.jpg';
@@ -35,7 +34,7 @@ class Media extends PureComponent {
   }
 
   render() {
-    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" isNew />;
+    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" />;
     const ostrichTherapyVideo = <Video youtubeId="WjJSC8v5bAg" />;
     const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
@@ -63,8 +62,8 @@ class Media extends PureComponent {
     return (
       <div>
         <h4 className="highlight text-center">NEW SINGLES!</h4>
-        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="medium" />
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="medium" />
+        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="small" />
+        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
         <h4 className="text-center">GREAT OLDIES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
         <Columns leftColumnChildren={ostrichTherapyVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
