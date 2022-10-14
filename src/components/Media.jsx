@@ -3,6 +3,14 @@ import Modal from 'react-modal';
 import Columns from './Columns';
 import Video from './Video';
 import SocialIcon from './SocialIcon';
+import {
+  ostrichYouTubeId,
+  bitcoinVideoYouTubeId,
+  wayOverYonderVideoYouTubeId,
+  sevenElevenVideoYouTubeId,
+  sweetLittleGirlVideoYouTubeId,
+  ifIStillVideoYouTubeId
+} from '../constants';
 
 import pressPhotoOne from '../images/conveyor-shirts.jpg';
 import pressPhotoTwo from '../images/press-photo-1.jpg';
@@ -34,16 +42,16 @@ class Media extends PureComponent {
   }
 
   render() {
-    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" />;
-    const ostrichTherapyVideo = <Video youtubeId="WjJSC8v5bAg" />;
+    const sevenElevenVideo = <Video youtubeId={sevenElevenVideoYouTubeId} />;
+    const ostrichTherapyVideo = <Video youtubeId={ostrichYouTubeId} />;
     const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
-    const wayOverYonderVideo = <Video youtubeId="Yw5tZtpiYlI" />;
-    const bitcoinVideo = <Video youtubeId="k8BI1KWwiTc" />;
-    const ostrichVideo = <Video youtubeId="WZ_macH8E1w" />;
-    const sweetVideo = <Video youtubeId="NdZ65rBdsWs" />;
-    const ifIStillVideo = <Video youtubeId="3XDlPrSyzLk" />;
+    const wayOverYonderVideo = <Video youtubeId={wayOverYonderVideoYouTubeId} />;
+    const bitcoinVideo = <Video youtubeId={bitcoinVideoYouTubeId} />;
+    const ostrichVideo = <Video youtubeId={ostrichYouTubeId} />;
+    const sweetVideo = <Video youtubeId={sweetLittleGirlVideoYouTubeId} />;
+    const ifIStillVideo = <Video youtubeId={ifIStillVideoYouTubeId} />;
     const bandAtConveyorPhoto = (
       <a href="#" onClick={this.openModalImageOne} >
         <img src={pressPhotoOne} alt="Press Photo 1" className="display-block" />

@@ -5,9 +5,13 @@ import Button, { buttonTypes } from './Button';
 import Headline, { headlineTypes } from './Headline';
 import {
   sevenElevenGlideLink,
-  wayOverYonderYouTubeLink,
-  bitcoinGamblerYoutTubeLink,
-  ostrichYouTubeLink,
+  getYouTubeLink,
+  ostrichYouTubeId,
+  bitcoinVideoYouTubeId,
+  wayOverYonderVideoYouTubeId,
+  sevenElevenVideoYouTubeId,
+  sweetLittleGirlVideoYouTubeId,
+  ifIStillVideoYouTubeId,
   selfEntitledAppleLink,
   selfEntitledSpotifyLink,
   // selfEntitledTidalLink,
@@ -32,10 +36,29 @@ export default class Links extends PureComponent {
     return (
       <div>
         <Header showVideo={false} />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">7-11 / Foggy Mountain Rock Video Premier</Headline>
+        <Headline type={headlineTypes.SECONDARY} className="highlight">Watch New Videos</Headline>
         <Columns
-          centerColumnChildren={(
-            <Button link={sevenElevenGlideLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(sweetLittleGirlVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>My Sweet Little Girl</Button>
+          )}
+          rightColumnChildren={(
+            <Button link={getYouTubeLink(ifIStillVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>If I Still Had You</Button>
+          )}
+        />
+        <Columns
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(sevenElevenVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>7-11 / Foggy Mountain Rock</Button>
+          )}
+          rightColumnChildren={(
+            <Button link={getYouTubeLink(ostrichYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Ostrich Therapy</Button>
+          )}
+        />
+        <Columns
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(bitcoinVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Bitcoin Gambler</Button>
+          )}
+          rightColumnChildren={(
+            <Button link={getYouTubeLink(wayOverYonderVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Way Over Yonder in the Minor Key</Button>
           )}
         />
         <Headline type={headlineTypes.SECONDARY} className="highlight">Self [En]Titled EP</Headline>
@@ -53,22 +76,6 @@ export default class Links extends PureComponent {
           )}
           rightColumnChildren={null}
         />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">Watch New Videos</Headline>
-        <Columns
-          leftColumnChildren={(
-            <Button link={ostrichYouTubeLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Ostrich Therapy</Button>
-          )}
-          rightColumnChildren={(
-            <Button link={bitcoinGamblerYoutTubeLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Bitcoin Gambler</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link={wayOverYonderYouTubeLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Way Over Yonder in the Minor Key</Button>
-          )}
-          rightColumnChildren={null}
-        />
-
         <Headline type={headlineTypes.SECONDARY} >Reviews</Headline>
         <Columns
           leftColumnChildren={(
@@ -88,11 +95,17 @@ export default class Links extends PureComponent {
         />
         <Columns
           leftColumnChildren={(
-            <Button link="http://www.themortonreport.com/celebrity/sports/music-reviews-six-little-known-artists-you-ought-to-hear/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Six artists you ought to know on The Morton Report</Button>
+            <Button link={sevenElevenGlideLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
           )}
           rightColumnChildren={(
+            <Button link="http://www.themortonreport.com/celebrity/sports/music-reviews-six-little-known-artists-you-ought-to-hear/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Six artists you ought to know on The Morton Report</Button>
+          )}
+        />
+        <Columns
+          leftColumnChildren={(
             <Button link="http://www.thealternateroot.com/topten040721.html" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Top 10 on The Alternate Root</Button>
           )}
+          rightColumnChildren={null}
         />
         <Headline type={headlineTypes.SECONDARY} >More Links...</Headline>
 
