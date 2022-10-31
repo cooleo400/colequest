@@ -43,7 +43,7 @@ class Media extends PureComponent {
 
   render() {
     const sevenElevenVideo = <Video youtubeId={sevenElevenVideoYouTubeId} />;
-    const ostrichTherapyVideo = <Video youtubeId={ostrichYouTubeId} />;
+    const ostrichTherapyLiveVideo = <Video youtubeId="WjJSC8v5bAg" />;
     const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
@@ -65,7 +65,7 @@ class Media extends PureComponent {
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
         <h4 className="text-center">LIVE PERFORMANCES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
-        <Columns leftColumnChildren={ostrichTherapyVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
+        <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
         <Columns centerColumnChildren={bandAtConveyorPhoto} marginBottom="small"/>
         <div className="social-container">
           <div className="social-container-sm">
