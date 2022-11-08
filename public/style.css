@@ -942,6 +942,16 @@ body.show-happening-today .section.shows .section-link h2 {
   }
 }
 
+.header-link-container {
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .secondary-headline {
   font-family: "Playball", cursive;
 }

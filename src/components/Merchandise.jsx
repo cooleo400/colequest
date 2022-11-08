@@ -15,7 +15,7 @@ const merchData = [
     link: 'http://omnivorerecordings.com/shop/cole-quest-and-the-city-pickers-self-entitled/',
     price: '$11.98 CD / $7.99 MP3',
     ctaLabel: 'Order',
-    isNew: true,
+    isNew: false,
   },
   {
     image: patchesImage,
@@ -24,14 +24,14 @@ const merchData = [
     link: 'mailto:info@colequest.com',
     price: '$3 Per Patch / $5 for 1 of each',
     ctaLabel: 'Email us',
-    isNew: true,
+    isNew: false,
   },
   {
     image: bandanaCoverImage,
     title: 'Brooklyn Bandanas',
-    description: (<span>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank">Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</span>),
+    description: (<span>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank" rel="noopener noreferrer" >Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</span>),
     link: 'mailto:info@colequest.com',
-    price: '$15',
+    price: (<span className="strike">$15</span>),
     ctaLabel: 'Email us',
     isNew: false,
   },
@@ -40,7 +40,7 @@ const merchData = [
     title: 'Pocket tee\'s, trucker hats and koozies!',
     description: 'Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we\'ll do our best to ship it when we can.',
     link: 'mailto:info@colequest.com',
-    price: (<span><span className="strike">$15 Shirts</span> / $10 Hats / $3 Koozies</span>),
+    price: (<span><span className="strike">$15 Shirts</span> / <span className="strike">$10 Hats</span> / $3 Koozies</span>),
     ctaLabel: 'Email us',
     isNew: false,
   },
@@ -63,11 +63,6 @@ const merchData = [
     isNew: false,
   },
 ];
-
-// <SocialIcon type="apple" />
-// <SocialIcon type="spotify" />
-// <SocialIcon type="bandcamp" />
-// <SocialIcon type="googlePlay" />
 
 const MerchItem = ({
   image,
