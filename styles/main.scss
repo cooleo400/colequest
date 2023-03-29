@@ -153,8 +153,11 @@ body.show-happening-today {
   text-decoration: line-through;
 }
 
+
+
 @import './header';
 
 // Components
 @import './components/headline';
 @import './components/links';
+@import './components/tour';

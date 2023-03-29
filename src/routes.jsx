@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import App from './app';
 import Links from './components/Links';
+// import PressKit from './components/PressKit';
+import Tour from './components/Tour';
 import 'styles/index.scss';
 
 // <Route path="/:route" render={(route) => {
@@ -16,6 +18,7 @@ const Routes = () => (
     <div>
       <Route exact path="/" component={App} />
       <Route exact path="/linkinbio" component={Links} />
+      <Route exact path="/tour" component={Tour} />
     </div>
   </Router>
 );

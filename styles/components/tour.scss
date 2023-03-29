@@ -1,0 +1,37 @@
+.tour-logo {
+  text-align: center;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url('../src/images/2023-press.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h1.first,
+  p {
+    margin-bottom: 0;
+  }
+  h1.last,
+  p {
+    margin-top: 0;
+  }
+}
+
+.show-happening-today .tour-logo {
+  @include animateAltBgOnText();
+}
+
+.tour-page-content {
+   padding: 2% 5%;
+   background-color: rgba(0,0,0,0.7);
+}
+
+.more-info {
+  margin-bottom: 50px;
+}

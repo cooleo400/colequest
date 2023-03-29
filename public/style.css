@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Phosphate';
+  src: url(./0d297395392df08b2b6734d952a15a42.ttf) format("truetype");
+}
+
+.phosphate-font {
+  font-family: 'Phosphate';
+  font-weight: 400;
+}
+
 @keyframes animateAltColor {
   0% {
     color: inherit;
@@ -41,6 +51,16 @@
   to {
     opacity: 1;
   }
+}
+
+@font-face {
+  font-family: 'Phosphate';
+  src: url(./0d297395392df08b2b6734d952a15a42.ttf) format("truetype");
+}
+
+.phosphate-font {
+  font-family: 'Phosphate';
+  font-weight: 400;
 }
 
 .bg-1 {
@@ -422,6 +442,16 @@ input {
   font-family: "Oswald", sans-serif;
 }
 
+@font-face {
+  font-family: 'Phosphate';
+  src: url(./0d297395392df08b2b6734d952a15a42.ttf) format("truetype");
+}
+
+.phosphate-font {
+  font-family: 'Phosphate';
+  font-weight: 400;
+}
+
 .loader {
   position: relative;
   width: 50%;
@@ -704,6 +734,16 @@ input {
   background-image: url(./f18c809e44aca8fc45b71830c3250c3c.jpg);
 }
 
+@font-face {
+  font-family: 'Phosphate';
+  src: url(./0d297395392df08b2b6734d952a15a42.ttf) format("truetype");
+}
+
+.phosphate-font {
+  font-family: 'Phosphate';
+  font-weight: 400;
+}
+
 .dates {
   display: table;
   width: 100%;
@@ -959,6 +999,45 @@ body.show-happening-today .section.shows .section-link h2 {
 .full-width-button {
   display: block;
   margin: 0 15px;
+}
+
+.tour-logo {
+  text-align: center;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./a683a398c3e2b03787a395d68263ddf1.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.tour-logo h1 {
+  font-size: 3em;
+}
+
+.tour-logo h1.first,
+.tour-logo p {
+  margin-bottom: 0;
+}
+
+.tour-logo h1.last,
+.tour-logo p {
+  margin-top: 0;
+}
+
+.show-happening-today .tour-logo {
+  animation: animateAltColor 1.5s linear !important;
+  animation-iteration-count: infinite !important;
+}
+
+.tour-page-content {
+  padding: 2% 5%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.more-info {
+  margin-bottom: 50px;
 }
 
 .button {

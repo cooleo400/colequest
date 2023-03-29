@@ -1,5 +1,10 @@
 @import './mixins';
 
+@font-face {
+  font-family: 'Phosphate';
+  src: url('../src/fonts/Phosphate-Inline-01.ttf') format('truetype'),
+}
+
 $primary-font-family: 'Playball', cursive;
 
 $primary-font-xl: 98px;
@@ -17,3 +22,8 @@ $secondary-font-md: 40px;
 $secondary-font-sm: 36px;
 $secondary-font-xs: 20px;
 $secondary-font-mobile-xs: 14px;
+
+.phosphate-font {
+  font-family: 'Phosphate';
+  font-weight: 400;
+}
