@@ -12,16 +12,11 @@ const client = createClient({
   accessToken: ACCESS_TOKEN
 });
 
-export function fetchShows() {
-  // return Promise.resolve();
-  return fetchEntriesForContentType('gig');
-}
-
 // Load all entries for a given Content Type from Contentful
 export function fetchEntriesForContentType (contentType) {
   return client.getEntries({
       content_type: contentType,
-      'fields.active' : 'true',
+      'fields.active': 'true',
       order: 'fields.date'
     })
   .then((response) => response.items)
@@ -40,6 +35,14 @@ function fetchContentTypes () {
   })
 }
 
+export function fetchShows() {
+  return fetchEntriesForContentType('gig');
+}
+
+export function filterShowsByTag(shows, tagId) {
+  return shows.filter((show) => show.metadata.tags.map(tag => tag.sys.id).includes(tagId));
+}
+
 export function submitEmail(email) {
   const emailUrl = 'http://colequest.com/subscribe.php';
 
@@ -55,4 +58,4 @@ export function submitEmail(email) {
   .catch((error) => {
     console.log(error);
   });
-};
+}

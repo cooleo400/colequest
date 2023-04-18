@@ -1,16 +1,12 @@
 import React, { PureComponent } from 'react';
 import Headline, { headlineTypes } from './Headline';
-import Bio from './Bio';
-import Link from './Link';
-import Columns from './Columns';
-import Loader from './Loader';
 import Button, { buttonTypes } from './Button';
 import Shows from './Shows';
 import SocialIcon from './SocialIcon';
-import { fetchShows } from '../actions';
+import { fetchShows, filterShowsByTag } from '../actions';
 import { isShowToday } from '../util';
 
-import pressPhotoOne from '../images/2023-press.jpg';
+const tourTagId = 'germanyTour2023';
 
 class Tour extends PureComponent {
   constructor(props) {
@@ -22,11 +18,18 @@ class Tour extends PureComponent {
 
   componentDidMount() {
     fetchShows()
-      .then(shows => {
-        // shows[0].fields.date = '2023-03-28'; //KEEP FOR DEBUGGING
-        const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
-        console.log(shows);
-        this.setState({ showData: shows, showHappeningToday });
+      .then(unfilteredShows => {
+        // unfilteredShows[0].fields.date = '2023-03-28'; //KEEP FOR DEBUGGING
+        const germanyShows = filterShowsByTag(unfilteredShows, tourTagId);
+        const usShows = unfilteredShows.filter((show) => {
+          const showTags = show.metadata.tags.map(tag => tag.sys.id);
+          return !showTags.includes(tourTagId);
+        });
+        const showHappeningToday = germanyShows.some((show) => isShowToday(show.fields.date));
+        this.setState({
+          germanyShows,
+          usShows
+        });
         if(showHappeningToday) {
           document.body.classList.add('show-happening-today');
         }
@@ -34,14 +37,6 @@ class Tour extends PureComponent {
       .catch((e) => {
         throw Error(e);
       });
-  }
-
-  renderPhotoLink(src, alt = ''){
-    return (
-      <a href={src} target="_blank" >
-        <img src={src} alt={alt} className="display-block" />
-      </a>
-    );
   }
 
   render() {
@@ -62,7 +57,10 @@ class Tour extends PureComponent {
         </div>
 
         <div className="tour-page-content" >
-          <Shows shows={this.state.showData} />
+          <h2 className="phosphate-font tour-title">Deutschlandtournee 2023</h2>
+          <Shows shows={this.state.germanyShows} />
+          <h2 className="phosphate-font tour-title">U.S. Shows</h2>
+          <Shows shows={this.state.usShows} />
           <Button link={'http://colequest.com'} className="text-center full-width-button more-info" type={buttonTypes.SECONDARY}>More Information</Button>
         </div>
       </div>
