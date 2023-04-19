@@ -5,7 +5,7 @@
   src: url('../src/fonts/Phosphate-Inline-01.ttf') format('truetype'),
 }
 
-$primary-font-family: 'Playball', cursive;
+$primary-font-family: 'Phosphate', cursive;
 
 $primary-font-xl: 98px;
 $primary-font-lg: 72px;
@@ -23,7 +23,11 @@ $secondary-font-sm: 36px;
 $secondary-font-xs: 20px;
 $secondary-font-mobile-xs: 14px;
 
-.phosphate-font {
+@mixin phosphate-font {
   font-family: 'Phosphate';
   font-weight: 400;
+}
+
+.phosphate-font {
+  @include phosphate-font;
 }

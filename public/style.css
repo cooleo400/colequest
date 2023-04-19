@@ -124,7 +124,7 @@
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  font-family: "Playball", cursive;
+  font-family: "Phosphate", cursive;
   width: 96%;
   max-height: 0;
   overflow: hidden;
@@ -142,7 +142,8 @@
 
 body {
   background-color: #c82c2f;
-  font-family: "Playball", cursive;
+  font-family: 'Phosphate';
+  font-weight: 400;
   color: #ffffff;
   font-size: 36px;
 }
@@ -168,6 +169,7 @@ a:hover {
 
 h2 {
   font-size: 72px;
+  font-weight: inherit;
 }
 
 @media (max-width: 37.5em) {
@@ -178,6 +180,7 @@ h2 {
 
 h3 {
   font-size: 40px;
+  font-weight: inherit;
 }
 
 @media (max-width: 37.5em) {
@@ -714,11 +717,19 @@ input {
   background-image: url(./c29a4b944a0eb53e688506ab34f10bdb.jpg);
 }
 
-.section.media .background-image {
-  background-image: url(./39e03733cf98963f9805cbb6d0df0536.jpg);
+.section.videos .background-image {
+  background-image: url(./d289421b9346886a11d7e68452272251.jpg);
 }
 
-.section.media .section-content.open {
+.section.videos .section-content.open {
+  max-height: 3500px;
+}
+
+.section.photos .background-image {
+  background-image: url(./469bbe7b36be3eab821b555399b5e202.jpg);
+}
+
+.section.photos .section-content.open {
   max-height: 3500px;
 }
 
@@ -993,7 +1004,8 @@ body.show-happening-today .section.shows .section-link h2 {
 }
 
 .secondary-headline {
-  font-family: "Playball", cursive;
+  font-family: 'Phosphate';
+  font-weight: 400;
 }
 
 .full-width-button {
@@ -1073,7 +1085,7 @@ body.show-happening-today .section.shows .section-link h2 {
 }
 
 .button.primary-button {
-  font-family: "Playball", cursive;
+  font-family: "Phosphate", cursive;
 }
 
 .button.secondary-button {

@@ -76,9 +76,20 @@
   &.shows .background-image {
     background-image: url('../src/images/steffi-gala-bw.jpg');
   }
-  &.media {
+  &.videos {
     .background-image {
-      background-image: url('../src/images/conveyor-shirts.jpg');
+      background-image: url('../src/images/matheus-dance-jalopy.jpg');
+    }
+
+    .section-content {
+      &.open {
+        max-height: 3500px;
+      }
+    }
+  }
+  &.photos {
+    .background-image {
+      background-image: url('../src/images/bench-heads.jpg');
     }
 
     .section-content {
@@ -90,7 +101,6 @@
   &.merchandise {
     .background-image {
       background-image: url('../src/images/rockland_dobro.jpg');
-      // background-image: url('../src/images/front-cover.jpg');
     }
 
     .section-content {

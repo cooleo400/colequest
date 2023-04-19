@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import Modal from 'react-modal';
 import Columns from './Columns';
 import Video from './Video';
 import SocialIcon from './SocialIcon';
@@ -12,43 +11,9 @@ import {
   ifIStillVideoYouTubeId
 } from '../constants';
 
-import pressPhotoOne from '../images/2023-press.jpg';
-import pressPhotoTwo from '../images/matheus-dance-jalopy.jpg';
-import pressPhotoThree from '../images/four-boys-jalopy.jpg';
-
-class Media extends PureComponent {
+class Videos extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.openModalImageOne = this.openModal.bind(this, pressPhotoOne);
-    this.openModalImageTwo = this.openModal.bind(this, pressPhotoTwo);
-    this.openModalImageThree = this.openModal.bind(this, pressPhotoThree);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-  }
-
-  openModal(image, event) {
-    event.preventDefault();
-    this.setState({
-      modalIsOpen: true,
-      image
-    });
-  }
-
-  handleCloseModal() {
-    this.setState({
-      modalIsOpen: false
-    });
-  }
-
-  getPhotoElement(src, onClick, alt = 'Press Photo') {
-    return (
-      <a href="#" onClick={onClick} >
-        <img src={src} alt={alt} className="display-block" />
-      </a>
-    )
   }
 
   render() {
@@ -72,9 +37,7 @@ class Media extends PureComponent {
         <h4 className="text-center">LIVE PERFORMANCES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
         <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
-        <h4 className="text-center">Press Photos</h4>
-        <Columns leftColumnChildren={this.getPhotoElement(pressPhotoOne, this.openModalImageOne)} rightColumnChildren={this.getPhotoElement(pressPhotoTwo, this.openModalImageTwo)} marginBottom="small"/>
-        <Columns leftColumnChildren={this.getPhotoElement(pressPhotoThree, this.openModalImageThree)} marginBottom="small"/>
+        <h4 className="text-center">RECORDED MUSIC</h4>
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="spotify-se" />
@@ -82,16 +45,9 @@ class Media extends PureComponent {
             <SocialIcon type="youtube" />
           </div>
         </div>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.handleCloseModal}
-          className="modal"
-          overlayClassName="overlay">
-            <img src={this.state.image} className="img" />
-        </Modal>
       </div>
     );
   }
 }
 
-export default Media;
+export default Videos;

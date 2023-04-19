@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
-import Headline, { headlineTypes } from './Headline';
 import Button, { buttonTypes } from './Button';
 import Shows from './Shows';
-import SocialIcon from './SocialIcon';
+import Header from './Header';
 import { fetchShows, filterShowsByTag } from '../actions';
 import { isShowToday } from '../util';
 
@@ -42,20 +41,7 @@ class Tour extends PureComponent {
   render() {
     return (
       <div>
-        <div className="tour-logo">
-          <h1 className="phosphate-font first">Cole Quest</h1>
-          <p className="phosphate-font">and the</p>
-          <h1 className="phosphate-font last">City Pickers</h1>
-          <div className="social-container">
-            <div className="social-container-md">
-              <SocialIcon type="instagram" />
-              <SocialIcon type="facebook" />
-              <SocialIcon type="spotify-se" />
-              <SocialIcon type="apple-se" />
-            </div>
-          </div>
-        </div>
-
+        <Header withSocialIcons />
         <div className="tour-page-content" >
           <h2 className="phosphate-font tour-title">Deutschlandtournee 2023</h2>
           <Shows shows={this.state.germanyShows} />

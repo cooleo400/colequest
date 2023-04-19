@@ -6,7 +6,8 @@ import Columns from './components/Columns';
 import Header from './components/Header';
 import Section from './components/Section';
 import About from './components/About';
-import Media from './components/Media';
+import Videos from './components/Videos';
+import Photos from './components/Photos';
 import Merchandise from './components/Merchandise';
 import Contact from './components/Contact';
 import Shows from './components/Shows';
@@ -26,14 +27,16 @@ class App extends PureComponent {
     this.sectionRefs = {
       about: null,
       shows: null,
-      media: null,
+      videos: null,
+      photos: null,
       merchandise: null,
       contact: null
     };
     this.state = {
       about: false,
       contact: false,
-      media: false,
+      videos: false,
+      photos: false,
       merchandise: false,
       shows: false,
       showData: [],
@@ -41,7 +44,7 @@ class App extends PureComponent {
       isModalOpen: false
     };
 
-    this.showVideo =  !/iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    this.showVideo =  false; // !/iPad|iPhone|iPod|Android/.test(navigator.userAgent);
 
     this.setSectionRef = this.setSectionRef.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -90,7 +93,8 @@ class App extends PureComponent {
       about,
       shows,
       showData,
-      media,
+      videos,
+      photos,
       merchandise,
       contact,
       highlight
@@ -107,10 +111,13 @@ class App extends PureComponent {
           <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
             <Shows shows={showData} />
           </Section>
-          <Section title="Media" className="media" isOpen={media} ref={ref => this.setSectionRef('media', ref)}>
-            <Media />
+          <Section title="Videos" className="videos" isOpen={videos} ref={ref => this.setSectionRef('videos', ref)}>
+            <Videos />
           </Section>
-          <Section title="Merchandise" className="merchandise" isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
+          <Section title="Photos" className="photos" isOpen={photos} ref={ref => this.setSectionRef('photos', ref)}>
+            <Photos />
+          </Section>
+          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
             <Merchandise />
           </Section>
           <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)}>

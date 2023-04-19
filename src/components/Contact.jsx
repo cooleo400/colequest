@@ -12,7 +12,7 @@ const Contact = (props) => (
         external
         className="inline-block"
       >
-        Book the band!
+        Book the band
       </Button>
     </div>
     <p className="text-center">Email:<br/> <a href="mailto:info@colequest.com">info@colequest.com</a></p>

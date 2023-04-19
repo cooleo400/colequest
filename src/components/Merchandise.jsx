@@ -4,10 +4,20 @@ import coverImage from '../images/cover.jpg';
 import selfEntitledCover from '../images/front-cover.jpg';
 import patchesImage from '../images/patches.jpg';
 import wearableCoverImage from '../images/merch.jpg';
-import vinylCoverImage from '../images/vinyl.jpg';
-import bandanaCoverImage from '../images/bandana.jpg';
+// import vinylCoverImage from '../images/vinyl.jpg';
+// import bandanaCoverImage from '../images/bandana.jpg';
+import louvinNYImage from '../images/i_louvin_ny.jpg';
 
 const merchData = [
+  {
+    image: louvinNYImage,
+    title: 'I Louvin NY Sticker',
+    description: 'How do you feel about NY? Do you heart Ira and Charlie Louvin? Well, now you can tell the world with a proud sticker created by some of us who feel strongly about them both.',
+    link: 'https://forms.gle/WLadHmPQCsmUXSBq7',
+    price: '$3',
+    ctaLabel: 'Order',
+    isNew: true,
+  },
   {
     image: selfEntitledCover,
     title: 'Self [En]Titled EP',
@@ -26,15 +36,16 @@ const merchData = [
     ctaLabel: 'Email us',
     isNew: false,
   },
-  {
-    image: bandanaCoverImage,
-    title: 'Brooklyn Bandanas',
-    description: (<span>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank" rel="noopener noreferrer" >Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</span>),
-    link: 'mailto:info@colequest.com',
-    price: (<span className="strike">$15</span>),
-    ctaLabel: 'Email us',
-    isNew: false,
-  },
+
+  // {
+  //   image: bandanaCoverImage,
+  //   title: 'Brooklyn Bandanas',
+  //   description: (<span>Made by our friend Katherine Slinghuff at <a href="https://www.brooklynbandanas.com/" target="_blank" rel="noopener noreferrer" >Brooklyn Bandanas</a>, these nifty little hand dryers are great for keeping you cool when the band turns up the heat or for those touching quiter moments to dry your eyes (product tested and approved).</span>),
+  //   link: 'mailto:info@colequest.com',
+  //   price: (<span className="strike">$15</span>),
+  //   ctaLabel: 'Email us',
+  //   isNew: false,
+  // },
   {
     image: wearableCoverImage,
     title: 'Pocket tee\'s, trucker hats and koozies!',
@@ -44,15 +55,15 @@ const merchData = [
     ctaLabel: 'Email us',
     isNew: false,
   },
-  {
-    image: vinylCoverImage,
-    title: 'Limited Edition Lath Cut Records',
-    description: 'Recorded live at LeestaVall Record Studios, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950\'s. Each record is handmade, one at a time, in real time, by a real person.',
-    link: 'mailto:info@colequest.com',
-    price: (<span className="strike">$20</span>),
-    ctaLabel: 'Email us',
-    isNew: false,
-  },
+  // {
+  //   image: vinylCoverImage,
+  //   title: 'Limited Edition Lath Cut Records',
+  //   description: 'Recorded live at LeestaVall Record Studios, these limited edition lathe cut record releases are made on a modified antique record cutting lathe from the 1950\'s. Each record is handmade, one at a time, in real time, by a real person.',
+  //   link: 'mailto:info@colequest.com',
+  //   price: (<span className="strike">$20</span>),
+  //   ctaLabel: 'Email us',
+  //   isNew: false,
+  // },
   {
     image: coverImage,
     title: 'Cole Quest and The City Pickers CD',

@@ -1,3 +1,3 @@
 .secondary-headline {
-  font-family: $primary-font-family;
+  @include phosphate-font;
 }

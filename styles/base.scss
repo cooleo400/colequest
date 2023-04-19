@@ -3,7 +3,7 @@
 
 body {
   background-color: $bg1;
-  font-family: $primary-font-family;
+  @include phosphate-font;
   color: $primary-font-color;
   font-size: $primary-font-sm;
   @include breakpoint('mobileonly') {
@@ -30,6 +30,7 @@ h1 {
 
 h2 {
   font-size: $primary-font-lg;
+  font-weight: inherit;
   @include breakpoint('mobileonly') {
     font-size: $primary-font-md;
   }
@@ -37,6 +38,7 @@ h2 {
 
 h3 {
   font-size: $primary-font-md;
+  font-weight: inherit;
   @include breakpoint('mobileonly') {
     font-size: $primary-font-sm;
   }

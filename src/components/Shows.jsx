@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Show from './Show';
 import Loader from './Loader';
 
@@ -68,17 +67,17 @@ class Shows extends PureComponent {
           {this.renderFetchedShows()}
         </div>
       );
-  };
-};
+  }
+}
 
 Shows.propTypes = {
-  className : PropTypes.string,
-  shows : PropTypes.array
+  className: PropTypes.string,
+  shows: PropTypes.array
 };
 
 Shows.defaultProps = {
-  className : '',
-  shows : []
+  className: '',
+  shows: []
 };
 
 export default Shows;
