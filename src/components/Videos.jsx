@@ -30,14 +30,7 @@ class Videos extends PureComponent {
 
     return (
       <div>
-        <h4 className="text-center">SELF [EN]TITLED</h4>
-        <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
-        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="small" />
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
-        <h4 className="text-center">LIVE PERFORMANCES</h4>
-        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
-        <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
-        <h4 className="text-center">RECORDED MUSIC</h4>
+        <h4 className="text-center">STREAMING MUSIC</h4>
         <div className="social-container">
           <div className="social-container-sm">
             <SocialIcon type="spotify-se" />
@@ -45,6 +38,13 @@ class Videos extends PureComponent {
             <SocialIcon type="youtube" />
           </div>
         </div>
+        <h4 className="text-center">SELF [EN]TITLED</h4>
+        <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
+        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="small" />
+        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
+        <h4 className="text-center">LIVE PERFORMANCES</h4>
+        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
+        <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
       </div>
     );
   }
