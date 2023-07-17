@@ -38,10 +38,10 @@ class Videos extends PureComponent {
             <SocialIcon type="youtube" />
           </div>
         </div>
-        <h4 className="text-center">SELF [EN]TITLED</h4>
+        <h4 className="text-center">SELF [EN]TITLED EP</h4>
+        <Columns leftColumnChildren={ostrichVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
+        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={sevenElevenVideo} marginBottom="small" />
         <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
-        <Columns leftColumnChildren={sevenElevenVideo} rightColumnChildren={ostrichVideo} marginBottom="small" />
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
         <h4 className="text-center">LIVE PERFORMANCES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
         <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />

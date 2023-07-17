@@ -3,12 +3,22 @@ import WithNew from './WithNew';
 import coverImage from '../images/cover.jpg';
 import selfEntitledCover from '../images/front-cover.jpg';
 import patchesImage from '../images/patches.jpg';
-import wearableCoverImage from '../images/merch.jpg';
+// import wearableCoverImage from '../images/merch.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
+import tourneePoster from '../images/Tour-Poster-web.jpg';
 
 const merchData = [
+  {
+    image: tourneePoster,
+    title: 'Deutschland Tournee 2023 Poster',
+    description: (<span>This beautiful piece of art, dedicated to our 2023 Germany tour, is a mixed media - collage (Westways & LIFE magazines from 50s-70s), watercolor and pen/ink on canvas includes hand lettering to give it that hand crafted look and feel. Designed and created by <a href="http://www.danamanon.com/" target="_blank" rel="noopener noreferrer">Dana Manon</a>.</span>),
+    link: 'mailto:info@colequest.com',
+    price: '$5',
+    ctaLabel: 'Email us',
+    isNew: true,
+  },
   {
     image: louvinNYImage,
     title: 'I Louvin NY Sticker',
@@ -16,7 +26,7 @@ const merchData = [
     link: 'https://forms.gle/WLadHmPQCsmUXSBq7',
     price: '$3',
     ctaLabel: 'Order',
-    isNew: true,
+    isNew: false,
   },
   {
     image: selfEntitledCover,
@@ -46,15 +56,15 @@ const merchData = [
   //   ctaLabel: 'Email us',
   //   isNew: false,
   // },
-  {
-    image: wearableCoverImage,
-    title: 'Pocket tee\'s, trucker hats and koozies!',
-    description: 'Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we\'ll do our best to ship it when we can.',
-    link: 'mailto:info@colequest.com',
-    price: (<span><span className="strike">$15 Shirts</span> / <span className="strike">$10 Hats</span> / $3 Koozies</span>),
-    ctaLabel: 'Email us',
-    isNew: false,
-  },
+  // {
+  //   image: wearableCoverImage,
+  //   title: 'Pocket tee\'s, trucker hats and koozies!',
+  //   description: 'Various color and size combinations of wearable gear with our logo smacked on it. To get your own, catch one of our live shows or reach out and we\'ll do our best to ship it when we can.',
+  //   link: 'mailto:info@colequest.com',
+  //   price: (<span><span className="strike">$15 Shirts</span> / <span className="strike">$10 Hats</span> / $3 Koozies</span>),
+  //   ctaLabel: 'Email us',
+  //   isNew: false,
+  // },
   // {
   //   image: vinylCoverImage,
   //   title: 'Limited Edition Lath Cut Records',

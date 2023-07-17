@@ -5,6 +5,8 @@ import Columns from './Columns';
 import Loader from './Loader';
 import Quote from './Quote';
 
+import InstagramEmbed from './InstagramEmbed';
+
 const epkLink = 'https://drive.google.com/open?id=1Af2V_dZbPYB8LN78R_gUQdoXeZ0Ihn0-';
 
 class About extends PureComponent {
