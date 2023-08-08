@@ -44,7 +44,7 @@ export function filterShowsByTag(shows, tagId) {
 }
 
 export function submitEmail(email) {
-  const emailUrl = 'http://colequest.com/subscribe.php';
+  const emailUrl = '//colequest.com/subscribe.php';
 
   return fetch(emailUrl, {
     method: 'POST',
