@@ -7,13 +7,13 @@ import patchesImage from '../images/patches.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
-import tourneePoster from '../images/Tour-Poster-web.jpg';
+import tourneePoster from '../images/Tour-Poster-signed-web.jpg';
 
 const merchData = [
   {
     image: tourneePoster,
-    title: 'Deutschland Tournee 2023 Poster',
-    description: (<span>This beautiful piece of art, dedicated to our 2023 Germany tour, is a mixed media - collage (Westways & LIFE magazines from 50s-70s), watercolor and pen/ink on canvas includes hand lettering to give it that hand crafted look and feel. Designed and created by <a href="http://www.danamanon.com/" target="_blank" rel="noopener noreferrer">Dana Manon</a>.</span>),
+    title: 'Deutschland Tournee 2023 Poster (Signed)',
+    description: (<span>This beautiful piece of art, dedicated to our 2023 Germany tour, is a mixed media - collage (Westways & LIFE magazines from 50s-70s), watercolor and pen/ink on canvas includes hand lettering to give it that hand crafted look and feel. Signed by Cole Quest, Christian Apuzzo, Matheus Verardino, Mike Mulhollan and Craig Akin. Designed and created by <a href="http://www.danamanon.com/" target="_blank" rel="noopener noreferrer">Dana Manon</a>.</span>),
     link: 'mailto:info@colequest.com',
     price: '$5',
     ctaLabel: 'Email us',
