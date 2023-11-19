@@ -60,9 +60,14 @@ class About extends PureComponent {
         <p><a href="https://www.youtube.com/watch?v=Yw5tZtpiYlI" target="_blank">Way Over Yonder in the Minor Key</a>, awarded Honorable Mention for <a href="https://www.wam-awards.com/2021-wam-award-winners" target="_blank">Best Cover song</a> by the W.A.M. Awards.</p>
       </div>
     );
-    const leftColAccolades = (
+    const centerColAccolades = (
       <div className="text-center">
         <p><a href="https://open.spotify.com/track/7lkwW1nd1jsDf2EDPGRxBX?si=a878a101fb614c6c" target="_blank">My Sweet Little Girl</a> sits 5 weeks at #1 and 7 weeks at #2 on <a href="https://rootsmusicreport.com/charts/view/song/sub_genre/traditional-bluegrass/weekly" target="_blank">Roots Music Report's Traditional Bluegrass Song Chart</a></p>
+      </div>
+    );
+    const leftColAccolades = (
+      <div className="text-center">
+        <p>Winners of the 2023 <a href="https://podunkbluegrass.com/band-competition/" target="_blank">Telefunken Band Competition at Podunk Bluegrass Festival</a></p>
       </div>
     );
 
@@ -147,7 +152,7 @@ class About extends PureComponent {
         <Columns leftColumnChildren={<Bio />} rightColumnChildren={twitter} />
         <br />
         <Headline type={headlineTypes.PRIMARY}>Accolades</Headline>
-        <Columns leftColumnChildren={leftColAccolades} rightColumnChildren={rightColAccolades} />
+        <Columns leftColumnChildren={leftColAccolades} centerColumnChildren={centerColAccolades} rightColumnChildren={rightColAccolades} />
         <Headline type={headlineTypes.PRIMARY}>Reviews</Headline>
         <Columns leftColumnChildren={leftColumnReviews} rightColumnChildren={rightColumnReviews} />
         <Headline type={headlineTypes.PRIMARY}>Featured On</Headline>
