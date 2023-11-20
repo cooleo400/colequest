@@ -9,7 +9,7 @@ export const ostrichYouTubeId = 'WZ_macH8E1w';
 export const bitcoinVideoYouTubeId = 'k8BI1KWwiTc';
 export const wayOverYonderVideoYouTubeId = 'Yw5tZtpiYlI';
 export const sevenElevenVideoYouTubeId = 'lrk2mBk_Vv0';
-export const sweetLittleGirlVideoYouTubeId = 'dnMwwiZQyZ0';
+export const sweetLittleGirlVideoYouTubeId = 'NdZ65rBdsWs';
 export const ifIStillVideoYouTubeId = '3XDlPrSyzLk';
 
 export const getYouTubeLink = (id) => `https://youtu.be/${id}`;

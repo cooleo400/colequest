@@ -149,7 +149,7 @@ class About extends PureComponent {
 
     return (
       <div>
-        <Columns leftColumnChildren={<Bio />} rightColumnChildren={twitter} />
+        <Columns centerColumnChildren={<Bio />} />
         <br />
         <Headline type={headlineTypes.PRIMARY}>Accolades</Headline>
         <Columns leftColumnChildren={leftColAccolades} centerColumnChildren={centerColAccolades} rightColumnChildren={rightColAccolades} />
