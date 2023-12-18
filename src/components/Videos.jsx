@@ -8,7 +8,8 @@ import {
   wayOverYonderVideoYouTubeId,
   sevenElevenVideoYouTubeId,
   sweetLittleGirlVideoYouTubeId,
-  ifIStillVideoYouTubeId
+  ifIStillVideoYouTubeId,
+  inTallBuildingsYouTubeId
 } from '../constants';
 
 class Videos extends PureComponent {
@@ -22,6 +23,8 @@ class Videos extends PureComponent {
     const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
+    const inTallBuildingsVideo = <Video youtubeId={inTallBuildingsYouTubeId} />;
+
     const wayOverYonderVideo = <Video youtubeId={wayOverYonderVideoYouTubeId} />;
     const bitcoinVideo = <Video youtubeId={bitcoinVideoYouTubeId} />;
     const ostrichVideo = <Video youtubeId={ostrichYouTubeId} />;
@@ -44,7 +47,7 @@ class Videos extends PureComponent {
         <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
         <h4 className="text-center">LIVE PERFORMANCES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
-        <Columns leftColumnChildren={ostrichTherapyLiveVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
+        <Columns leftColumnChildren={inTallBuildingsVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
       </div>
     );
   }
