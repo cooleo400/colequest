@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   selfEntitledAppleLink,
-  selfEntitledSpotifyLink
+  selfEntitledSpotifyLink,
+  youtubeChannelLink
 } from '../constants';
 
 const socialTypes = {
@@ -19,7 +20,7 @@ const socialTypes = {
   spotify: 'https://open.spotify.com/album/518LdQOgCX5YuAGyXFL3bN',
   'spotify-se': selfEntitledSpotifyLink,
   twitter: 'https://twitter.com/colequestcp',
-  youtube: 'https://www.youtube.com/channel/UCRvFa90dbwytdK75cpxbfmg',
+  youtube: youtubeChannelLink,
 }
 
 const SocialIcon = ({ type }) => {

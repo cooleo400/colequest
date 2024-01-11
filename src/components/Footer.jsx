@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="social-container-md">
         <SocialIcon type="facebook" />
         <SocialIcon type="instagram" />
-        <SocialIcon type="twitter" />
+        <SocialIcon type="youtube" />
         <SocialIcon type="email" />
       </div>
       <div className="footer-copy text-center">

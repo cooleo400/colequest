@@ -9,7 +9,8 @@ import {
   sevenElevenVideoYouTubeId,
   sweetLittleGirlVideoYouTubeId,
   ifIStillVideoYouTubeId,
-  inTallBuildingsYouTubeId
+  inTallBuildingsYouTubeId,
+  sheTalksYouTubeId
 } from '../constants';
 
 class Videos extends PureComponent {
@@ -19,11 +20,12 @@ class Videos extends PureComponent {
 
   render() {
     const sevenElevenVideo = <Video youtubeId={sevenElevenVideoYouTubeId} />;
-    const ostrichTherapyLiveVideo = <Video youtubeId="WjJSC8v5bAg" />;
-    const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
+    // const ostrichTherapyLiveVideo = <Video youtubeId="WjJSC8v5bAg" />;
+    // const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
     const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
     const inTallBuildingsVideo = <Video youtubeId={inTallBuildingsYouTubeId} />;
+    const sheTalksVideo = <Video youtubeId={sheTalksYouTubeId} />;
 
     const wayOverYonderVideo = <Video youtubeId={wayOverYonderVideoYouTubeId} />;
     const bitcoinVideo = <Video youtubeId={bitcoinVideoYouTubeId} />;
@@ -46,8 +48,8 @@ class Videos extends PureComponent {
         <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={sevenElevenVideo} marginBottom="small" />
         <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
         <h4 className="text-center">LIVE PERFORMANCES</h4>
-        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
-        <Columns leftColumnChildren={inTallBuildingsVideo} rightColumnChildren={waxCyclinderVideo} marginBottom="small" />
+        <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={sheTalksVideo} marginBottom="small" />
+        <Columns leftColumnChildren={inTallBuildingsVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
       </div>
     );
   }

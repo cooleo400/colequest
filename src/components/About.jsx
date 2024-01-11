@@ -73,6 +73,9 @@ class About extends PureComponent {
 
     const leftColumnReviews = (
       <div className="text-center">
+        <Quote attribution="www.honnef-heute.de" attributionLink="https://honnef-heute.de/cole-quest-and-the-city-pickers-rockten-das-weingut/">
+          "Cole Quest and The City Pickers rocked the winery. [They] delivered bluegrass at its best. The fans clapped frenetically, danced and were thrilled."
+        </Quote>
         <Quote author="" attribution="American Songwriter" attributionLink="https://americansongwriter.com/review-cole-quest-makes-granddad-proud/">
           "Having made their name in their native New York City, Quest and company are clearly well-equipped to convey the music with a craft and creativity befitting his bloodline...Then again, the ability to affect a listener is a sure sign of skill and savvy. And Quest, like his grandfather, has the ability to convey those feelings with care and compassion. Woody would be proud...4 of 5 stars"
         </Quote>
@@ -86,6 +89,9 @@ class About extends PureComponent {
     );
     const rightColumnReviews = (
       <div className="text-center">
+        <Quote attribution="www.country.de" attributionLink="https://www.country.de/2023/07/03/cole-quest-the-city-pickers-verzuecken-eisenach/">
+          "Cole Quest and The City Pickers took the audience by storm and put on a concert that will be remembered for a long time."
+        </Quote>
         <Quote author="" attribution="Take Effect" attributionLink="https://takeeffectreviews.com/april-2021-2/2021/4/19/cole-quest-and-the-city-pickers">
           "An energetic and intimate quick listen...that tips it hat to legends like Bill Monroe or Earl Scruggs, Quest and company prove that urban bluegrass can be just as genuine as its rural counterparts, and their knack for progressive ideas certainly only adds more appeal to their craft...8/10"
         </Quote>
@@ -147,9 +153,11 @@ class About extends PureComponent {
       </div>
     );
 
+
     return (
       <div>
         <Columns centerColumnChildren={<Bio />} />
+
         <br />
         <Headline type={headlineTypes.PRIMARY}>Accolades</Headline>
         <Columns leftColumnChildren={leftColAccolades} centerColumnChildren={centerColAccolades} rightColumnChildren={rightColAccolades} />

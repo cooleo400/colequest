@@ -6,27 +6,21 @@ import Headline, { headlineTypes } from './Headline';
 import {
   sevenElevenGlideLink,
   getYouTubeLink,
-  ostrichYouTubeId,
-  bitcoinVideoYouTubeId,
-  wayOverYonderVideoYouTubeId,
-  sevenElevenVideoYouTubeId,
-  sweetLittleGirlVideoYouTubeId,
-  ifIStillVideoYouTubeId,
+  // ostrichYouTubeId,
+  // bitcoinVideoYouTubeId,
+  // wayOverYonderVideoYouTubeId,
+  // sevenElevenVideoYouTubeId,
+  // sweetLittleGirlVideoYouTubeId,
+  // ifIStillVideoYouTubeId,
+  inTallBuildingsYouTubeId,
+  sheTalksYouTubeId,
   selfEntitledAppleLink,
   selfEntitledSpotifyLink,
   // selfEntitledTidalLink,
   // selfEntitledAmazonLink,
-  selfEntitledPurchaseLink
+  selfEntitledPurchaseLink,
+  youtubeChannelLink
 } from '../constants';
-
-// <Columns
-//   leftColumnChildren={(
-//     <Button link={selfEntitledTidalLink} ctaLabel="Listen on Tidal" className="text-center full-width-button" type={buttonTypes.SECONDARY}></Button>
-//   )}
-//   rightColumnChildren={(
-//     <Button link={selfEntitledAmazonLink} ctaLabel="Listen on Amazon" className="text-center full-width-button" type={buttonTypes.SECONDARY}></Button>
-//   )}
-// />
 
 export default class Links extends PureComponent {
   constructor(props){
@@ -34,34 +28,18 @@ export default class Links extends PureComponent {
   }
   render() {
     return (
-      <div>
+      <div style={{ paddingBottom: '20px' }}>
         <Header showVideo={false} />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">Watch New Videos</Headline>
+        <Headline type={headlineTypes.SECONDARY}>Watch Videos</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={getYouTubeLink(sweetLittleGirlVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>My Sweet Little Girl</Button>
+            <Button link={getYouTubeLink(sheTalksYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>She Talks A Lot (and I Like It)</Button>
           )}
           rightColumnChildren={(
-            <Button link={getYouTubeLink(ifIStillVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>If I Still Had You</Button>
+            <Button link={getYouTubeLink(inTallBuildingsYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>In Tall Buildings</Button>
           )}
         />
-        <Columns
-          leftColumnChildren={(
-            <Button link={getYouTubeLink(sevenElevenVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>7-11 / Foggy Mountain Rock</Button>
-          )}
-          rightColumnChildren={(
-            <Button link={getYouTubeLink(ostrichYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Ostrich Therapy</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link={getYouTubeLink(bitcoinVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Bitcoin Gambler</Button>
-          )}
-          rightColumnChildren={(
-            <Button link={getYouTubeLink(wayOverYonderVideoYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Way Over Yonder in the Minor Key</Button>
-          )}
-        />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">Self [En]Titled EP</Headline>
+        <Headline type={headlineTypes.SECONDARY}>Self [En]Titled EP</Headline>
         <Columns
           leftColumnChildren={(
             <Button link={selfEntitledSpotifyLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Listen on Spotify</Button>
@@ -108,14 +86,19 @@ export default class Links extends PureComponent {
           rightColumnChildren={null}
         />
         <Headline type={headlineTypes.SECONDARY} >More Links...</Headline>
-
         <Columns
           leftColumnChildren={(
             <Button link="/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>ColeQuest.com</Button>
           )}
           rightColumnChildren={(
+            <Button link={youtubeChannelLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Youtube Channel</Button>
+          )}
+        />
+        <Columns
+          leftColumnChildren={(
             <Button link="http://eepurl.com/beYHvT" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Join mailing list</Button>
           )}
+          rightColumnChildren={null}
         />
       </div>
     );

@@ -17,7 +17,7 @@ const merchData = [
     link: 'mailto:info@colequest.com',
     price: '$5',
     ctaLabel: 'Email us',
-    isNew: true,
+    isNew: false,
   },
   {
     image: louvinNYImage,
