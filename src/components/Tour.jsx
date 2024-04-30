@@ -5,7 +5,7 @@ import Header from './Header';
 import { fetchShows, filterShowsByTag } from '../actions';
 import { isShowToday } from '../util';
 
-const tourTagId = 'germanyTour2023';
+const tourTagId = 'germanyTour2024';
 
 class Tour extends PureComponent {
   constructor(props) {
@@ -43,7 +43,7 @@ class Tour extends PureComponent {
       <div>
         <Header withSocialIcons />
         <div className="tour-page-content" >
-          <h2 className="phosphate-font tour-title">Deutschlandtournee 2023</h2>
+          <h2 className="phosphate-font tour-title">Deutschlandtournee 2024</h2>
           <Shows shows={this.state.germanyShows} />
           <h2 className="phosphate-font tour-title">U.S. Shows</h2>
           <Shows shows={this.state.usShows} />

@@ -7,6 +7,8 @@ import Quote from './Quote';
 
 import InstagramEmbed from './InstagramEmbed';
 
+import bioPhotoSrc from '../images/rudolstadt-day1-smile.jpg';
+
 const epkLink = 'https://drive.google.com/open?id=1Af2V_dZbPYB8LN78R_gUQdoXeZ0Ihn0-';
 
 class About extends PureComponent {
@@ -24,6 +26,9 @@ class About extends PureComponent {
   }
 
   render() {
+
+    const bioPhotoWrapper = (<img src={bioPhotoSrc} />)
+
     const twitter = (
       <div>
         <a className="twitter-timeline" data-height="400" data-link-color="#c82c2f" href="https://twitter.com/colequestcp?ref_src=twsrc%5Etfw">
@@ -156,8 +161,7 @@ class About extends PureComponent {
 
     return (
       <div>
-        <Columns centerColumnChildren={<Bio />} />
-
+        <Columns leftColumnChildren={<Bio />} rightColumnChildren={bioPhotoWrapper} />
         <br />
         <Headline type={headlineTypes.PRIMARY}>Accolades</Headline>
         <Columns leftColumnChildren={leftColAccolades} centerColumnChildren={centerColAccolades} rightColumnChildren={rightColAccolades} />

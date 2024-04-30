@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 import Video from './components/Video';
 import SpotifyEmbed from './components/SpotifyEmbed';
 import { submitEmail, fetchShows } from './actions';
-import { isShowToday } from './util';
+import { animateTitle, isShowToday } from './util';
 import 'normalize.css';
 import 'styles/index.scss';
 
@@ -40,7 +40,7 @@ class App extends PureComponent {
       merchandise: false,
       shows: false,
       showData: [],
-      showHappeningToday: false,
+      showTonight: false,
       isModalOpen: false
     };
 
@@ -55,10 +55,12 @@ class App extends PureComponent {
     fetchShows()
       .then(shows => {
         // shows[0].fields.date = '2018-09-16'; //KEEP FOR DEBUGGING
-        const showHappeningToday = shows.some((show) => isShowToday(show.fields.date));
-        this.setState({ showData: shows, showHappeningToday });
-        if(showHappeningToday) {
+        const showTonight = shows.find((show) => isShowToday(show.fields.date) ? show : null);
+        this.setState({ showData: shows, showTonight });
+        if(showTonight) {
           document.body.classList.add('show-happening-today');
+          const title = `${showTonight.fields.eventTitle} in ${showTonight.fields.locationTitle} tonight! `.toUpperCase();
+          animateTitle(title);
         }
       })
       .catch((e) => {
@@ -99,7 +101,6 @@ class App extends PureComponent {
       contact,
       highlight
     } = this.state;
-    const sevenElevenVideo = <Video youtubeId="lrk2mBk_Vv0" />;
 
     return (
       <div>
@@ -131,7 +132,9 @@ class App extends PureComponent {
           className="modal"
           overlayClassName="overlay fade-in">
             <h4 className="highlight text-center">CHECKOUT OUR NEW VIDEO!</h4>
-            {sevenElevenVideo}
+            {
+              //
+            }
         </Modal>
       </div>
     );
