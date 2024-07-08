@@ -741,6 +741,14 @@ input {
   max-height: 2900px;
 }
 
+.section.lyrics .background-image {
+  background-image: url(./89f2bbbcb2e96d645d0055e4c8a9fd20.jpg);
+}
+
+.section.lyrics h4 {
+  margin: 15px 0;
+}
+
 .section.contact .background-image {
   background-image: url(./f18c809e44aca8fc45b71830c3250c3c.jpg);
 }

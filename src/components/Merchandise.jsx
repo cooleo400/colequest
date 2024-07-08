@@ -1,15 +1,26 @@
 import React from 'react';
 import WithNew from './WithNew';
+import Link from './Link';
 import coverImage from '../images/cover.jpg';
 import selfEntitledCover from '../images/front-cover.jpg';
 import patchesImage from '../images/patches.jpg';
 // import wearableCoverImage from '../images/merch.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
+import shirtToteImage from '../images/shirt-totes.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
 import tourneePoster from '../images/Tour-Poster-signed-web.jpg';
 
 const merchData = [
+  {
+    image: shirtToteImage,
+    title: 'Shirts N Totes',
+    description: (<span>Including illustrations by our friend <Link href="https://www.instagram.com/george_and_corey/">Corey Cavangolo</Link>, take home this rootsy raccoon ringer tee, or the two steppin' elephant tote as a great way to show your support for the band and look good doing it. Both are screen printed by hand in Brooklyn, NY by <Link  href="https://funhousehouse.fun/">Funhouse Screen Printing</Link>. Sizes and Colors available upon request.</span>),
+    link: 'mailto:info@colequest.com',
+    price: '$25 Shirt / $15 Tote',
+    ctaLabel: 'Email us',
+    isNew: true,
+  },
   {
     image: tourneePoster,
     title: 'Deutschland Tournee 2023 Poster (Signed)',

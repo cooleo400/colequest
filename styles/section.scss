@@ -109,6 +109,15 @@
       }
     }
   }
+  &.lyrics {
+    .background-image {
+      background-image: url('../src/images/Carriage-House-Board.jpg');
+    }
+
+    h4 {
+      margin: 15px 0;
+    }
+  }
   &.contact .background-image {
     background-image: url('../src/images/cccprelease-87.jpg');
   }

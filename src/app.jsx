@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import scrollToComponent from 'react-scroll-to-component';
 import Modal from 'react-modal';
-import Columns from './components/Columns';
 import Header from './components/Header';
 import Section from './components/Section';
 import About from './components/About';
@@ -12,8 +11,7 @@ import Merchandise from './components/Merchandise';
 import Contact from './components/Contact';
 import Shows from './components/Shows';
 import Footer from './components/Footer';
-import Video from './components/Video';
-import SpotifyEmbed from './components/SpotifyEmbed';
+import Lyrics from './components/Lyrics';
 import { submitEmail, fetchShows } from './actions';
 import { animateTitle, isShowToday } from './util';
 import 'normalize.css';
@@ -30,6 +28,7 @@ class App extends PureComponent {
       videos: null,
       photos: null,
       merchandise: null,
+      lyrics: null,
       contact: null
     };
     this.state = {
@@ -38,6 +37,7 @@ class App extends PureComponent {
       videos: false,
       photos: false,
       merchandise: false,
+      lyrics: false,
       shows: false,
       showData: [],
       showTonight: false,
@@ -98,6 +98,7 @@ class App extends PureComponent {
       videos,
       photos,
       merchandise,
+      lyrics,
       contact,
       highlight
     } = this.state;
@@ -118,8 +119,11 @@ class App extends PureComponent {
           <Section title="Photos" className="photos" isOpen={photos} ref={ref => this.setSectionRef('photos', ref)}>
             <Photos />
           </Section>
-          <Section title="Merchandise" className="merchandise" isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
+          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
             <Merchandise />
+          </Section>
+          <Section title="Lyrics" className="lyrics" isOpen={lyrics} ref={ref => this.setSectionRef('lyrics', ref)}>
+            <Lyrics />
           </Section>
           <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)}>
             <Contact submitEmail={submitEmail} />
