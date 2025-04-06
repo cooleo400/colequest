@@ -5,7 +5,35 @@
   src: url('../src/fonts/Phosphate-Inline-01.ttf') format('truetype'),
 }
 
-$primary-font-family: 'Phosphate', cursive;
+@font-face {
+  font-family: 'Mansalva';
+  src: url('../src/fonts/Mansalva-Regular.ttf') format('truetype'),
+}
+
+// @font-face {
+//   font-family: 'Boldonse';
+//   src: url('../src/fonts/Boldonse-Regular.ttf') format('truetype'),
+// }
+
+@import url("https://p.typekit.net/p.css?s=1&k=rlk3ygo&ht=tk&f=18494&a=53590716&app=typekit&e=css");
+
+@font-face {
+  font-family:"freight-display-pro";
+  src:url("https://use.typekit.net/af/c8c65e/000000000000000077359f9c/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
+      url("https://use.typekit.net/af/c8c65e/000000000000000077359f9c/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+      url("https://use.typekit.net/af/c8c65e/000000000000000077359f9c/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+
+  font-display:auto;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"freight-big-pro";
+  src:url("https://use.typekit.net/af/af470a/000000000000000077359f90/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/af470a/000000000000000077359f90/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/af470a/000000000000000077359f90/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:900;font-stretch:normal;
+}
+
+$primary-font-family: 'Mansalva', cursive;
 
 $primary-font-xl: 98px;
 $primary-font-lg: 72px;
@@ -14,7 +42,7 @@ $primary-font-sm: 36px;
 $primary-font-xs: 20px;
 $primary-font-mobile-xs: 14px;
 
-$secondary-font-family: 'Oswald', sans-serif;
+$secondary-font-family: 'freight-big-pro', serif;
 
 $secondary-font-xl: 98px;
 $secondary-font-lg: 72px;
@@ -28,6 +56,11 @@ $secondary-font-mobile-xs: 14px;
   font-weight: 400;
 }
 
-.phosphate-font {
-  @include phosphate-font;
+@mixin primary-font {
+  font-family: 'Mansalva';
+  font-weight: 400;
+}
+
+.primary-font {
+  @include primary-font;
 }

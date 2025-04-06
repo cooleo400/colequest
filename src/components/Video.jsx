@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WithNew from './WithNew';
 
-const Video = ({ youtubeId, autoPlay, isNew }) => {
+const Video = ({ youtubeId, autoPlay, isNew, url: urlOverride }) => {
   let url = `https://www.youtube.com/embed/${youtubeId}`;
   if(autoPlay) {
     url += `?autoplay=1&mute=1&rel=0&loop=1&playlist=${youtubeId}`;
+  }
+
+  if(urlOverride) {
+    url = urlOverride;
   }
 
   return (
@@ -14,6 +18,7 @@ const Video = ({ youtubeId, autoPlay, isNew }) => {
     </WithNew>
   );
 }
+
 
 Video.propsTypes = {
   autoPlay: PropTypes.bool,

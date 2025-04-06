@@ -22,9 +22,9 @@ const Header = ({ showVideo, withSocialIcons = false }) => {
     return (
       <div className="tour-logo">
         <div className="title-wrapper">
-          <h1 className="phosphate-font first">Cole Quest</h1>
-          <p className="phosphate-font">and the</p>
-          <h1 className="phosphate-font last">City Pickers</h1>
+          <h1 className="primary-font first">Cole Quest</h1>
+          <p className="primary-font">and the</p>
+          <h1 className="primary-font last">City Pickers</h1>
         </div>
         {withSocialIcons && (
           <div className="social-container">

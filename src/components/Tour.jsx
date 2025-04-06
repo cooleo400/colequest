@@ -43,9 +43,9 @@ class Tour extends PureComponent {
       <div>
         <Header withSocialIcons />
         <div className="tour-page-content" >
-          <h2 className="phosphate-font tour-title">Deutschlandtournee 2024</h2>
+          <h2 className="primary-font tour-title">Deutschlandtournee 2024</h2>
           <Shows shows={this.state.germanyShows} />
-          <h2 className="phosphate-font tour-title">U.S. Shows</h2>
+          <h2 className="primary-font tour-title">U.S. Shows</h2>
           <Shows shows={this.state.usShows} />
           <Button link={'http://colequest.com'} className="text-center full-width-button more-info" type={buttonTypes.SECONDARY}>More Information</Button>
         </div>

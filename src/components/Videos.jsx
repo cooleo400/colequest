@@ -1,15 +1,11 @@
 import React, { PureComponent } from 'react';
 import Columns from './Columns';
 import Video from './Video';
+import Link from './Link';
 import SocialIcon from './SocialIcon';
 import {
-  ostrichYouTubeId,
-  bitcoinVideoYouTubeId,
-  wayOverYonderVideoYouTubeId,
-  sevenElevenVideoYouTubeId,
-  sweetLittleGirlVideoYouTubeId,
-  ifIStillVideoYouTubeId,
   inTallBuildingsYouTubeId,
+  instrumentMedleyId,
   sheTalksYouTubeId
 } from '../constants';
 
@@ -19,19 +15,10 @@ class Videos extends PureComponent {
   }
 
   render() {
-    const sevenElevenVideo = <Video youtubeId={sevenElevenVideoYouTubeId} />;
-    // const ostrichTherapyLiveVideo = <Video youtubeId="WjJSC8v5bAg" />;
-    // const waxCyclinderVideo = <Video youtubeId="OCCV3hsgSyM" />;
-    const themeTimeVideo = <Video youtubeId="B6bVcKoctL4" />;
+    const instrumentMedleyVideo = <Video youtubeId={instrumentMedleyId} />;
     const doReMiVideo = <Video youtubeId="SPPbG1u4lvU" />;
     const inTallBuildingsVideo = <Video youtubeId={inTallBuildingsYouTubeId} />;
     const sheTalksVideo = <Video youtubeId={sheTalksYouTubeId} />;
-
-    const wayOverYonderVideo = <Video youtubeId={wayOverYonderVideoYouTubeId} />;
-    const bitcoinVideo = <Video youtubeId={bitcoinVideoYouTubeId} />;
-    const ostrichVideo = <Video youtubeId={ostrichYouTubeId} />;
-    const sweetVideo = <Video youtubeId={sweetLittleGirlVideoYouTubeId} />;
-    const ifIStillVideo = <Video youtubeId={ifIStillVideoYouTubeId} />;
 
     return (
       <div>
@@ -44,12 +31,11 @@ class Videos extends PureComponent {
           </div>
         </div>
         <h4 className="text-center">SELF [EN]TITLED EP</h4>
-        <Columns leftColumnChildren={ostrichVideo} rightColumnChildren={bitcoinVideo} marginBottom="small" />
-        <Columns leftColumnChildren={wayOverYonderVideo} rightColumnChildren={sevenElevenVideo} marginBottom="small" />
-        <Columns leftColumnChildren={sweetVideo} rightColumnChildren={ifIStillVideo} marginBottom="small" />
+        <p>For the release of our album, Self [En]Titled,  we teamed up with the amazingly talented <Link href="https://www.doingfunstuff.com/">Megan O'Neill</Link> to create <strong>SIX(!!)</strong> unique animated music videos—one for each track on the EP! Each of the hand crafted characters and animated story lines help to bring a visual identity to each of our unique tracks. <Link href="https://www.doingfunstuff.com/projects/city-pickers-music-videos">Read more on Megan's website</Link>.</p>
+        <Video url={'https://www.youtube.com/embed/videoseries?si=b_AAvHHBc86Ku9Zk&amp;list=PL_6w4fkYvQtDwB3-Brz6VKob9e1jBhEaz'} />
         <h4 className="text-center">LIVE PERFORMANCES</h4>
         <Columns leftColumnChildren={doReMiVideo} rightColumnChildren={sheTalksVideo} marginBottom="small" />
-        <Columns leftColumnChildren={inTallBuildingsVideo} rightColumnChildren={themeTimeVideo} marginBottom="small" />
+        <Columns leftColumnChildren={inTallBuildingsVideo} rightColumnChildren={instrumentMedleyVideo} marginBottom="small" />
       </div>
     );
   }

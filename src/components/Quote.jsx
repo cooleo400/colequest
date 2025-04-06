@@ -11,7 +11,7 @@ function Quote({ author, attribution, attributionLink, children }) {
     <div>
       <p>{ children }</p>
       <p>
-        <span className="color-bg-1">{ author }</span>
+        <span className="color-attribution">{ author }</span>
         {author && attribution &&
           <span> / {attributionWithLink} </span>
         }

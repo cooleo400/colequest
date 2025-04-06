@@ -13,6 +13,7 @@ export const sweetLittleGirlVideoYouTubeId = 'NdZ65rBdsWs';
 export const ifIStillVideoYouTubeId = '3XDlPrSyzLk';
 export const inTallBuildingsYouTubeId = '_uUlqpkmIIw';
 export const sheTalksYouTubeId = '4k6D_68-sAQ';
+export const instrumentMedleyId = 'LutNNNcTtR0'
 
 export const getYouTubeLink = (id) => `https://youtu.be/${id}`;
 

@@ -54,7 +54,7 @@ class App extends PureComponent {
     const { route } = this.props;
     fetchShows()
       .then(shows => {
-        // shows[0].fields.date = '2018-09-16'; //KEEP FOR DEBUGGING
+        shows[0].fields.date = '2025-04-05'; //KEEP FOR DEBUGGING
         const showTonight = shows.find((show) => isShowToday(show.fields.date) ? show : null);
         this.setState({ showData: shows, showTonight });
         if(showTonight) {

@@ -33,7 +33,7 @@ class Lyric extends PureComponent {
         </a>
         <div className={lyricClass}>
             <div dangerouslySetInnerHTML={{ __html: body }} />
-            <p><span className="color-bg-1">{ author }</span></p>
+            <p><span className="color-attribution">{ author }</span></p>
         </div>
       </div>
     );

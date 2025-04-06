@@ -3,7 +3,7 @@
 
 body {
   background-color: $bg1;
-  @include phosphate-font;
+  @include primary-font;
   color: $primary-font-color;
   font-size: $primary-font-sm;
   @include breakpoint('mobileonly') {

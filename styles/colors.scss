@@ -10,11 +10,14 @@ $green-transparent : rgba(91, 158, 40, .7); //#5b9e28;
 $grey : #666666;
 $yellow : #e4981e;
 
-$bg1: $red;
+$green1: #3d7f35;
+$yellow1: #f4dc50;
+
+$bg1: $green1;
 $bg2: $black1;
 $bg3: $black2;
 $bg4: $white;
 
 $primary-font-color: $white;
 $primary-font-color-disabled: $grey;
-$primary-font-color-alt: $yellow;
+$primary-font-color-alt: $yellow1;

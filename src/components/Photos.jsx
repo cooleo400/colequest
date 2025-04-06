@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react';
 import Modal from 'react-modal';
 import Columns from './Columns';
-import SocialIcon from './SocialIcon';
 
-import pressPhotoOne from '../images/2023-press.jpg';
-import pressPhotoTwo from '../images/matheus-dance-jalopy.jpg';
-import pressPhotoThree from '../images/four-boys-jalopy.jpg';
-import pressPhotoFour from '../images/bench-heads.jpg';
+import pressPhotoOne from '../images/2025-jalopy-backyard-1.jpg';
+import pressPhotoTwo from '../images/2025-jalopy-outfront.jpg';
+import pressPhotoThree from  '../images/matheus-dance-jalopy.jpg';
+import pressPhotoFour from '../images/2025-jalopy-backyard-2.jpg';
 
 class Media extends PureComponent {
   constructor(props) {
