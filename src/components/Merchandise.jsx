@@ -7,11 +7,22 @@ import patchesImage from '../images/patches.jpg';
 // import wearableCoverImage from '../images/merch.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
+import homegrownCoverImage from '../images/Homegrown-front_cover.jpg';
 import shirtToteImage from '../images/shirt-totes.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
 import tourneePoster from '../images/Tour-Poster-signed-web.jpg';
+import { bandcampHomegrownLink } from '../constants';
 
 const merchData = [
+  {
+    image: homegrownCoverImage,
+    title: 'Homegrown LP',
+    description: (<span>Including original songs, and traditionals from songwriters Woody Guthrie, Peter Rowan, and John Hartford, our new album - Homegrown - comes out on <Link href="https://www.jalopyrecords.org/">Jalopy Records</Link> on July 18th. Get your copy with a pre-order of the vinyl today!</span>),
+    link: bandcampHomegrownLink,
+    price: '$20 Vinyl + Shipping',
+    ctaLabel: 'Pre-Order Vinyl',
+    isNew: true,
+  },
   {
     image: shirtToteImage,
     title: 'Shirts N Totes',
@@ -19,7 +30,7 @@ const merchData = [
     link: 'mailto:info@colequest.com',
     price: '$25 Shirt / $15 Tote',
     ctaLabel: 'Email us',
-    isNew: true,
+    isNew: false,
   },
   {
     image: tourneePoster,

@@ -1,6 +1,7 @@
 export const songKeys = {
     BITCOIN: 'bitcoin-gambler',
     BUY_ME_BACK: 'buy-me-back-barry',
+    EARLY_MORNING_DEW: 'early-morning-dew',
     I_AINT: 'i-aint',
     IF_I_STILL: 'if-i-still-had-you',
     OSTRICH: 'ostrich-therapy',
@@ -8,6 +9,7 @@ export const songKeys = {
     SHE_TALKS: 'she-talks-alot',
     SWEET_LITTLE_GIRL: 'sweet-little-girl',
     WHERE_IM_FROM: 'where-im-from',
+    
 }
 
 export const lyricConfig = {
@@ -103,6 +105,36 @@ export const lyricConfig = {
             but till then I'll be torn.<br/></p>
         `,
         'author': 'Words and Music by Cole Quest',
+    },
+    [songKeys.EARLY_MORNING_DEW]: {
+        'title': 'Early Morning Dew',
+        'body': `
+            <p>Last night I lay in my bed,<br/>
+            my lover close to me.<br/>
+            Then I looked into her eyes this  morning, <br/>
+            as we woke from our dreams.</p>
+
+            <p>We dreampt of a life time together<br/>
+            We planned every breath of every day<br/>
+            But when i tell you how I feel,  and you say it isn’t real, <br/>
+            then I knew you weren’t here to stay.<p>
+
+            <p>Then I realized, <br/>
+            this would be our last, early morning dew<br/>
+            And I realized, this would be my last, <br/>
+            morning with you.</p>
+
+            <p>I place my hand on her face, <br/>
+            her skin I knew so well<br/>
+            And I felt those cheeks I kissed, for years<br/>
+            As my throat began to swell.</p>
+
+            <p>And we realized, this would be our last,<br/>
+            Early morning dew<br/>
+            And Our love was running out, and there was nothing, we could do<br/>
+            In the Early morning dew.</p>
+        `,
+        'author': 'Words by Cole Quest, Music by Daniel Romano',
     },
     [songKeys.OSTRICH]: {
         'title': 'Ostrich Therapy',

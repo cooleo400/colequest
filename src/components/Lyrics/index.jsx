@@ -5,6 +5,7 @@ import Lyric from './Lyric';
 const songs = [
   songKeys.BITCOIN,
   songKeys.BUY_ME_BACK,
+  songKeys.EARLY_MORNING_DEW,
   songKeys.I_AINT,
   songKeys.IF_I_STILL,
   songKeys.OSTRICH,

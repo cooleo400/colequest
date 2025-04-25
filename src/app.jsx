@@ -12,8 +12,13 @@ import Contact from './components/Contact';
 import Shows from './components/Shows';
 import Footer from './components/Footer';
 import Lyrics from './components/Lyrics';
+import Button from './components/Button';
+import Headline, { headlineTypes } from './components/Headline';
+import Video from './components/Video';
+import Link from './components/Link';
 import { submitEmail, fetchShows } from './actions';
 import { animateTitle, isShowToday } from './util';
+import { iAintYTId, linktreeHomegrownLink, bandcampHomegrownLink } from './constants';
 import 'normalize.css';
 import 'styles/index.scss';
 
@@ -54,7 +59,7 @@ class App extends PureComponent {
     const { route } = this.props;
     fetchShows()
       .then(shows => {
-        shows[0].fields.date = '2025-04-05'; //KEEP FOR DEBUGGING
+        // shows[0].fields.date = '2025-04-05'; //KEEP FOR DEBUGGING
         const showTonight = shows.find((show) => isShowToday(show.fields.date) ? show : null);
         this.setState({ showData: shows, showTonight });
         if(showTonight) {
@@ -77,9 +82,9 @@ class App extends PureComponent {
     }
 
     // Keep around to display modal
-    // setTimeout(() => {
-    //   this.setState({ isModalOpen: true });
-    // }, 5000);
+    setTimeout(() => {
+      this.setState({ isModalOpen: true });
+    }, 5000);
   }
 
   setSectionRef(section, ref) {
@@ -113,7 +118,7 @@ class App extends PureComponent {
           <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
             <Shows shows={showData} />
           </Section>
-          <Section title="Videos / Music" className="videos" isOpen={videos} ref={ref => this.setSectionRef('videos', ref)}>
+          <Section title="Videos / Music" className="videos" highlight  isOpen={videos} ref={ref => this.setSectionRef('videos', ref)}>
             <Videos />
           </Section>
           <Section title="Photos" className="photos" isOpen={photos} ref={ref => this.setSectionRef('photos', ref)}>
@@ -135,10 +140,13 @@ class App extends PureComponent {
           onRequestClose={this.handleCloseModal}
           className="modal"
           overlayClassName="overlay fade-in">
-            <h4 className="highlight text-center">CHECKOUT OUR NEW VIDEO!</h4>
-            {
-              //
-            }
+            <Headline type={headlineTypes.SECONDARY} className="highlight">NEW ALBUM - HOMEGROWN</Headline>
+            <p>Comes out July 18th on <Link href="http://jalopyrecords.org">Jalopy Records</Link>! In the mean time you can stream and watch music videos for our singles. You can also <Link href={bandcampHomegrownLink}>pre-order the vinyl here</Link>.</p>
+            <p className="text-center">Check out our first video for the single, I Ain't, below!</p>
+            <Video youtubeId={iAintYTId} />
+            <p>
+              <Button link={linktreeHomegrownLink} className="text-center full-width-button" external>Pre-order and stream!</Button>
+            </p>
         </Modal>
       </div>
     );

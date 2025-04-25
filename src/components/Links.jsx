@@ -4,21 +4,16 @@ import Columns from './Columns';
 import Button, { buttonTypes } from './Button';
 import Headline, { headlineTypes } from './Headline';
 import {
+  bandcampHomegrownLink,
+  linktreeHomegrownLink,
+  iAintYTId,
+  inTallBuildingsAlbumYTId,
+  whereImFromAlbumYTId,
+  soPraVariarVideoYTId,
   sevenElevenGlideLink,
   getYouTubeLink,
-  // ostrichYouTubeId,
-  // bitcoinVideoYouTubeId,
-  // wayOverYonderVideoYouTubeId,
-  // sevenElevenVideoYouTubeId,
-  // sweetLittleGirlVideoYouTubeId,
-  // ifIStillVideoYouTubeId,
-  inTallBuildingsYouTubeId,
-  sheTalksYouTubeId,
-  selfEntitledAppleLink,
-  selfEntitledSpotifyLink,
-  // selfEntitledTidalLink,
-  // selfEntitledAmazonLink,
-  selfEntitledPurchaseLink,
+  inTallBuildingsYTId,
+  sheTalksYTId,
   youtubeChannelLink
 } from '../constants';
 
@@ -30,31 +25,49 @@ export default class Links extends PureComponent {
     return (
       <div style={{ paddingBottom: '20px' }}>
         <Header showVideo={false} />
-        <Headline type={headlineTypes.SECONDARY}>Watch Videos</Headline>
+        <Headline type={headlineTypes.SECONDARY} className="highlight">New Album - Homegrown - Available July 18</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={getYouTubeLink(sheTalksYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>She Talks A Lot (and I Like It)</Button>
+            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Pre-save Homegrown</Button>
           )}
           rightColumnChildren={(
-            <Button link={getYouTubeLink(inTallBuildingsYouTubeId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>In Tall Buildings</Button>
+            <Button link={bandcampHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Pre-Order Vinyl</Button>
           )}
         />
-        <Headline type={headlineTypes.SECONDARY}>Self [En]Titled EP</Headline>
+        <Headline type={headlineTypes.SECONDARY}>Listen now</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={selfEntitledSpotifyLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Listen on Spotify</Button>
-          )}
-          rightColumnChildren={(
-            <Button link={selfEntitledAppleLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Listen on Apple Music</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link={selfEntitledPurchaseLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Purchase</Button>
+            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Stream I Ain't</Button>
           )}
           rightColumnChildren={null}
         />
+        <Headline type={headlineTypes.SECONDARY}>Music Videos</Headline>
+        <Columns
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(iAintYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Watch I Ain't Video</Button>
+          )}
+          rightColumnChildren={null}
+        />
+        {/* <Headline type={headlineTypes.SECONDARY}>Live Videos</Headline>
+        <Columns
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(sheTalksYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>She Talks A Lot (and I Like It)</Button>
+          )}
+          rightColumnChildren={(
+            <Button link={getYouTubeLink(inTallBuildingsYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>In Tall Buildings</Button>
+          )}
+        /> */}
         <Headline type={headlineTypes.SECONDARY} >Reviews</Headline>
+        <Columns
+          leftColumnChildren={(
+            <Button link="https://www.wideopencountry.com/cole-quest-and-the-city-pickers-drop-new-single/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Wide Open Country</Button>
+          )}
+          rightColumnChildren={(
+            <Button link="https://www.gratefulweb.com/articles/sowing-tradition-reaping-innovation-cole-quest-city-pickers" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Grateful Web</Button>
+          )}
+        />
+        
+{/*         
         <Columns
           leftColumnChildren={(
             <Button link="https://americansongwriter.com/review-cole-quest-makes-granddad-proud/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>American Songwriter</Button>
@@ -84,14 +97,14 @@ export default class Links extends PureComponent {
             <Button link="http://www.thealternateroot.com/topten040721.html" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Top 10 on The Alternate Root</Button>
           )}
           rightColumnChildren={null}
-        />
+        /> */}
         <Headline type={headlineTypes.SECONDARY} >More Links...</Headline>
         <Columns
           leftColumnChildren={(
             <Button link="/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>ColeQuest.com</Button>
           )}
           rightColumnChildren={(
-            <Button link={youtubeChannelLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Youtube Channel</Button>
+            <Button link={youtubeChannelLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>YouTube Channel</Button>
           )}
         />
         <Columns
