@@ -25,10 +25,33 @@ export const selfEntitledSpotifyLink = 'https://open.spotify.com/album/722LxydFu
 
 //Homegrown
 export const iAintYTId = 'lojq37fmA2A';
-export const inTallBuildingsAlbumYTId = '5r7g4wXr8aE';
-export const whereImFromAlbumYTId = '5r7g4wXr8aE';
-export const soPraVariarVideoYTId = '5r7g4wXr8aE';
+export const inTallBuildingsAlbumYTId = 'T3JmgyPr0n4';
+export const whereImFromAlbumYTId = 'ux6XbY411Bo';
+export const soPraVariarVideoYTId = 'ux6XbY411Bo';
+
+// I Aint Single Links
+export const iAHomegrownAmazonMusicLink = 'https://amazon.com/music/player/albums/B0F22HNBBC?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_OMEX2g67CK6GOiSW0tqMoAKZG&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=ea4e4b58d48d227b9ed64874bb6520bd';
+export const iAHomegrownTidalLink = 'https://tidal.com/browse/album/425229228';
+export const iAHomegrownAppleLink = 'https://music.apple.com/us/album/1803443127?ls=1&app=music&at=1l3vpUI&ct=LFV_ea4e4b58d48d227b9ed64874bb6520bd&itscg=30440&itsct=catchall_p9&lId=212757114&cId=none&sr=9&src=Linkfire';
+export const iAHomegrownSpotifyLink = 'https://open.spotify.com/album/3BFJyv92NpSrZTIozHIujI?go=1';
+
+// In Tall Buildings Single Links
+export const itbHomegrownAmazonMusicLink = 'https://amazon.com/music/player/albums/B0F22HNBBC?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_OMEX2g67CK6GOiSW0tqMoAKZG&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=ea4e4b58d48d227b9ed64874bb6520bd';
+export const itbHomegrownTidalLink = 'https://tidal.com/browse/album/425229228';
+export const itbHomegrownAppleLink = 'https://music.apple.com/us/album/1803443127?ls=1&app=music&at=1l3vpUI&ct=LFV_ea4e4b58d48d227b9ed64874bb6520bd&itscg=30440&itsct=catchall_p9&lId=212757114&cId=none&sr=9&src=Linkfire';
+export const itbHomegrownSpotifyLink = 'https://open.spotify.com/album/3BFJyv92NpSrZTIozHIujI?go=1';
+
+// Where I'm From Single
+export const wifHomegrownAmazonMusicLink = 'https://amazon.com/music/player/tracks/B0F22L661L?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_vQJQU5mplWhGsgt4iD69Fdfk0';
+export const wifHomegrownTidalLink = 'https://tidal.com/browse/track/443215585?u';
+export const wifHomegrownAppleLink = 'https://music.apple.com/us/song/where-im-from/1823374166';
+export const wifHomegrownSpotifyLink = 'https://open.spotify.com/track/6rke1PUU4uOPfuIGXAvoSw?si=d0fa26a5acec407b';
+
 export const linktreeHomegrownLink = 'https://lnk.to/cole-quest-homegrown';
 export const bandcampHomegrownLink = 'https://citypickers.bandcamp.com/album/homegrown';
+
+export const homegrownYoutubePlaylistLink = 'https://www.youtube.com/playlist?list=PL_6w4fkYvQtB7L5G1mJOEky9OfbgDQLW4';
+export const homegrownAppleLink = 'https://music.apple.com/us/album/homegrown/1803443127';
+export const homegrownSpotifyLink = null;
 
 

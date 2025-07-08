@@ -8,7 +8,7 @@ import {
 
 const socialTypes = {
   // amazon : '',
-  apple: 'https://geo.itunes.apple.com/us/album/cole-quest-city-pickers/id1126888774?mt=1&app=music',
+  apple: 'https://music.apple.com/us/artist/cole-quest-and-the-city-pickers/1126888910',
   'apple-se': selfEntitledAppleLink,
   bandcamp: 'https://colequest.bandcamp.com/releases',
   email: 'mailto:info@colequest.com',
@@ -17,7 +17,7 @@ const socialTypes = {
   'googlePlay-se': 'https://play.google.com/store/music/album?id=Bmnfkklrohzcljqfdymrcmfu3ty&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1',
   instagram: 'https://www.instagram.com/citypickers/',
   soundcloud: 'https://soundcloud.com/citypickers',
-  spotify: 'https://open.spotify.com/album/518LdQOgCX5YuAGyXFL3bN',
+  spotify: 'https://open.spotify.com/artist/1SIMdfmZi6TCoYaBU7AMeM?si=0QfWefErRX2lBLkUGhse6A',
   'spotify-se': selfEntitledSpotifyLink,
   twitter: 'https://twitter.com/colequestcp',
   youtube: youtubeChannelLink,

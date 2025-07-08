@@ -7,7 +7,7 @@ import patchesImage from '../images/patches.jpg';
 // import wearableCoverImage from '../images/merch.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
-import homegrownCoverImage from '../images/Homegrown-front_cover.jpg';
+import homegrownCoverImage from '../images/Homegrown-covers-photo.jpg';
 import shirtToteImage from '../images/shirt-totes.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
 import tourneePoster from '../images/Tour-Poster-signed-web.jpg';

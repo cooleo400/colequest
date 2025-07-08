@@ -37,11 +37,19 @@ export default class Links extends PureComponent {
         <Headline type={headlineTypes.SECONDARY}>Listen now</Headline>
         <Columns
           leftColumnChildren={(
-            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Stream I Ain't</Button>
+            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Stream Where I'm From</Button>
           )}
           rightColumnChildren={null}
         />
         <Headline type={headlineTypes.SECONDARY}>Music Videos</Headline>
+        <Columns
+          leftColumnChildren={(
+            <Button link={getYouTubeLink(whereImFromAlbumYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Watch Where I'm From Video</Button>
+          )}
+          rightColumnChildren={(
+            <Button link={getYouTubeLink(inTallBuildingsAlbumYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Watch In Tall Buildings Video</Button>
+          )}
+        />
         <Columns
           leftColumnChildren={(
             <Button link={getYouTubeLink(iAintYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Watch I Ain't Video</Button>
@@ -60,13 +68,28 @@ export default class Links extends PureComponent {
         <Headline type={headlineTypes.SECONDARY} >Reviews</Headline>
         <Columns
           leftColumnChildren={(
+            <Button link="https://americansongwriter.com/cole-quest-and-the-city-pickers-led-by-woody-guthries-grandson-revisit-his-grandfathers-new-york-city-era-on-fourth-album-new-single-where-im-from-exclusive/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>American Songwriter Premier</Button>
+          )}
+          rightColumnChildren={(
+            <Button link="https://folkalley.com/song-premiere-cole-quest-the-city-pickers-tall-buildings/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Folk Alley Premier</Button>
+          )}
+        />
+        <Columns
+          leftColumnChildren={(
             <Button link="https://www.wideopencountry.com/cole-quest-and-the-city-pickers-drop-new-single/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Wide Open Country</Button>
           )}
           rightColumnChildren={(
-            <Button link="https://www.gratefulweb.com/articles/sowing-tradition-reaping-innovation-cole-quest-city-pickers" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Grateful Web</Button>
+            <Button link="https://glidemagazine.com/313138/listen-cole-quest-and-the-city-pickers-showcase-bluegrass-prowess-on-infectious-i-aint/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
           )}
         />
-        
+        <Columns
+          leftColumnChildren={(
+            <Button link="https://www.gratefulweb.com/articles/sowing-tradition-reaping-innovation-cole-quest-city-pickers" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Grateful Web</Button>
+          )}
+          rightColumnChildren={(
+            <Button link="http://www.thealternateroot.com/topten04302025.html" className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Alternate Root Top 10</Button>
+          )}
+        />        
 {/*         
         <Columns
           leftColumnChildren={(

@@ -18,7 +18,7 @@ import Video from './components/Video';
 import Link from './components/Link';
 import { submitEmail, fetchShows } from './actions';
 import { animateTitle, isShowToday } from './util';
-import { iAintYTId, linktreeHomegrownLink, bandcampHomegrownLink } from './constants';
+import { inTallBuildingsAlbumYTId, linktreeHomegrownLink, bandcampHomegrownLink } from './constants';
 import 'normalize.css';
 import 'styles/index.scss';
 
@@ -82,9 +82,9 @@ class App extends PureComponent {
     }
 
     // Keep around to display modal
-    setTimeout(() => {
-      this.setState({ isModalOpen: true });
-    }, 5000);
+    // setTimeout(() => {
+    //   this.setState({ isModalOpen: true });
+    // }, 5000);
   }
 
   setSectionRef(section, ref) {
@@ -142,8 +142,8 @@ class App extends PureComponent {
           overlayClassName="overlay fade-in">
             <Headline type={headlineTypes.SECONDARY} className="highlight">NEW ALBUM - HOMEGROWN</Headline>
             <p>Comes out July 18th on <Link href="http://jalopyrecords.org">Jalopy Records</Link>! In the mean time you can stream and watch music videos for our singles. You can also <Link href={bandcampHomegrownLink}>pre-order the vinyl here</Link>.</p>
-            <p className="text-center">Check out our first video for the single, I Ain't, below!</p>
-            <Video youtubeId={iAintYTId} />
+            <p className="text-center">Check out our SECOND single, In Tall Buildings, below!</p>
+            <Video youtubeId={inTallBuildingsAlbumYTId} />
             <p>
               <Button link={linktreeHomegrownLink} className="text-center full-width-button" external>Pre-order and stream!</Button>
             </p>
