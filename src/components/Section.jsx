@@ -22,7 +22,14 @@ class Section extends PureComponent {
   }
 
   handleClick() {
-    this.setState({ open : !this.state.open, animationComplete : false });
+    const newOpenState = !this.state.open;
+    this.setState({ open : newOpenState, animationComplete : false });
+    
+    // Call the onToggle callback if provided
+    if (this.props.onToggle) {
+      this.props.onToggle(newOpenState);
+    }
+    
     setTimeout(() => {
       this.setState({ animationComplete : true });
     },animationDuration);
@@ -63,6 +70,7 @@ Section.propTypes = {
   className : PropTypes.string,
   highlight : PropTypes.bool,
   isOpen : PropTypes.bool,
+  onToggle : PropTypes.func,
   title : PropTypes.string.isRequired
 };
 

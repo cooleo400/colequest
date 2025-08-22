@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import scrollToComponent from 'react-scroll-to-component';
 import Modal from 'react-modal';
 import Header from './components/Header';
@@ -53,6 +54,7 @@ class App extends PureComponent {
 
     this.setSectionRef = this.setSectionRef.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleSectionToggle = this.handleSectionToggle.bind(this);
   }
 
   componentDidMount() {
@@ -91,6 +93,20 @@ class App extends PureComponent {
     this.sectionRefs[section] = ref;
   }
 
+  handleSectionToggle(section, isOpen) {
+    // Update section state
+    this.setState({ [section]: isOpen });
+    
+    // Update URL based on section state
+    if (isOpen) {
+      // Section is opening - update URL to show section
+      this.props.history.push(`/${section}`);
+    } else {
+      // Section is closing - go back to homepage
+      this.props.history.push('/');
+    }
+  }
+
   handleCloseModal() {
     this.setState({ isModalOpen: false });
   }
@@ -112,25 +128,25 @@ class App extends PureComponent {
       <div>
         <Header showVideo={this.showVideo} />
         <div className="content">
-          <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)}>
+          <Section title="About" className="about" isOpen={about} ref={ref => this.setSectionRef('about', ref)} onToggle={(isOpen) => this.handleSectionToggle('about', isOpen)}>
             <About />
           </Section>
-          <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)}>
+          <Section title="Shows" className="shows" highlight={highlight} isOpen={shows} ref={ref => this.setSectionRef('shows', ref)} onToggle={(isOpen) => this.handleSectionToggle('shows', isOpen)}>
             <Shows shows={showData} />
           </Section>
-          <Section title="Videos / Music" className="videos" highlight  isOpen={videos} ref={ref => this.setSectionRef('videos', ref)}>
+          <Section title="Videos / Music" className="videos" highlight  isOpen={videos} ref={ref => this.setSectionRef('videos', ref)} onToggle={(isOpen) => this.handleSectionToggle('videos', isOpen)}>
             <Videos />
           </Section>
-          <Section title="Photos" className="photos" isOpen={photos} ref={ref => this.setSectionRef('photos', ref)}>
+          <Section title="Photos" className="photos" isOpen={photos} ref={ref => this.setSectionRef('photos', ref)} onToggle={(isOpen) => this.handleSectionToggle('photos', isOpen)}>
             <Photos />
           </Section>
-          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)}>
+          <Section title="Merchandise" className="merchandise" highlight isOpen={merchandise} ref={ref => this.setSectionRef('merchandise', ref)} onToggle={(isOpen) => this.handleSectionToggle('merchandise', isOpen)}>
             <Merchandise />
           </Section>
-          <Section title="Lyrics" className="lyrics" isOpen={lyrics} ref={ref => this.setSectionRef('lyrics', ref)}>
+          <Section title="Lyrics" className="lyrics" isOpen={lyrics} ref={ref => this.setSectionRef('lyrics', ref)} onToggle={(isOpen) => this.handleSectionToggle('lyrics', isOpen)}>
             <Lyrics />
           </Section>
-          <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)}>
+          <Section title="Contact" className="contact" isOpen={contact} ref={ref => this.setSectionRef('contact', ref)} onToggle={(isOpen) => this.handleSectionToggle('contact', isOpen)}>
             <Contact submitEmail={submitEmail} />
           </Section>
         </div>
@@ -161,4 +177,4 @@ App.defaultProps = {
   route: null
 }
 
-export default App;
+export default withRouter(App);
