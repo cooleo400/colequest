@@ -42,9 +42,9 @@ class Videos extends PureComponent {
           </div>
         </div>
         <h4 className="text-center highlight">HOMEGROWN LP</h4>
-        <p>Our new album - Homegrown - will be released on <Link href="http://jalopyrecords.org">Jalopy Records</Link> on July 18! In the mean time you can stream and watch music videos for our singles. You can also <Link href={bandcampHomegrownLink}>pre-order the vinyl here</Link>!</p>
+        <p>Our new album - Homegrown - is OUT NOW on <Link href="http://jalopyrecords.org">Jalopy Records</Link>! Stream it on your favorite streaming service or <Link href={bandcampHomegrownLink}>purchase it on Bandcamp here</Link>!</p>
         <p>
-          <Button link={linktreeHomegrownLink} external className="text-center full-width-button" >Stream Where I'm From</Button>
+          <Button link={linktreeHomegrownLink} external className="text-center full-width-button" >Stream Homegrown</Button>
         </p>
         <Columns leftColumnChildren={WhereImFromHomegrownVideo} rightColumnChildren={inTallBuildingsHomegrownVideo} marginBottom="small" />
         <Columns leftColumnChildren={IAintHomegrownVideo} rightColumnChildren={null} marginBottom="small" />

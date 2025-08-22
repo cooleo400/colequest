@@ -78,6 +78,9 @@ class About extends PureComponent {
 
     const leftColumnReviews = (
       <div className="text-center">
+        <Quote attribution="No Depression" attributionLink="https://nodepression.org/album-review-on-homegrown-cole-quest-and-the-city-pickers-deftly-move-the-legacy-of-woody-guthrie-along-in-all-the-right-ways/">
+          "You start to realize how fully Quest has made his ancestral musical lineage a part of his own place in folk music history circa 2025. And lord knows we need it."
+        </Quote>
         <Quote attribution="www.honnef-heute.de" attributionLink="https://honnef-heute.de/cole-quest-and-the-city-pickers-rockten-das-weingut/">
           "Cole Quest and The City Pickers rocked the winery. [They] delivered bluegrass at its best. The fans clapped frenetically, danced and were thrilled."
         </Quote>
@@ -94,6 +97,9 @@ class About extends PureComponent {
     );
     const rightColumnReviews = (
       <div className="text-center">
+        <Quote attribution="Glide Magazine" attributionLink="https://glidemagazine.com/315052/cole-quest-woody-guthries-grandson-pays-debt-to-legendary-balladeer-commands-his-own-journey-feature/#google_vignette">
+          "Bluegrass-anchored energy, blues-stirred restlessness, and folk-infused introspection… Among the new recordings, there is a country, heartbreak song, there are overt avowals of bluegrass, and there are keystones of gospel and bluesy hymnals. There is discreet humor. There is the sound of poetry in the words."
+        </Quote>
         <Quote attribution="www.country.de" attributionLink="https://www.country.de/2023/07/03/cole-quest-the-city-pickers-verzuecken-eisenach/">
           "Cole Quest and The City Pickers took the audience by storm and put on a concert that will be remembered for a long time."
         </Quote>

@@ -17,29 +17,96 @@ import {
   youtubeChannelLink
 } from '../constants';
 
+const reviews = [
+  {
+    title: 'No Depression Review',
+    link: 'https://nodepression.org/album-review-on-homegrown-cole-quest-and-the-city-pickers-deftly-move-the-legacy-of-woody-guthrie-along-in-all-the-right-ways/'
+  },
+  {
+    title: 'Americana Highways Review',
+    link: 'https://americanahighways.org/2025/07/14/review-cole-quest-the-city-pickers-homegrown/'
+  },
+  {
+    title: 'American Songwriter Feature',
+    link: 'https://americansongwriter.com/cole-quest-and-the-city-pickers-led-by-woody-guthries-grandson-revisit-his-grandfathers-new-york-city-era-on-fourth-album-new-single-where-im-from-exclusive/'
+  },
+  {
+    title: 'Glide Magazine Review',
+    link: 'https://glidemagazine.com/315052/cole-quest-woody-guthries-grandson-pays-debt-to-legendary-balladeer-commands-his-own-journey-feature/#google_vignette'
+  },
+  {
+    title: 'Americana UK Feature',
+    link: 'https://americana-uk.com/cole-quest-and-the-city-pickers-i-aint-no-way'
+  },  
+  {
+    title: 'Folk Alley Premier',
+    link: 'https://folkalley.com/song-premiere-cole-quest-the-city-pickers-tall-buildings/'
+  },
+  {
+    title: 'Wide Open Country',
+    link: 'https://www.wideopencountry.com/cole-quest-and-the-city-pickers-drop-new-single/'
+  },
+  // {
+  //   link: 'https://glidemagazine.com/313138/listen-cole-quest-and-the-city-pickers-showcase-bluegrass-prowess-on-infectious-i-aint/',
+  //   title: 'Glide Magazine'
+  // },
+  // {
+  //   link: 'https://www.gratefulweb.com/articles/sowing-tradition-reaping-innovation-cole-quest-city-pickers',
+  //   title: 'Grateful Web'
+  // },
+  // {
+  //   link: 'http://www.thealternateroot.com/topten04302025.html',
+  //   title: 'The Alternate Root Top 10'
+  // }
+]
+
+
+
 export default class Links extends PureComponent {
   constructor(props){
     super(props);
+  }
+  renderReviews(reviewOptions) {
+    const pairs = [];
+    for (let i = 0; i < reviewOptions.length; i += 2) {
+      pairs.push({
+        left: reviewOptions[i],
+        right: reviewOptions[i + 1] || null
+      });
+    }
+
+    return pairs.map((pair, index) => (
+      <Columns
+        key={index}
+        leftColumnChildren={
+          pair.left ? (
+            <Button link={pair.left.link} className="text-center full-width-button" type={buttonTypes.SECONDARY}>
+              {pair.left.title}
+            </Button>
+          ) : null
+        }
+        rightColumnChildren={
+          pair.right ? (
+            <Button link={pair.right.link} className="text-center full-width-button" type={buttonTypes.SECONDARY}>
+              {pair.right.title}
+            </Button>
+          ) : null
+        }
+      />
+    ));
   }
   render() {
     return (
       <div style={{ paddingBottom: '20px' }}>
         <Header showVideo={false} />
-        <Headline type={headlineTypes.SECONDARY} className="highlight">New Album - Homegrown - Available July 18</Headline>
+        <Headline type={headlineTypes.SECONDARY} className="highlight">New Album - Homegrown - Out Now!</Headline>    
         <Columns
           leftColumnChildren={(
-            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Pre-save Homegrown</Button>
+            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Stream Homegrown</Button>
           )}
           rightColumnChildren={(
-            <Button link={bandcampHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Pre-Order Vinyl</Button>
+            <Button link={bandcampHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Purchase Homegrown</Button>
           )}
-        />
-        <Headline type={headlineTypes.SECONDARY}>Listen now</Headline>
-        <Columns
-          leftColumnChildren={(
-            <Button link={linktreeHomegrownLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Stream Where I'm From</Button>
-          )}
-          rightColumnChildren={null}
         />
         <Headline type={headlineTypes.SECONDARY}>Music Videos</Headline>
         <Columns
@@ -65,62 +132,8 @@ export default class Links extends PureComponent {
             <Button link={getYouTubeLink(inTallBuildingsYTId)} className="text-center full-width-button" type={buttonTypes.SECONDARY}>In Tall Buildings</Button>
           )}
         /> */}
-        <Headline type={headlineTypes.SECONDARY} >Reviews</Headline>
-        <Columns
-          leftColumnChildren={(
-            <Button link="https://americansongwriter.com/cole-quest-and-the-city-pickers-led-by-woody-guthries-grandson-revisit-his-grandfathers-new-york-city-era-on-fourth-album-new-single-where-im-from-exclusive/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>American Songwriter Premier</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="https://folkalley.com/song-premiere-cole-quest-the-city-pickers-tall-buildings/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Folk Alley Premier</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link="https://www.wideopencountry.com/cole-quest-and-the-city-pickers-drop-new-single/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Wide Open Country</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="https://glidemagazine.com/313138/listen-cole-quest-and-the-city-pickers-showcase-bluegrass-prowess-on-infectious-i-aint/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link="https://www.gratefulweb.com/articles/sowing-tradition-reaping-innovation-cole-quest-city-pickers" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Grateful Web</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="http://www.thealternateroot.com/topten04302025.html" className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Alternate Root Top 10</Button>
-          )}
-        />        
-{/*         
-        <Columns
-          leftColumnChildren={(
-            <Button link="https://americansongwriter.com/review-cole-quest-makes-granddad-proud/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>American Songwriter</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="https://americanahighways.org/2021/04/16/review-cole-quest-and-the-city-pickers-self-entitled-is-bright-stellar-performance/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Americana Highways</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link="https://thebluegrasssituation.com/read/watch-cole-quest-and-the-city-pickers-the-bitcoin-gambler/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>The Bluegrass Situation</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="https://bluegrasstoday.com/cole-quest-the-city-pickers-remember-woody-guthrie/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Bluegrass Today</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link={sevenElevenGlideLink} className="text-center full-width-button" type={buttonTypes.SECONDARY}>Glide Magazine</Button>
-          )}
-          rightColumnChildren={(
-            <Button link="http://www.themortonreport.com/celebrity/sports/music-reviews-six-little-known-artists-you-ought-to-hear/" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Six artists you ought to know on The Morton Report</Button>
-          )}
-        />
-        <Columns
-          leftColumnChildren={(
-            <Button link="http://www.thealternateroot.com/topten040721.html" className="text-center full-width-button" type={buttonTypes.SECONDARY}>Top 10 on The Alternate Root</Button>
-          )}
-          rightColumnChildren={null}
-        /> */}
+        <Headline type={headlineTypes.SECONDARY} >Reviews and Features</Headline>
+        {this.renderReviews(reviews)}
         <Headline type={headlineTypes.SECONDARY} >More Links...</Headline>
         <Columns
           leftColumnChildren={(
