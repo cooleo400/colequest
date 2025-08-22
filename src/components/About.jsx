@@ -29,14 +29,6 @@ class About extends PureComponent {
 
     const bioPhotoWrapper = (<img src={bioPhotoSrc} />)
 
-    const twitter = (
-      <div>
-        <a className="twitter-timeline" data-height="400" data-link-color="#c82c2f" href="https://twitter.com/colequestcp?ref_src=twsrc%5Etfw">
-          <Loader />
-        </a>
-      </div>
-    );
-
     const centerColumnReviews = (
       <div className="text-center">
         <Quote author="" attribution="American Songwriter" attributionLink="https://americansongwriter.com/review-cole-quest-makes-granddad-proud/">
