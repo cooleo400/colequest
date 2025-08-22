@@ -17,12 +17,6 @@ class About extends PureComponent {
   }
 
   componentDidMount() {
-    try {
-      twttr.widgets.load();
-    } catch(e) {
-      console.error(`Error: Twitter widget can't load. ${e}`);
-    }
-
   }
 
   render() {
@@ -63,6 +57,11 @@ class About extends PureComponent {
       </div>
     );
     const leftColAccolades = (
+      <div className="text-center">
+        <p>Homegrown debuted at #78 on the Top 200 Americana Album Chart</p>
+      </div>
+    );
+    const leftColAccoladesTwo = (
       <div className="text-center">
         <p>Winners of the 2023 <a href="https://podunkbluegrass.com/band-competition/" target="_blank">Telefunken Band Competition at Podunk Bluegrass Festival</a></p>
       </div>
@@ -163,6 +162,7 @@ class About extends PureComponent {
         <br />
         <Headline type={headlineTypes.PRIMARY}>Accolades</Headline>
         <Columns leftColumnChildren={leftColAccolades} centerColumnChildren={centerColAccolades} rightColumnChildren={rightColAccolades} />
+        <Columns leftColumnChildren={leftColAccoladesTwo} centerColumnChildren={<div />} rightColumnChildren={<div />} />
         <Headline type={headlineTypes.PRIMARY}>Reviews</Headline>
         <Columns leftColumnChildren={leftColumnReviews} rightColumnChildren={rightColumnReviews} />
         <Headline type={headlineTypes.PRIMARY}>Featured On</Headline>
