@@ -16,7 +16,6 @@ import Button from './components/Button';
 import Headline, { headlineTypes } from './components/Headline';
 import Video from './components/Video';
 import Link from './components/Link';
-import StructuredData from './components/StructuredData';
 import { submitEmail, fetchShows } from './actions';
 import { animateTitle, isShowToday } from './util';
 import { inTallBuildingsAlbumYTId, linktreeHomegrownLink, bandcampHomegrownLink } from './constants';
@@ -149,7 +148,6 @@ class App extends PureComponent {
               <Button link={linktreeHomegrownLink} className="text-center full-width-button" external>Pre-order and stream!</Button>
             </p>
         </Modal>
-        <StructuredData />
       </div>
     );
   }
