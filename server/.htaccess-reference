@@ -1,0 +1,16 @@
+RewriteEngine on
+
+# Existing domain redirects
+RewriteCond %{HTTP_HOST} ^colequest\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.colequest\.com$
+RewriteRule ^linkinbio|tour$ $1 [NC]
+
+# External booking redirect
+RewriteRule ^booking$ "https\:\/\/forms\.gle\/MxR5miWu5qxoqnp86" [R=301,L]
+
+# SPA routing - handle client-side routes
+Options -MultiViews
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/booking$
+RewriteRule ^ index.html [QSA,L]
