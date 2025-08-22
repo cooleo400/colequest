@@ -19,6 +19,9 @@ const Routes = () => (
       <Route exact path="/" component={App} />
       <Route exact path="/linkinbio" component={Links} />
       <Route exact path="/tour" component={Tour} />
+      <Route path="/:route" render={(routeProps) => {
+        return (<App route={routeProps.match.params.route} />);
+      }} />
     </div>
   </Router>
 );
