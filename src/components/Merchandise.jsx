@@ -16,6 +16,15 @@ import { bandcampHomegrownLink } from '../constants';
 const merchData = [
   {
     image: homegrownCoverImage,
+    title: 'Homegrown Tee',
+    description: (<span>Celebrate our latest release with the official Homegrown t-shirt, featuring artwork inspired by our new album. Available in two beautiful earth-tone colors: Pine and Cornsilk. <strong>Limited time only - while supplies last!</strong> Show your support and grab yours before they're gone.</span>),
+    link: 'mailto:info@colequest.com',
+    price: '$25 + Shipping',
+    ctaLabel: 'Email us',
+    isNew: true,
+  },
+  {
+    image: homegrownCoverImage,
     title: 'Homegrown LP',
     description: (<span>Including original songs, and traditionals from songwriters Woody Guthrie, Peter Rowan, and John Hartford, our new album - Homegrown - comes out on <Link href="https://www.jalopyrecords.org/">Jalopy Records</Link> on July 18th. Get your copy with a pre-order of the vinyl today!</span>),
     link: bandcampHomegrownLink,
