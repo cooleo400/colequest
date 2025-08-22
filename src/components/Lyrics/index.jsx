@@ -12,6 +12,8 @@ const songs = [
   songKeys.ONE_FINE_DAY,
   songKeys.SHE_TALKS,
   songKeys.SWEET_LITTLE_GIRL,
+  songKeys.SYDNEY_LOULIE,
+  songKeys.TUESDAY,
   songKeys.WHERE_IM_FROM,
 ]
 

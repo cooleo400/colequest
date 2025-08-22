@@ -7,10 +7,11 @@ export const songKeys = {
     OSTRICH: 'ostrich-therapy',
     ONE_FINE_DAY: 'one-fine-day',
     SHE_TALKS: 'she-talks-alot',
+    SYDNEY_LOULIE: 'sydney-loulie',
     SWEET_LITTLE_GIRL: 'sweet-little-girl',
-    WHERE_IM_FROM: 'where-im-from',
-    
-}
+    TUESDAY: 'tuesday',
+    WHERE_IM_FROM: 'where-im-from'
+};
 
 export const lyricConfig = {
     [songKeys.BITCOIN]: {
@@ -331,6 +332,48 @@ export const lyricConfig = {
         `,
         'author': 'Words and Music by Cole Quest',
     },
+    [songKeys.SYDNEY_LOULIE]: {
+        'title': 'Sydney Loulie',
+        'body': `
+            <p>Hey Sydney Loulie<br/>
+            Where do you go, while your family’s at home?<br/>
+            Tell me hey, tell me truly<br/>
+            I’d like to know, why you're never at home?<br/>
+            </p>
+            <p>Hey Sydney Loulie<br/>
+            Heard you were out singing a song<br/>
+            Singing, hey Tom Dooley<br/>
+            Hang your head and cry, now you’re bound to die<br/>
+            </p>
+            <p>Sing it out loud<br/>
+            Bring in the crowd<br/>
+            Don’t have a doubt now baby<br/>
+            It should all work out<br/>
+            </p>
+            <p>Hey Sydney Loulie<br/>
+            I listen to your songs, sing em all day long<br/>
+            Play, it right to me<br/>
+            Ya pick up your guitar, soon you’ll be a star<br/>
+            </p>
+            <p>Hey Sydney Loulie<br/>
+            Heard you were out marching along<br/>
+            Chanting “hey no more cruelty”<br/>
+            “Leave em alone, now go on home”<br/>
+            </p>
+            <p>Hey Sydney Loulie<br/>
+            Tell me is it true, they ain’t yet heard of you<br/>
+            They, well they confuse me<br/>
+            Your always away, hoping for the day (you can)<br/>
+            </p>
+            <p>Sing it out loud<br/>
+            Bring in the crowd<br/>
+            Won’t have a doubt now baby<br/>
+            It would all work out<br/>
+            It would all work out
+            </p>
+        `,
+        'author': 'Words and Music by Cole Quest',
+    },
     [songKeys.SWEET_LITTLE_GIRL]: {
         'title': 'My Sweet Little Girl',
         'body': `
@@ -357,6 +400,46 @@ export const lyricConfig = {
             I loved her eyes and her tail that curled<br/>
             worth more than every single little pearl<br/>
             cause she was my sweet little girl.<br/></p>
+        `,
+        'author': 'Words and Music by Cole Quest',
+    },
+    [songKeys.TUESDAY]: {
+        'title': 'Tuesdays Come Around Again',
+        'body': `
+            <p>Tuesday’s come around again, I didn’t even know<<br/>
+            Left from right, up from down, or which way to go.<br/>
+            Seems I couldn’t find the door, No I didn’t make the polls<br/>
+            Dug this ditch nice and deep, gonna sit down in this hole.</br></p>
+            <p>Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down</br></p>
+            <p>Guess I’ll, say goodbye to welfare, goodbye to my health<br/>
+            Say hello to rich guys, pilling up their wealth.<br/>
+            Goodbye to the unions, goodbye min’mum wage<br/>
+            Won’t have much to my name, by my parents age.</br></p>
+            <p>Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down<br/>
+            Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down</br></p>
+            <p>I’ve made my bed gonna lay right down, not much you can do.<br/>
+            Thoughts n’ prayers in my dreams, for the red white n blue.<br/>
+            I’m sure they’ve got the welcome mat, for the new regime.<br/>
+            While I’m looking at my feet, a king will reign supreme.</br></p>
+            <p>Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down<br/>
+            Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down</br></p>
+            <p>Come on everybody, come on gather round<br/>
+            Come on everybody, n’ put your foot down<br/>
+            Come on everybody, come on gather round<br/>
+            Come on everybody, sing it out loud</br></p>
+            <p>All you fascists bound to lose<br/>
+            All you fascists bound to lose<br/>
+            All you fascists bound to lose<br/>
+            Bound to lose, you fascists bound to lose<br/>
+            All you fascists bound to lose<br/>
+            All you fascists bound to lose<br/>
+            All you fascists bound to lose<br/>
+            Bound to lose, you fascists bound to lose</br></p>
         `,
         'author': 'Words and Music by Cole Quest',
     },
