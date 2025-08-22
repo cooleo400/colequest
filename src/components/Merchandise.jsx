@@ -8,6 +8,7 @@ import patchesImage from '../images/patches.jpg';
 // import vinylCoverImage from '../images/vinyl.jpg';
 // import bandanaCoverImage from '../images/bandana.jpg';
 import homegrownCoverImage from '../images/Homegrown-covers-photo.jpg';
+import homegrownTeeImage from '../images/Homegrown-tees.jpg';
 import shirtToteImage from '../images/shirt-totes.jpg';
 import louvinNYImage from '../images/i_louvin_ny.jpg';
 import tourneePoster from '../images/Tour-Poster-signed-web.jpg';
@@ -15,7 +16,7 @@ import { bandcampHomegrownLink } from '../constants';
 
 const merchData = [
   {
-    image: homegrownCoverImage,
+    image: homegrownTeeImage,
     title: 'Homegrown Tee',
     description: (<span>Celebrate our latest release with the official Homegrown t-shirt, featuring artwork inspired by our new album. Available in two beautiful earth-tone colors: Pine and Cornsilk. <strong>Limited time only - while supplies last!</strong> Show your support and grab yours before they're gone.</span>),
     link: 'mailto:info@colequest.com',
@@ -29,7 +30,7 @@ const merchData = [
     description: (<span>Including original songs, and traditionals from songwriters Woody Guthrie, Peter Rowan, and John Hartford, our new album - Homegrown - comes out on <Link href="https://www.jalopyrecords.org/">Jalopy Records</Link> on July 18th. Get your copy with a pre-order of the vinyl today!</span>),
     link: bandcampHomegrownLink,
     price: '$20 Vinyl + Shipping',
-    ctaLabel: 'Pre-Order Vinyl',
+    ctaLabel: 'Order Vinyl',
     isNew: true,
   },
   {
