@@ -6,7 +6,6 @@ Sitemap: https://colequest.com/sitemap.xml
 
 # Disallow certain files
 Disallow: /server/
-Disallow: /*.js$
-Disallow: /*.css$
 Disallow: /webpack*
 Disallow: /package*
+Disallow: /node_modules/
