@@ -99,11 +99,13 @@ class App extends PureComponent {
     
     // Update URL based on section state
     if (isOpen) {
-      // Section is opening - update URL to show section
+      // Section is opening - update URL immediately
       this.props.history.push(`/${section}`);
     } else {
-      // Section is closing - go back to homepage
-      this.props.history.push('/');
+      // Section is closing - delay URL update to allow animation to complete
+      setTimeout(() => {
+        this.props.history.push('/');
+      }, 1000); // Match the Section component's animationDuration
     }
   }
 
