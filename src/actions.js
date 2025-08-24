@@ -39,6 +39,24 @@ export function fetchShows() {
   return fetchEntriesForContentType('gig');
 }
 
+export function fetchBio() {
+  return client.getEntries({
+      content_type: 'bio',
+      limit: 1
+    })
+  .then((response) => {
+    if (response.items.length > 0) {
+      return response.items[0].fields.description;
+    }
+    return 'Cole Quest and The City Pickers bring authentic Brooklyn bluegrass to NYC.'; // fallback
+  })
+  .catch((error) => {
+    console.log('Error occurred while fetching Bio:');
+    console.error(error);
+    return 'Cole Quest and The City Pickers bring authentic Brooklyn bluegrass to NYC.'; // fallback
+  });
+}
+
 export function filterShowsByTag(shows, tagId) {
   return shows.filter((show) => show.metadata.tags.map(tag => tag.sys.id).includes(tagId));
 }
